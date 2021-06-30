@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"onlyh.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta name="keywords" content="编程,学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js高阶函数">
+<meta property="og:url" content="http://onlyH.github.io/2017/12/02/js高阶函数/index.html">
+<meta property="og:site_name" content="郝洁的博客">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-28T07:56:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js高阶函数">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+
+<link rel="canonical" href="http://onlyH.github.io/2017/12/02/js高阶函数/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>js高阶函数 | 郝洁的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">郝洁的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">shuan horse</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Startseite</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archiv</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://onlyH.github.io/2017/12/02/js高阶函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="欢乐的shaun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          js高阶函数
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              <time title="Erstellt: 2017-12-02 00:00:00" itemprop="dateCreated datePublished" datetime="2017-12-02T00:00:00+08:00">2017-12-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-07-28 15:56:28" itemprop="dateModified" datetime="2019-07-28T15:56:28+08:00">2019-07-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greentng</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hello world'</span>)</span><br><span class="line">&#125;</span><br><span class="line">greentng() <span class="comment">//hello world</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">greentng.lang = <span class="string">'English'</span></span><br><span class="line"><span class="built_in">console</span>.log(greentng.lang) <span class="comment">//English</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//可以在 JavaScript 中将函数赋值给变量</span></span><br><span class="line"><span class="keyword">const</span> square = <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x * <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> total = square;</span><br><span class="line">total(<span class="number">4</span>)  <span class="comment">//8</span></span><br><span class="line"><span class="comment">//将函数作为参数传递</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">format</span>(<span class="params">type, one, two</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (type == <span class="string">'oneCase'</span>) &#123;</span><br><span class="line">        one()</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type == <span class="string">'twoCase'</span>) &#123;</span><br><span class="line">        two()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">one</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'this is one'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">two</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'this is two'</span>)</span><br><span class="line">&#125;</span><br><span class="line">format(<span class="string">'oneCase'</span>, one, two)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">高阶函数是对其他函数进行操作的函数，操作可以是将它们作为参数，或者是返回它们。</span></span><br><span class="line"><span class="comment"> 简单来说，高阶函数是一个接收函数作为参数或将函数作为输出返回的函数。</span></span><br><span class="line"><span class="comment"> 例如，Array.prototype.map，Array.prototype.filter 和 Array.prototype.reduce 是语言中内置的一些高阶函数。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">Array.prototype.map</span></span><br><span class="line"><span class="comment">map() 方法通过调用对输入数组中每个元素调用回调函数来创建一个新数组。</span></span><br><span class="line"><span class="comment">map() 方法将获取回调函数中的每个返回值，并使用这些值创建一个新数组。</span></span><br><span class="line"><span class="comment">传递给 map() 方法的回调函数接受 3 个参数：element，index 和 array。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="keyword">var</span> arr = []</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; num.length; i++) &#123;</span><br><span class="line">    arr.push(num[i] * <span class="number">2</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(arr)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// map</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="keyword">var</span> arr = num.map(<span class="function"><span class="params">item</span> =&gt;</span> item * <span class="number">2</span>)</span><br><span class="line"><span class="built_in">console</span>.log(arr)</span><br><span class="line"></span><br><span class="line"><span class="comment">//假设我们有一个包含不同人的出生年份的数组，我们想要创建一个包含其年龄的数组。 例如：</span></span><br><span class="line"><span class="keyword">const</span> year = [<span class="number">1993</span>, <span class="number">1923</span>, <span class="number">1983</span>, <span class="number">1990</span>]</span><br><span class="line"><span class="keyword">const</span> age = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; year.length; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> change = <span class="number">2018</span> - year[i]</span><br><span class="line">    age.push(change)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(age)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// map</span></span><br><span class="line"><span class="keyword">const</span> year = [<span class="number">1993</span>, <span class="number">1923</span>, <span class="number">1983</span>, <span class="number">1990</span>]</span><br><span class="line"><span class="keyword">const</span> age = year.map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="number">2018</span>-item)</span><br><span class="line"><span class="built_in">console</span>.log(age)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">Array.prototype.filter</span></span><br><span class="line"><span class="comment">filter() 方法会创建一个新数组，其中包含所有通过回调函数测试的元素。</span></span><br><span class="line"><span class="comment"> 传递给 filter() 方法的回调函数接受3个参数：element，index 和 array。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//假设我们有一个包含名称和年龄属性的对象数组。 我们想要创建一个只包含成年人（年龄大于或等于18）的数组。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> persons = [</span><br><span class="line">    &#123;<span class="attr">name</span>:<span class="string">'peter'</span>,<span class="attr">age</span>:<span class="number">16</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>:<span class="string">'lele'</span>,<span class="attr">age</span>:<span class="number">26</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>:<span class="string">'shaun'</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>:<span class="string">'tony'</span>,<span class="attr">age</span>:<span class="number">46</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>:<span class="string">'jack'</span>,<span class="attr">age</span>:<span class="number">54</span>&#125;,</span><br><span class="line"></span><br><span class="line">]</span><br><span class="line"><span class="keyword">var</span> adult = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ;i &lt;persons.length;i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(persons[i].age &gt;=<span class="number">18</span>) &#123;</span><br><span class="line">        adult.push(persons[i])</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(adult)</span><br><span class="line"><span class="comment">//filter</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> persons = [</span><br><span class="line">    &#123;<span class="attr">name</span>:<span class="string">'peter'</span>,<span class="attr">age</span>:<span class="number">16</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>:<span class="string">'lele'</span>,<span class="attr">age</span>:<span class="number">26</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>:<span class="string">'shaun'</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>:<span class="string">'tony'</span>,<span class="attr">age</span>:<span class="number">46</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>:<span class="string">'jack'</span>,<span class="attr">age</span>:<span class="number">54</span>&#125;,</span><br><span class="line"></span><br><span class="line">]</span><br><span class="line"><span class="keyword">var</span> adult = persons.filter(<span class="function"><span class="params">item</span> =&gt;</span>item.age &gt;=<span class="number">18</span>)</span><br><span class="line"><span class="built_in">console</span>.log(adult)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">Array.prototype.reducereduce 方法对调用数组的每个元素执行回调函数，最后生成一个单一的值并返回。</span></span><br><span class="line"><span class="comment"> reduce 方法接受两个参数：1）reducer 函数（回调），2）一个可选的 initialValue。</span></span><br><span class="line"><span class="comment"> reducer 函数（回调）接受四个参数：accumulator，currentValue，currentIndex，sourceArray。</span></span><br><span class="line"><span class="comment"> 如果提供了 initialValue，则累加器将等于 initialValue，currentValue 将等于数组中的第一个元素。</span></span><br><span class="line"><span class="comment"> 如果没有提供 initialValue，则累加器将等于数组中的第一个元素，currentValue 将等于数组中的第二个元素。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//假设我们要对一个数字数组的求和：</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">var</span> total = sum.reduce(<span class="function">(<span class="params">a,b</span>) =&gt;</span> a+b)</span><br><span class="line"><span class="built_in">console</span>.log(total)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">每次对数组中的某个值调用 reducer 函数，</span></span><br><span class="line"><span class="comment">累加器都会保留上一次 reducer 函数操作返回的结果，</span></span><br><span class="line"><span class="comment">并将 currentValue 设置为数组的当前值。 </span></span><br><span class="line"><span class="comment">最后把结果存储在 sum 变量中。</span></span><br><span class="line"><span class="comment">我们还可以为它提供初始值：</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="keyword">var</span> total = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ;i &lt;num.length;i++) &#123;</span><br><span class="line">    total +=num[i]</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(total)</span><br><span class="line"></span><br><span class="line"><span class="comment">//reduce</span></span><br><span class="line"><span class="keyword">var</span> num = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="keyword">var</span> total = num.reduce(<span class="function">(<span class="params">a,b</span>) =&gt;</span>&#123;<span class="keyword">return</span> a+b&#125;,<span class="number">10</span>)</span><br><span class="line"><span class="built_in">console</span>.log(total)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">我们假设 JavaScript 没有原生的 map 方法。</span></span><br><span class="line"><span class="comment">我们可以自己构建它，从而创建我们自己的高阶函数。 </span></span><br><span class="line"><span class="comment">假设我们有一个字符串数组，我们希望把它转换为整数数组，其中每个元素代表原始数组中字符串的长度。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> strArray = [<span class="string">'javascript'</span>,<span class="string">'python'</span>,<span class="string">'php'</span>,<span class="string">'java'</span>,<span class="string">'c'</span>]</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mapEach</span>(<span class="params">arr,fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> num = []</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;arr.length;i++) &#123;</span><br><span class="line">        num.push(fn(arr[i]))</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> strLength = strArray.mapEach(<span class="function">(<span class="params">strArray,(</span>)=&gt;</span>))</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/编程/" rel="tag"># 编程</a>
+              <a href="/tags/学习/" rel="tag"># 学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/12/02/this/" rel="prev" title="this">
+      <i class="fa fa-chevron-left"></i> this
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/12/03/垃圾回收/" rel="next" title="垃圾回收">
+      垃圾回收 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Inhaltsverzeichnis
+        </li>
+        <li class="sidebar-nav-overview">
+          Übersicht
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">郝洁</p>
+  <div class="site-description" itemprop="description">欢乐的shaun</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">Kategorien</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">schlagwörter</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">郝洁</span>
+</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

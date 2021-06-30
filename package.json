@@ -5,6 +5,11 @@
   "hexo": {
     "version": "3.7.1"
   },
+  "scripts": {
+    "s": "hexo s",
+    "d" : "hexo d",
+    "g": "hexo g"
+  },
   "dependencies": {
     "acorn": "^8.4.0",
     "hexo": "^3.7.0",
