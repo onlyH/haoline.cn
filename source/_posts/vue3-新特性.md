@@ -1,7 +1,22 @@
 ---
 title: vue3-新特性
 date: 2021-06-18 14:27:55
-tags:
+categories: 技术
+tags: [编程,感悟]
+keywords: vue3
+created: 创建于
+modified: 更新于
+sticky: 置顶
+posted: Posted on #发表于
+visitors: Visitors #阅读次数
+in: In #分类于
+read_more: 阅读全文
+untitled: 未命名
+toc_empty: 此文章未包含目录
+wordcount: 字数统计
+min2read: 阅读时长
+totalcount: Site words total count
+copyright: true
 ---
 #### 性能提升
 - 打包大小减少41%

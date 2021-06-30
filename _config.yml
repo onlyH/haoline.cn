@@ -3,13 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 郝洁的博客
-subtitle: shuan horse
-description: 欢乐的shaun
-keywords: web,javascript
+title: 郝洁的小栈
+subtitle: shaun web
+description: web开发
+keywords: 前端博客,JavaScript,html5,css3,Jquery,NodeJs,Ubuntu（#博客关键字）
 author: 郝洁
-language: zh-Hans
+language: zh-CN
 timezone:
+
 
 # URL 网站
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -26,7 +27,8 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
+
 
 # Writing 文章
 new_post_name: :title.md # File name of new posts新建文件默认文件名
@@ -95,3 +97,25 @@ search:
 # 文章末尾添加“本文结束”标记
 passage_end_tag:
   enabled: true
+
+  # Post wordcount display settings
+  # Dependencies: https://github.com/willin/hexo-wordcount
+  post_wordcount:
+    item_text: true
+    wordcount: true
+    min2read: true
+
+    live2d:
+      enable: true
+      scriptFrom: local
+      pluginRootPath: live2dw/
+      pluginJsPath: lib/
+      pluginModelPath: assets/
+      model:
+        use:  live2d-widget-model-miku
+      display:
+        position: right
+        width: 140
+        height: 260
+      mobile:
+        show: true
