@@ -44,25 +44,33 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"onlyh.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"onlyh.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
 
 
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "2f08acae"
+    });
+  daovoice('update');
+  </script>
 
 
-  <meta name="description" content="程序 更容易理解 函数或者方法输入输出的参数类型，外部条件等 动态语言的约束：需要手动调整等过程 有了ts，diamante本身就可以回答上述问题  效率更高 在不同的代码块和定义中进行跳转 代码自动补全 丰富的接口提示  更少的错误 编译期间能够发现大部分错误 杜绝一些比较常见错误  非常好的包容性 完全兼容js 第三方库可以单独编写类型文件  不足 增加学习成本 短期内增加开发成本">
+
+  <meta name="description" content="程序 更容易理解 函数或者方法输入输出的参数类型，外部条件等 动态语言的约束：需要手动调整等过程 有了ts，diamante本身就可以回答上述问题  效率更高">
 <meta name="keywords" content="前端博客,JavaScript,html5,css3,Jquery,NodeJs,Ubuntu（#博客关键字）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue3-ts">
 <meta property="og:url" content="http://onlyH.github.io/2021/06/17/vue3-ts/index.html">
 <meta property="og:site_name" content="郝洁的小栈">
-<meta property="og:description" content="程序 更容易理解 函数或者方法输入输出的参数类型，外部条件等 动态语言的约束：需要手动调整等过程 有了ts，diamante本身就可以回答上述问题  效率更高 在不同的代码块和定义中进行跳转 代码自动补全 丰富的接口提示  更少的错误 编译期间能够发现大部分错误 杜绝一些比较常见错误  非常好的包容性 完全兼容js 第三方库可以单独编写类型文件  不足 增加学习成本 短期内增加开发成本">
+<meta property="og:description" content="程序 更容易理解 函数或者方法输入输出的参数类型，外部条件等 动态语言的约束：需要手动调整等过程 有了ts，diamante本身就可以回答上述问题  效率更高">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2021-06-17T08:36:32.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue3-ts">
-<meta name="twitter:description" content="程序 更容易理解 函数或者方法输入输出的参数类型，外部条件等 动态语言的约束：需要手动调整等过程 有了ts，diamante本身就可以回答上述问题  效率更高 在不同的代码块和定义中进行跳转 代码自动补全 丰富的接口提示  更少的错误 编译期间能够发现大部分错误 杜绝一些比较常见错误  非常好的包容性 完全兼容js 第三方库可以单独编写类型文件  不足 增加学习成本 短期内增加开发成本">
+<meta name="twitter:description" content="程序 更容易理解 函数或者方法输入输出的参数类型，外部条件等 动态语言的约束：需要手动调整等过程 有了ts，diamante本身就可以回答上述问题  效率更高">
 
 <link rel="canonical" href="http://onlyH.github.io/2021/06/17/vue3-ts/">
 
@@ -111,7 +119,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <div class="container">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -153,7 +161,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">9</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -163,7 +171,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">58</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">59</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -306,7 +314,7 @@
   
 </div>
         <div class="reward-container">
-  <div>喜欢就给个鼓励吧~.</div>
+  <div>喜欢就给个鼓励吧~</div>
   <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
     打赏
   </button>
@@ -451,7 +459,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">59</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -464,7 +472,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -532,7 +540,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共27.2k字</span>
+  <span class="post-count">博客全站共27.3k字</span>
 </div>
 -->
 
@@ -552,9 +560,7 @@
   
   <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/utils.js"></script>
 <script src="/js/schemes/pisces.js"></script>
 <script src="/js/next-boot.js"></script>
 
@@ -612,6 +618,8 @@
      <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
      <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
      <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+
   
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
