@@ -178,7 +178,7 @@ body {
   background: var(--body-bg-color);
   color: var(--text-color);
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 2;
 }
 @media (max-width: 991px) {
@@ -1291,7 +1291,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fffffc;
+  background: #b60333;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2764,7 +2764,6 @@ ul.breadcrumb li + li:last-child {
   box-sizing: border-box;
   color: var(--text-color);
   width: 240px;
-  opacity: 0;
 }
 .sidebar-inner.affix {
   position: fixed;
