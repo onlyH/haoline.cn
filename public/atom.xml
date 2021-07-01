@@ -174,33 +174,6 @@
   </entry>
   
   <entry>
-    <title>异步回调处理</title>
-    <link href="http://onlyH.github.io/2021/03/15/%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83/"/>
-    <id>http://onlyH.github.io/2021/03/15/异步回调/</id>
-    <published>2021-03-15T08:13:37.576Z</published>
-    <updated>2019-07-28T07:56:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>之前异步回调总是出现问题，先上一段错误的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">callbacking = <span class="literal">false</span></span><br><span class="line"><span class="keyword">if</span>(!<span class="keyword">this</span>.callbacking) &#123;</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line">    <span class="keyword">this</span>.callback()</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>这段代码会走<code>this.callbacking = false</code>但是没有意义，如果callback是同步的，这个if在callback执行期间不再会走第二次，如果是异步的，这样写是不对的。我的callback是异步的。。所以这样写的效果是这样的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line"><span class="keyword">this</span>.callback() <span class="comment">//发起异步请求后callback函数结束（请求未完成）</span></span><br><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br></pre></td></tr></table></figure></p><p>也就是说，callbacking在异步请求没有结束的时候就已经回归到false了，无法起到想要的作用。应该这样写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line"><span class="keyword">this</span>.callback(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><p>callback接受的函数需要在异步完成后执行。这样才能保证指定代码在异步操作完成后才执行，比如说在<code>this.callbacking = true</code>上锁后，是希望在异步操作结束后才解锁。</p><p>或者使用promise，在.then().then解决</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;之前异步回调总是出现问题，先上一段错误的代码&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span cl
-      
-    
-    </summary>
-    
-      <category term="js" scheme="http://onlyH.github.io/categories/js/"/>
-    
-    
-      <category term="编程" scheme="http://onlyH.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="学习" scheme="http://onlyH.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>封装--逐步运动</title>
     <link href="http://onlyH.github.io/2021/03/15/%E5%B0%81%E8%A3%85%E8%BF%90%E5%8A%A81/"/>
     <id>http://onlyH.github.io/2021/03/15/封装运动1/</id>
@@ -224,6 +197,33 @@
       <category term="编程" scheme="http://onlyH.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
       <category term="封装" scheme="http://onlyH.github.io/tags/%E5%B0%81%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>异步回调处理</title>
+    <link href="http://onlyH.github.io/2021/03/15/%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83/"/>
+    <id>http://onlyH.github.io/2021/03/15/异步回调/</id>
+    <published>2021-03-15T08:13:37.576Z</published>
+    <updated>2019-07-28T07:56:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前异步回调总是出现问题，先上一段错误的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">callbacking = <span class="literal">false</span></span><br><span class="line"><span class="keyword">if</span>(!<span class="keyword">this</span>.callbacking) &#123;</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line">    <span class="keyword">this</span>.callback()</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>这段代码会走<code>this.callbacking = false</code>但是没有意义，如果callback是同步的，这个if在callback执行期间不再会走第二次，如果是异步的，这样写是不对的。我的callback是异步的。。所以这样写的效果是这样的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line"><span class="keyword">this</span>.callback() <span class="comment">//发起异步请求后callback函数结束（请求未完成）</span></span><br><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br></pre></td></tr></table></figure></p><p>也就是说，callbacking在异步请求没有结束的时候就已经回归到false了，无法起到想要的作用。应该这样写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line"><span class="keyword">this</span>.callback(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><p>callback接受的函数需要在异步完成后执行。这样才能保证指定代码在异步操作完成后才执行，比如说在<code>this.callbacking = true</code>上锁后，是希望在异步操作结束后才解锁。</p><p>或者使用promise，在.then().then解决</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;之前异步回调总是出现问题，先上一段错误的代码&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span cl
+      
+    
+    </summary>
+    
+      <category term="js" scheme="http://onlyH.github.io/categories/js/"/>
+    
+    
+      <category term="编程" scheme="http://onlyH.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="学习" scheme="http://onlyH.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
