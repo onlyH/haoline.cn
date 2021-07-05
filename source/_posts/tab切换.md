@@ -1,7 +1,7 @@
 ---
 title: tab切换
 categories: js
-date: 2018-4-2
+date: 2018-04-02 15:33:03
 tags: [编程,功能]
 ---
 使用javascript和jquery编写tab切换,使用jquery编写列表切换

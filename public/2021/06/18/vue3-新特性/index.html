@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
 
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
@@ -35,6 +36,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
   <script src="/lib/pace/pace.min.js"></script>
 
@@ -44,7 +46,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
 
@@ -59,20 +61,21 @@
 
 
 
-  <meta name="description" content="性能提升 打包大小减少41% 初次渲染快55%，133% 内存使用减少54%  Composition API">
+  <meta name="description" content="vue3都做了什么呢？">
 <meta name="keywords" content="vue3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue3-新特性">
 <meta property="og:url" content="https://github.com/onlyH/onlyh.github.io/2021/06/18/vue3-新特性/index.html">
 <meta property="og:site_name" content="郝洁的小栈">
-<meta property="og:description" content="性能提升 打包大小减少41% 初次渲染快55%，133% 内存使用减少54%  Composition API">
+<meta property="og:description" content="vue3都做了什么呢？">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://github.com/onlyH/2021/06/18/vue3-新特性/生命周期.png">
-<meta property="og:updated_time" content="2021-07-01T06:14:36.393Z">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2017/01/vue.png">
+<meta property="og:image" content="https://github.com/onlyH/onlyh.github.io/2021/06/18/vue3-新特性/生命周期.png">
+<meta property="og:updated_time" content="2021-07-02T09:28:52.935Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue3-新特性">
-<meta name="twitter:description" content="性能提升 打包大小减少41% 初次渲染快55%，133% 内存使用减少54%  Composition API">
-<meta name="twitter:image" content="https://github.com/onlyH/2021/06/18/vue3-新特性/生命周期.png">
+<meta name="twitter:description" content="vue3都做了什么呢？">
+<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2017/01/vue.png">
 
 <link rel="canonical" href="https://github.com/onlyH/onlyh.github.io/2021/06/18/vue3-新特性/">
 
@@ -117,6 +120,11 @@
   .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
+
+
+
+
+
 
 </head>
 
@@ -263,7 +271,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-01 14:14:36" itemprop="dateModified" datetime="2021-07-01T14:14:36+08:00">2021-07-01</time>
+                <time title="修改时间：2021-07-02 17:28:52" itemprop="dateModified" datetime="2021-07-02T17:28:52+08:00">2021-07-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -286,7 +294,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="性能提升"><a href="#性能提升" class="headerlink" title="性能提升"></a>性能提升</h4><ul>
+        <p><blockquote class="blockquote-center"><br><img src="https://www.runoob.com/wp-content/uploads/2017/01/vue.png"><br>vue3都做了什么呢？<br></blockquote><br><a id="more"></a></p>
+<h4 id="性能提升"><a href="#性能提升" class="headerlink" title="性能提升"></a>性能提升</h4><ul>
 <li>打包大小减少41%</li>
 <li>初次渲染快55%，133%</li>
 <li>内存使用减少54%</li>
@@ -306,7 +315,7 @@
 <h4 id="更好的ts支持"><a href="#更好的ts支持" class="headerlink" title="更好的ts支持"></a>更好的ts支持</h4><h4 id="为什么要有vue3（解决现有存在的棘手问题）"><a href="#为什么要有vue3（解决现有存在的棘手问题）" class="headerlink" title="为什么要有vue3（解决现有存在的棘手问题）"></a>为什么要有vue3（解决现有存在的棘手问题）</h4><ul>
 <li><p>随着功能的增长，复杂组件的代码变得难以维护</p>
 </li>
-<li><p>Mixin的缺点 </p>
+<li><p>Mixin的缺点</p>
 </li>
 </ul>
 <ol>
@@ -320,8 +329,8 @@
 <li><p>新生命周期</p>
 </li>
 </ul>
-<p><img src="//github.com/onlyH/2021/06/18/vue3-新特性/生命周期.png" alt="生命周期"></p>
-
+<p><img src="//github.com/onlyH/onlyh.github.io/2021/06/18/vue3-新特性/生命周期.png" alt="生命周期"></p>
+<h4 id="免费api：-https-dog-ceo-dog-api"><a href="#免费api：-https-dog-ceo-dog-api" class="headerlink" title="免费api： https://dog.ceo/dog-api/"></a>免费api： <a href="https://dog.ceo/dog-api/" target="_blank" rel="noopener">https://dog.ceo/dog-api/</a></h4>
     </div>
 
     
@@ -339,7 +348,7 @@
   <p><span>本文标题:</span><a href="/2021/06/18/vue3-新特性/">vue3-新特性</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 郝洁 的个人博客">郝洁</a></p>
   <p><span>发布时间:</span>2021年06月18日 - 14:27</p>
-  <p><span>最后更新:</span>2021年07月01日 - 14:14</p>
+  <p><span>最后更新:</span>2021年07月02日 - 17:28</p>
   <p><span>原始链接:</span><a href="/2021/06/18/vue3-新特性/" title="vue3-新特性">https://github.com/onlyH/onlyh.github.io/2021/06/18/vue3-新特性/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://github.com/onlyH/onlyh.github.io/2021/06/18/vue3-新特性/"  aria-label="复制成功！"></i></span>
   </p>
@@ -506,7 +515,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#性能提升"><span class="nav-number">1.</span> <span class="nav-text">性能提升</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Composition-API"><span class="nav-number">2.</span> <span class="nav-text">Composition API</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新增特性"><span class="nav-number">3.</span> <span class="nav-text">新增特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更好的ts支持"><span class="nav-number">4.</span> <span class="nav-text">更好的ts支持</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要有vue3（解决现有存在的棘手问题）"><span class="nav-number">5.</span> <span class="nav-text">为什么要有vue3（解决现有存在的棘手问题）</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#性能提升"><span class="nav-number">1.</span> <span class="nav-text">性能提升</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Composition-API"><span class="nav-number">2.</span> <span class="nav-text">Composition API</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新增特性"><span class="nav-number">3.</span> <span class="nav-text">新增特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更好的ts支持"><span class="nav-number">4.</span> <span class="nav-text">更好的ts支持</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要有vue3（解决现有存在的棘手问题）"><span class="nav-number">5.</span> <span class="nav-text">为什么要有vue3（解决现有存在的棘手问题）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#免费api：-https-dog-ceo-dog-api"><span class="nav-number">6.</span> <span class="nav-text">免费api： https://dog.ceo/dog-api/</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -603,7 +612,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共27.3k字</span>
+  <span class="post-count">博客全站共27.8k字</span>
 </div>
 -->
 
@@ -623,6 +632,8 @@
   
   <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
 <script src="/js/utils.js"></script>
 <script src="/js/schemes/pisces.js"></script>
 <script src="/js/next-boot.js"></script>
@@ -684,5 +695,12 @@
   
 
   
+
+  <!--崩溃欺骗-->
+  <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/snow.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
 </html>

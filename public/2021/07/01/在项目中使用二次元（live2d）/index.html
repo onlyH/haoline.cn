@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
 
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
@@ -35,6 +36,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
   <script src="/lib/pace/pace.min.js"></script>
 
@@ -44,7 +46,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
 
@@ -59,18 +61,20 @@
 
 
 
-  <meta name="description" content="scackjlkjlkjlkjlkllkj">
+  <meta name="description" content="了解live2d使用原理">
 <meta name="keywords" content="前端博客,JavaScript,html5,css3,Jquery,NodeJs,Ubuntu（#博客关键字）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在项目中使用二次元（live2d）">
 <meta property="og:url" content="https://github.com/onlyH/onlyh.github.io/2021/07/01/在项目中使用二次元（live2d）/index.html">
 <meta property="og:site_name" content="郝洁的小栈">
-<meta property="og:description" content="scackjlkjlkjlkjlkllkj">
+<meta property="og:description" content="了解live2d使用原理">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-07-01T07:10:23.178Z">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzk4YjQzNTJhZ3kxZzI5NThmMGd5cGoyMGloMGhpYWFuLmpwZw?x-oss-process=image/format,png">
+<meta property="og:updated_time" content="2021-07-01T10:22:00.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在项目中使用二次元（live2d）">
-<meta name="twitter:description" content="scackjlkjlkjlkjlkllkj">
+<meta name="twitter:description" content="了解live2d使用原理">
+<meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzk4YjQzNTJhZ3kxZzI5NThmMGd5cGoyMGloMGhpYWFuLmpwZw?x-oss-process=image/format,png">
 
 <link rel="canonical" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/在项目中使用二次元（live2d）/">
 
@@ -115,6 +119,11 @@
   .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
+
+
+
+
+
 
 </head>
 
@@ -255,7 +264,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-07-01 15:02:41 / 修改时间：15:10:23" itemprop="dateCreated datePublished" datetime="2021-07-01T15:02:41+08:00">2021-07-01</time>
+              <time title="创建时间：2021-07-01 15:02:41 / 修改时间：18:22:00" itemprop="dateCreated datePublished" datetime="2021-07-01T15:02:41+08:00">2021-07-01</time>
             </span>
 
           
@@ -269,7 +278,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>scackjlkjlkjlkjlkllkj</p>
+        <blockquote class="blockquote-center"><br><image src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzk4YjQzNTJhZ3kxZzI5NGVocG96aWoyMDVhMDVuZ2xrLmpwZw?x-oss-process=image/format,png"></image><br>了解live2d使用原理<br></blockquote>
+
+<a id="more"></a>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br><span class="line">npm install live2d-widget-model-hijiki #这里可以改成你想要的动画资源</span><br></pre></td></tr></table></figure>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzk4YjQzNTJhZ3kxZzI5NThmMGd5cGoyMGloMGhpYWFuLmpwZw?x-oss-process=image/format,png" alt=""></p>
+<p>找到并拷贝<code>node_modules\live2d-widget-model-hijiki</code>文件夹</p>
+<p>在博客的根目录下新建一个文件夹（live2d_modules），将之前拷贝的内容放进去</p>
+<p>找到根目录的配置文件<code>_config.xml</code><br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  scriptFrom:</span> <span class="string">local</span></span><br><span class="line"><span class="attr">  pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line"><span class="attr">  pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line"><span class="attr">  pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line"><span class="attr">  tagMode:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  debug:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  model:</span></span><br><span class="line"><span class="attr">    use:</span> <span class="string">live2d-widget-model-hijiki</span></span><br><span class="line"><span class="attr">  display:</span></span><br><span class="line"><span class="attr">    position:</span> <span class="string">right</span></span><br><span class="line"><span class="attr">    width:</span> <span class="number">150</span></span><br><span class="line"><span class="attr">    height:</span> <span class="number">300</span></span><br><span class="line"><span class="attr">  mobile:</span></span><br><span class="line"><span class="attr">    show:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>运行 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<p> 编译完后 public 目录会多出来一个live2dw,index.html</p>
+<p> 打开HTML文件，拉到最下面，复制js代码段</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;L2Dwidget.init(&#123;<span class="string">"pluginRootPath"</span>:<span class="string">"live2dw/"</span>,<span class="string">"pluginJsPath"</span>:<span class="string">"lib/"</span>,<span class="string">"pluginModelPath"</span>:<span class="string">"assets/"</span>,<span class="string">"tagMode"</span>:<span class="literal">false</span>,<span class="string">"debug"</span>:<span class="literal">false</span>,<span class="string">"model"</span>:&#123;<span class="string">"jsonPath"</span>:<span class="string">"/live2dw/assets/live2d-widget-model-hijiki.model.json"</span>&#125;,<span class="string">"display"</span>:&#123;<span class="string">"position"</span>:<span class="string">"right"</span>,<span class="string">"width"</span>:<span class="number">150</span>,<span class="string">"height"</span>:<span class="number">300</span>&#125;,<span class="string">"mobile"</span>:&#123;<span class="string">"show"</span>:<span class="literal">true</span>&#125;,<span class="string">"log"</span>:<span class="literal">false</span>&#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>把复制出来的 2 段script标签和上图中 live2dw文件夹，拷到自己的项目中</p>
+<h4 id="要注意资源路径的存放方式，避免因为资源文件找不到一直报错"><a href="#要注意资源路径的存放方式，避免因为资源文件找不到一直报错" class="headerlink" title="要注意资源路径的存放方式，避免因为资源文件找不到一直报错"></a>要注意资源路径的存放方式，避免因为资源文件找不到一直报错</h4><p>只要把资源文件放好，JS引入正确，方法调用没问题。那就是已经成功了</p>
+<blockquote>
+<p>其实通过 hexo 编译只是为了拿到 /live2dw/lib/L2Dwidget.min.js 这段核心JS文件,在 init 方法中的一些配置，其实都是对应的路径。比如 lib 的路径 assets(动画资源的路径)。只要细心一点，观察一下目录的路径不同。就可以在项目中通过修改配置使用全部的动画了！</p>
+</blockquote>
+<h3 id="在vue中的使用"><a href="#在vue中的使用" class="headerlink" title="在vue中的使用"></a>在vue中的使用</h3><p>将live2dw放入public文件夹中</p>
+<p>在index.html文件中引用<code>&lt;script src=&quot;/live2dw/lib/L2Dwidget.min.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>使用：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">   setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">     <span class="built_in">window</span>.L2Dwidget.init(&#123;</span><br><span class="line">       pluginRootPath: <span class="string">'live2dw/'</span>,</span><br><span class="line">       pluginJsPath: <span class="string">'lib/'</span>,</span><br><span class="line">       pluginModelPath: <span class="string">'live2d-widget-model-hijiki/assets/'</span>,</span><br><span class="line">       tagMode: <span class="literal">false</span>,</span><br><span class="line">       debug: <span class="literal">false</span>,</span><br><span class="line">       model: &#123; <span class="attr">jsonPath</span>: <span class="string">'/live2dw/live2d-widget-model-hijiki/assets/hijiki.model.json'</span> &#125;,</span><br><span class="line">       display: &#123; <span class="attr">position</span>: <span class="string">'right'</span>, <span class="attr">width</span>: <span class="number">150</span>, <span class="attr">height</span>: <span class="number">300</span> &#125;,</span><br><span class="line">       mobile: &#123; <span class="attr">show</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">       log: <span class="literal">false</span></span><br><span class="line">     &#125;)</span><br><span class="line">   &#125;, <span class="number">3000</span>)</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
 
     </div>
 
@@ -357,10 +385,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/07/01/改进-select/" rel="prev" title="富文本-select改进">
-      <i class="fa fa-chevron-left"></i> 富文本-select改进
+    <a href="/2021/07/01/github访问代理映射/" rel="prev" title="github访问代理映射">
+      <i class="fa fa-chevron-left"></i> github访问代理映射
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/07/01/babel运行/" rel="next" title="运行babel，webpack，rollop.js用法">
+      运行babel，webpack，rollop.js用法 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -419,6 +450,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#要注意资源路径的存放方式，避免因为资源文件找不到一直报错"><span class="nav-number">1.</span> <span class="nav-text">要注意资源路径的存放方式，避免因为资源文件找不到一直报错</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在vue中的使用"><span class="nav-number"></span> <span class="nav-text">在vue中的使用</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -515,7 +547,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共27.3k字</span>
+  <span class="post-count">博客全站共27.8k字</span>
 </div>
 -->
 
@@ -535,6 +567,8 @@
   
   <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
 <script src="/js/utils.js"></script>
 <script src="/js/schemes/pisces.js"></script>
 <script src="/js/next-boot.js"></script>
@@ -596,5 +630,12 @@
   
 
   
+
+  <!--崩溃欺骗-->
+  <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/snow.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
 </html>

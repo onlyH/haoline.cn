@@ -1,7 +1,7 @@
 ---
 title: js替换json对象中的键名
 categories: js
-date: 2018-5-2
+date: 2021-03-17 15:33:03
 tags: [编程,功能]
 ---
 使用map()是目前想到的最简单的办法。。

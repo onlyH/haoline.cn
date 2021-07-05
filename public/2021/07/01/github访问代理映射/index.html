@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
 
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
@@ -35,6 +36,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
   <script src="/lib/pace/pace.min.js"></script>
 
@@ -44,7 +46,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
 
@@ -67,7 +69,7 @@
 <meta property="og:site_name" content="郝洁的小栈">
 <meta property="og:description" content="为本地 hosts 文件添加 Github 相关映射 打开本地 hosts 文件 win + r =&amp;gt; C:\WINDOWS\system32\drivers\etc进入 获取 Github 相关网站的 IP   访问 https://www.ipaddress.com 输入 github.global.ssl.fastly.net 和 github.com，查询ip地址">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-07-01T06:14:36.385Z">
+<meta property="og:updated_time" content="2021-07-01T07:30:54.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github访问代理映射">
 <meta name="twitter:description" content="为本地 hosts 文件添加 Github 相关映射 打开本地 hosts 文件 win + r =&amp;gt; C:\WINDOWS\system32\drivers\etc进入 获取 Github 相关网站的 IP   访问 https://www.ipaddress.com 输入 github.global.ssl.fastly.net 和 github.com，查询ip地址">
@@ -115,6 +117,11 @@
   .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
+
+
+
+
+
 
 </head>
 
@@ -255,7 +262,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-07-01 10:39:40 / 修改时间：14:14:36" itemprop="dateCreated datePublished" datetime="2021-07-01T10:39:40+08:00">2021-07-01</time>
+              <time title="创建时间：2021-07-01 10:39:40 / 修改时间：15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T10:39:40+08:00">2021-07-01</time>
             </span>
 
           
@@ -302,7 +309,7 @@
   <p><span>本文标题:</span><a href="/2021/07/01/github访问代理映射/">github访问代理映射</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 郝洁 的个人博客">郝洁</a></p>
   <p><span>发布时间:</span>2021年07月01日 - 10:39</p>
-  <p><span>最后更新:</span>2021年07月01日 - 14:14</p>
+  <p><span>最后更新:</span>2021年07月01日 - 15:30</p>
   <p><span>原始链接:</span><a href="/2021/07/01/github访问代理映射/" title="github访问代理映射">https://github.com/onlyH/onlyh.github.io/2021/07/01/github访问代理映射/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://github.com/onlyH/onlyh.github.io/2021/07/01/github访问代理映射/"  aria-label="复制成功！"></i></span>
   </p>
@@ -408,8 +415,8 @@
       <i class="fa fa-chevron-left"></i> vue3-新特性
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/07/01/Iterator-forOf/" rel="next" title="ES6系列-Iterator与for of">
-      ES6系列-Iterator与for of <i class="fa fa-chevron-right"></i>
+    <a href="/2021/07/01/在项目中使用二次元（live2d）/" rel="next" title="在项目中使用二次元（live2d）">
+      在项目中使用二次元（live2d） <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -566,7 +573,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共27.3k字</span>
+  <span class="post-count">博客全站共27.8k字</span>
 </div>
 -->
 
@@ -586,6 +593,8 @@
   
   <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
 <script src="/js/utils.js"></script>
 <script src="/js/schemes/pisces.js"></script>
 <script src="/js/next-boot.js"></script>
@@ -647,5 +656,12 @@
   
 
   
+
+  <!--崩溃欺骗-->
+  <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/snow.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
 </html>

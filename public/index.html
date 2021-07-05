@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
 
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
@@ -35,6 +36,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
   <script src="/lib/pace/pace.min.js"></script>
 
@@ -44,7 +46,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
 
@@ -114,6 +116,11 @@
   .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
+
+
+
+
+
 
 </head>
 
@@ -229,7 +236,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/在项目中使用二次元（live2d）/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/封装运动1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -243,7 +250,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/07/01/在项目中使用二次元（live2d）/" class="post-title-link" itemprop="url">在项目中使用二次元（live2d）</a>
+            <a href="/2021/07/01/封装运动1/" class="post-title-link" itemprop="url">封装--逐步运动</a>
         </h2>
 
         <div class="post-meta">
@@ -252,9 +259,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-07-01 15:02:41 / 修改时间：15:10:23" itemprop="dateCreated datePublished" datetime="2021-07-01T15:02:41+08:00">2021-07-01</time>
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
             </span>
 
           
@@ -268,7 +283,169 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>scackjlkjlkjlkjlkllkj</p>
+          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//html</span></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=, initial-scale=1.0"</span>&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"ie=edge"</span>&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">    &lt;style&gt;</span></span><br><span class="line"><span class="regexp">        * &#123;</span></span><br><span class="line"><span class="regexp">            margin: 0;</span></span><br><span class="line"><span class="regexp">            padding: 0;</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">        </span></span><br><span class="line"><span class="regexp">        div &#123;</span></span><br><span class="line"><span class="regexp">            width: 200px;</span></span><br><span class="line"><span class="regexp">            height: 200px;</span></span><br><span class="line"><span class="regexp">            opacity: .3;</span></span><br><span class="line"><span class="regexp">            background-color: yellow;</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>style&gt;</span><br><span class="line">&lt;<span class="regexp">/head&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;body&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;&lt;/</span>div&gt;</span><br><span class="line">    &lt;script src=<span class="string">"moveOne.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="keyword">var</span> tag = $tag(<span class="string">'div'</span>)</span><br><span class="line">        tag.onmouseover = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            starSport(tag, <span class="string">'width'</span>, <span class="number">400</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                starSport(tag, <span class="string">'opacity'</span>, <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        tag.onmouseout = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            starSport(tag, <span class="string">'width'</span>, <span class="number">200</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                starSport(tag, <span class="string">'opacity'</span>, <span class="number">30</span>)</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//moveOne.js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">$tag</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(id)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取样式属性</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj, attr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (obj.currentStyle) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj.currentStyle[attr]</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> getComputedStyle(obj, <span class="literal">false</span>)[attr]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//运动</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">starSport</span>(<span class="params">obj, attr, target, fn</span>) </span>&#123; <span class="comment">//当前对象，属性，变化对象</span></span><br><span class="line">    obj.timer = <span class="literal">null</span></span><br><span class="line">    clearInterval(obj.timer)</span><br><span class="line">    obj.timer = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> current = <span class="number">0</span></span><br><span class="line">        <span class="comment">//定义当前属性</span></span><br><span class="line">        <span class="keyword">if</span> (attr === <span class="string">'opacity'</span>) &#123;</span><br><span class="line">            current = <span class="built_in">Math</span>.round(<span class="built_in">parseFloat</span>(getStyle(obj, attr) * <span class="number">100</span>))</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            current = <span class="built_in">parseInt</span>(getStyle(obj, attr))</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//定义速度</span></span><br><span class="line">        <span class="keyword">var</span> speed = (target - current) / <span class="number">8</span></span><br><span class="line">        speed = speed &gt; <span class="number">0</span> ? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果当前值等于目标值</span></span><br><span class="line">        <span class="keyword">if</span> (current === target) &#123;</span><br><span class="line">            <span class="comment">//如果第一次运动停止</span></span><br><span class="line">            clearInterval(obj.timer)</span><br><span class="line">            <span class="keyword">if</span> (fn) &#123;</span><br><span class="line">                fn()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (attr === <span class="string">'opacity'</span>) &#123;</span><br><span class="line">                obj.style[attr] = (current + speed) / <span class="number">100</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                obj.style[attr] = current + speed + <span class="string">'px'</span></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="number">30</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/异步回调/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/01/异步回调/" class="post-title-link" itemprop="url">异步回调处理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>之前异步回调总是出现问题，先上一段错误的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">callbacking = <span class="literal">false</span></span><br><span class="line"><span class="keyword">if</span>(!<span class="keyword">this</span>.callbacking) &#123;</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line">    <span class="keyword">this</span>.callback()</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这段代码会走<code>this.callbacking = false</code>但是没有意义，如果callback是同步的，这个if在callback执行期间不再会走第二次，如果是异步的，这样写是不对的。我的callback是异步的。。所以这样写的效果是这样的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line"><span class="keyword">this</span>.callback() <span class="comment">//发起异步请求后callback函数结束（请求未完成）</span></span><br><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
+<p>也就是说，callbacking在异步请求没有结束的时候就已经回归到false了，无法起到想要的作用。应该这样写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line"><span class="keyword">this</span>.callback(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/07/01/异步回调/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/截取字符串/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/01/截取字符串/" class="post-title-link" itemprop="url">截取字符串最方便的办法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今日解析YouTube视频，采用了YouTube的iframe。<br>其中有一坑是YouTube不允许输入第三方链接，也就是不解析，解决的办法就是<br><code>http://www.youtube.com/embed/VIDEO_ID</code></p>
+<ul>
+<li><p>例如：<br><code>https://www.youtube.com/watch?v=78tNYZUS-ps</code><br>改为：<br><code>http://www.youtube.com/embed/78tNYZUS-ps</code></p>
+</li>
+<li><p>为了判断输入的URL是否是一个有效的，我们采取了后台解析id的办法，返回title。<br>那么我就需要将用户输入的链接进行截取。试了好几种办法，虽然都能实现，但是觉得麻烦，最终选择了，split()方法，他可以将一个字符串分割成字符串数组。</p>
+<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="built_in">url</span> = <span class="string">'https://www.youtube.com/watch?v=78tNYZUS-ps'</span>;</span><br><span class="line"><span class="keyword">let</span> front = <span class="built_in">url</span>.split(<span class="string">'='</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">let</span> end = <span class="built_in">url</span>.split(<span class="string">'='</span>)[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">console</span>.log(front,end) <span class="comment">//https://www.youtube.com/watch?v 78tNYZUS-ps</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -318,7 +495,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-07-01 14:14:36" itemprop="dateCreated datePublished" datetime="2021-07-01T14:14:36+08:00">2021-07-01</time>
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -379,313 +556,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/类与对象/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/01/类与对象/" class="post-title-link" itemprop="url">ES6系列-类与对象</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-01 14:14:36" itemprop="dateCreated datePublished" datetime="2021-07-01T14:14:36+08:00">2021-07-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 类与对象</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">        <span class="keyword">constructor</span>(name = 'yoyo') &#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> v_person = <span class="keyword">new</span> Person(<span class="string">'v'</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(v_person) <span class="comment">//Person &#123;name: "v"&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">        <span class="keyword">constructor</span>(name = 'child') &#123;</span><br><span class="line">            <span class="comment">//  super()会使用父类的所有</span></span><br><span class="line">            <span class="keyword">super</span>(name)</span><br><span class="line">            <span class="keyword">this</span>.type = <span class="string">'dog'</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">new</span> Child()) <span class="comment">//Child &#123;name: "child", type: "dog"&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">new</span> Child(<span class="string">'hello'</span>)) <span class="comment">//Child &#123;name: "hello", type: "dog"&#125;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// getter,setter</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">        <span class="keyword">constructor</span>(name = 'yoy') &#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name</span><br><span class="line">        &#125;</span><br><span class="line">        get longName() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name + <span class="string">'读取属性'</span></span><br><span class="line">        &#125;</span><br><span class="line">        set longName(value) &#123;</span><br><span class="line">            <span class="keyword">this</span>.name = value</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> v = <span class="keyword">new</span> Person()</span><br><span class="line">    <span class="built_in">console</span>.log(v.longName, <span class="string">'getter'</span>)<span class="comment">//yoy读取属性 getter</span></span><br><span class="line">    v.longName = <span class="string">'hello'</span></span><br><span class="line">    <span class="built_in">console</span>.log(v.longName) <span class="comment">//hello读取属性</span></span><br><span class="line">    <span class="keyword">let</span> vs = <span class="keyword">new</span> Person(<span class="string">'lele'</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(vs.longName, <span class="string">'setter'</span>) <span class="comment">//lele读取属性 setter</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 静态方法，不是使用类的实例去调用</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">        <span class="keyword">constructor</span>(name = 'yoyo') &#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">static</span> tail() &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'this is tail'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    Person.tail()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 静态属性 ===&gt; 直接在类上定义</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">        <span class="keyword">constructor</span>(name = 'uouo') &#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">static</span> tail() &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'this is tail'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    Person.numberId = <span class="number">23333</span></span><br><span class="line">    <span class="built_in">console</span>.log(Person.numberId) <span class="comment">//2333</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/异步回调/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/01/异步回调/" class="post-title-link" itemprop="url">异步回调处理</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-01 14:14:36" itemprop="dateCreated datePublished" datetime="2021-07-01T14:14:36+08:00">2021-07-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>之前异步回调总是出现问题，先上一段错误的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">callbacking = <span class="literal">false</span></span><br><span class="line"><span class="keyword">if</span>(!<span class="keyword">this</span>.callbacking) &#123;</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line">    <span class="keyword">this</span>.callback()</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这段代码会走<code>this.callbacking = false</code>但是没有意义，如果callback是同步的，这个if在callback执行期间不再会走第二次，如果是异步的，这样写是不对的。我的callback是异步的。。所以这样写的效果是这样的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line"><span class="keyword">this</span>.callback() <span class="comment">//发起异步请求后callback函数结束（请求未完成）</span></span><br><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
-<p>也就是说，callbacking在异步请求没有结束的时候就已经回归到false了，无法起到想要的作用。应该这样写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.callbacking = <span class="literal">true</span></span><br><span class="line"><span class="keyword">this</span>.callback(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.callbacking = <span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/07/01/异步回调/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/封装运动1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/01/封装运动1/" class="post-title-link" itemprop="url">封装--逐步运动</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-01 14:14:36" itemprop="dateCreated datePublished" datetime="2021-07-01T14:14:36+08:00">2021-07-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//html</span></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=, initial-scale=1.0"</span>&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"ie=edge"</span>&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">    &lt;style&gt;</span></span><br><span class="line"><span class="regexp">        * &#123;</span></span><br><span class="line"><span class="regexp">            margin: 0;</span></span><br><span class="line"><span class="regexp">            padding: 0;</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">        </span></span><br><span class="line"><span class="regexp">        div &#123;</span></span><br><span class="line"><span class="regexp">            width: 200px;</span></span><br><span class="line"><span class="regexp">            height: 200px;</span></span><br><span class="line"><span class="regexp">            opacity: .3;</span></span><br><span class="line"><span class="regexp">            background-color: yellow;</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>style&gt;</span><br><span class="line">&lt;<span class="regexp">/head&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;body&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;&lt;/</span>div&gt;</span><br><span class="line">    &lt;script src=<span class="string">"moveOne.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="keyword">var</span> tag = $tag(<span class="string">'div'</span>)</span><br><span class="line">        tag.onmouseover = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            starSport(tag, <span class="string">'width'</span>, <span class="number">400</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                starSport(tag, <span class="string">'opacity'</span>, <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        tag.onmouseout = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            starSport(tag, <span class="string">'width'</span>, <span class="number">200</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                starSport(tag, <span class="string">'opacity'</span>, <span class="number">30</span>)</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//moveOne.js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">$tag</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(id)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取样式属性</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj, attr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (obj.currentStyle) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj.currentStyle[attr]</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> getComputedStyle(obj, <span class="literal">false</span>)[attr]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//运动</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">starSport</span>(<span class="params">obj, attr, target, fn</span>) </span>&#123; <span class="comment">//当前对象，属性，变化对象</span></span><br><span class="line">    obj.timer = <span class="literal">null</span></span><br><span class="line">    clearInterval(obj.timer)</span><br><span class="line">    obj.timer = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> current = <span class="number">0</span></span><br><span class="line">        <span class="comment">//定义当前属性</span></span><br><span class="line">        <span class="keyword">if</span> (attr === <span class="string">'opacity'</span>) &#123;</span><br><span class="line">            current = <span class="built_in">Math</span>.round(<span class="built_in">parseFloat</span>(getStyle(obj, attr) * <span class="number">100</span>))</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            current = <span class="built_in">parseInt</span>(getStyle(obj, attr))</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//定义速度</span></span><br><span class="line">        <span class="keyword">var</span> speed = (target - current) / <span class="number">8</span></span><br><span class="line">        speed = speed &gt; <span class="number">0</span> ? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果当前值等于目标值</span></span><br><span class="line">        <span class="keyword">if</span> (current === target) &#123;</span><br><span class="line">            <span class="comment">//如果第一次运动停止</span></span><br><span class="line">            clearInterval(obj.timer)</span><br><span class="line">            <span class="keyword">if</span> (fn) &#123;</span><br><span class="line">                fn()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (attr === <span class="string">'opacity'</span>) &#123;</span><br><span class="line">                obj.style[attr] = (current + speed) / <span class="number">100</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                obj.style[attr] = current + speed + <span class="string">'px'</span></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="number">30</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/截取字符串/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/01/截取字符串/" class="post-title-link" itemprop="url">截取字符串最方便的办法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-01 14:14:36" itemprop="dateCreated datePublished" datetime="2021-07-01T14:14:36+08:00">2021-07-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今日解析YouTube视频，采用了YouTube的iframe。<br>其中有一坑是YouTube不允许输入第三方链接，也就是不解析，解决的办法就是<br><code>http://www.youtube.com/embed/VIDEO_ID</code></p>
-<ul>
-<li><p>例如：<br><code>https://www.youtube.com/watch?v=78tNYZUS-ps</code><br>改为：<br><code>http://www.youtube.com/embed/78tNYZUS-ps</code></p>
-</li>
-<li><p>为了判断输入的URL是否是一个有效的，我们采取了后台解析id的办法，返回title。<br>那么我就需要将用户输入的链接进行截取。试了好几种办法，虽然都能实现，但是觉得麻烦，最终选择了，split()方法，他可以将一个字符串分割成字符串数组。</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="built_in">url</span> = <span class="string">'https://www.youtube.com/watch?v=78tNYZUS-ps'</span>;</span><br><span class="line"><span class="keyword">let</span> front = <span class="built_in">url</span>.split(<span class="string">'='</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">let</span> end = <span class="built_in">url</span>.split(<span class="string">'='</span>)[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">console</span>.log(front,end) <span class="comment">//https://www.youtube.com/watch?v 78tNYZUS-ps</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/动态添加属性/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -710,7 +580,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-07-01 14:14:36" itemprop="dateCreated datePublished" datetime="2021-07-01T14:14:36+08:00">2021-07-01</time>
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -760,87 +630,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/webpack/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/01/webpack/" class="post-title-link" itemprop="url">webpack配置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-01 14:14:36" itemprop="dateCreated datePublished" datetime="2021-07-01T14:14:36+08:00">2021-07-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="webpack属性配置"><a href="#webpack属性配置" class="headerlink" title="webpack属性配置"></a>webpack属性配置</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry:&#123;</span><br><span class="line">        <span class="comment">//main默认入口，可以是多入口</span></span><br><span class="line">        main:<span class="string">'./src/main.js'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//出口</span></span><br><span class="line">    output:&#123;</span><br><span class="line">        filemane:<span class="string">'./build.js'</span>,</span><br><span class="line">        <span class="comment">//指定js文件</span></span><br><span class="line">        path:path.join(__dirname,<span class="string">'..'</span>,<span class="string">'dist'</span>,)</span><br><span class="line">        <span class="comment">//最好是绝对路径，代表当前目录的上一级的dist</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="built_in">module</span>:&#123;</span><br><span class="line">           <span class="comment">// 一样的功能rules:   webpack2.x之后新加的</span></span><br><span class="line">           loaders:[       <span class="built_in">require</span>(<span class="string">'./a.css||./a.js'</span>)</span><br><span class="line">               &#123;<span class="attr">test</span>:<span class="regexp">/\.css$/</span>,</span><br><span class="line">                loader:<span class="string">'style-loader!css-loader'</span>,</span><br><span class="line">              <span class="comment">//  顺序是反过来的2!1</span></span><br><span class="line">               &#125;,</span><br><span class="line">               &#123;</span><br><span class="line">                test:<span class="regexp">/\.(jpg|svg)$/</span>,</span><br><span class="line">                loader:<span class="string">'url-loader?limit=4096&amp;name=[name].[ext]'</span>,</span><br><span class="line">               <span class="comment">// 顺序是反过来的2!1 </span></span><br><span class="line">              <span class="comment">//  [name].[ext]内置提供的，因为本身是先读这个文件</span></span><br><span class="line">                options:&#123;</span><br><span class="line">                   limit:<span class="number">4096</span>,</span><br><span class="line">                   name:<span class="string">'[name].[ext]'</span></span><br><span class="line">                &#125;</span><br><span class="line">               &#125;</span><br><span class="line">           ]</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins:[</span><br><span class="line">        <span class="comment">//  插件的执行顺序是依次执行的</span></span><br><span class="line">           <span class="keyword">new</span> htmlWebpackPlugin(&#123;</span><br><span class="line">               template:<span class="string">'./src/index.html'</span>,</span><br><span class="line">               &#125;)</span><br><span class="line">               <span class="comment">//将src下的template属性描述的文件根据当前配置的output.path，将文件移动到该目录</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="webpack-es6"><a href="#webpack-es6" class="headerlink" title="webpack-es6"></a>webpack-es6</h4>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/07/01/webpack/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/webpack-babel-core/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -865,7 +654,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-07-01 14:14:36" itemprop="dateCreated datePublished" datetime="2021-07-01T14:14:36+08:00">2021-07-01</time>
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -925,6 +714,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/webpack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/01/webpack/" class="post-title-link" itemprop="url">webpack配置</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="webpack属性配置"><a href="#webpack属性配置" class="headerlink" title="webpack属性配置"></a>webpack属性配置</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry:&#123;</span><br><span class="line">        <span class="comment">//main默认入口，可以是多入口</span></span><br><span class="line">        main:<span class="string">'./src/main.js'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//出口</span></span><br><span class="line">    output:&#123;</span><br><span class="line">        filemane:<span class="string">'./build.js'</span>,</span><br><span class="line">        <span class="comment">//指定js文件</span></span><br><span class="line">        path:path.join(__dirname,<span class="string">'..'</span>,<span class="string">'dist'</span>,)</span><br><span class="line">        <span class="comment">//最好是绝对路径，代表当前目录的上一级的dist</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="built_in">module</span>:&#123;</span><br><span class="line">           <span class="comment">// 一样的功能rules:   webpack2.x之后新加的</span></span><br><span class="line">           loaders:[       <span class="built_in">require</span>(<span class="string">'./a.css||./a.js'</span>)</span><br><span class="line">               &#123;<span class="attr">test</span>:<span class="regexp">/\.css$/</span>,</span><br><span class="line">                loader:<span class="string">'style-loader!css-loader'</span>,</span><br><span class="line">              <span class="comment">//  顺序是反过来的2!1</span></span><br><span class="line">               &#125;,</span><br><span class="line">               &#123;</span><br><span class="line">                test:<span class="regexp">/\.(jpg|svg)$/</span>,</span><br><span class="line">                loader:<span class="string">'url-loader?limit=4096&amp;name=[name].[ext]'</span>,</span><br><span class="line">               <span class="comment">// 顺序是反过来的2!1 </span></span><br><span class="line">              <span class="comment">//  [name].[ext]内置提供的，因为本身是先读这个文件</span></span><br><span class="line">                options:&#123;</span><br><span class="line">                   limit:<span class="number">4096</span>,</span><br><span class="line">                   name:<span class="string">'[name].[ext]'</span></span><br><span class="line">                &#125;</span><br><span class="line">               &#125;</span><br><span class="line">           ]</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins:[</span><br><span class="line">        <span class="comment">//  插件的执行顺序是依次执行的</span></span><br><span class="line">           <span class="keyword">new</span> htmlWebpackPlugin(&#123;</span><br><span class="line">               template:<span class="string">'./src/index.html'</span>,</span><br><span class="line">               &#125;)</span><br><span class="line">               <span class="comment">//将src下的template属性描述的文件根据当前配置的output.path，将文件移动到该目录</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="webpack-es6"><a href="#webpack-es6" class="headerlink" title="webpack-es6"></a>webpack-es6</h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/07/01/webpack/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/webpack端口/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -949,7 +819,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-07-01 14:14:36" itemprop="dateCreated datePublished" datetime="2021-07-01T14:14:36+08:00">2021-07-01</time>
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -975,6 +845,160 @@
           <p>今日，修改webpack端口号，遇到了问题<br>本来是在webpack.config.js文件夹里添加了devServer属性<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">   <span class="attribute">devServer</span>: &#123;</span><br><span class="line">        <span class="attribute">port</span>: <span class="number">2333</span>,</span><br><span class="line">        <span class="attribute">host</span>: <span class="string">'0.0.0.0'</span>,</span><br><span class="line">        <span class="attribute">overlay</span>: &#123;</span><br><span class="line">            <span class="attribute">errors</span>: true</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attribute">hot</span>: true</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">     <span class="attribute">plugins</span>: [</span><br><span class="line">        new webpack.HotModuleReplacementPlugin(),]</span><br><span class="line"><span class="built_in">``</span>`   </span><br><span class="line"><span class="built_in">`webpack-dev-server`</span> 带 <span class="built_in">`hot`</span> 参数的时候，要去掉config里面的 HotModuleReplacementPlugin</span><br><span class="line">不然会内存溢出。</span><br><span class="line">解决办法：删除</span><br></pre></td></tr></table></figure></p>
 <p>plugins: [<br>        new webpack.HotModuleReplacementPlugin()<br>]<br><code>`</code><br>将<br><code>&quot;dev&quot;: &quot;webpack-dev-server --mode development&quot;,</code><br>改为<br><code>&quot;dev&quot;: &quot;webpack-dev-server --hot --inline&quot;,</code><br>启动服务并不能自动刷新，要自动刷新需要用到webpack-dev-server –hot –inline<br>当使用webpack-dev-server –hot –inline命令时，<br>在每次修改文件，是将文件打包<br>　　保存在内存中并没有写在磁盘里(默认是根据webpack.config.js打包文件，通过–config xxxx.js修改)，这种打包得到的文件<br>　　和项目根目录中的index.html位于同一级（你看不到，因为<br>　　它在内存中并没有在磁盘里）。使用webpack命令将打包后的文件保存在磁盘中<br>　　例如在index.html文件中引入通过webpack-dev-server –hot –inline打包的build.js<br><code>&lt;script src=&quot;build.js&quot;&gt;&lt;/script&gt;</code><br>　　在index.html文件中引入通过webpack命令打包的build.js<br><code>&lt;script src=&quot;./build/build.js&quot;&gt;&lt;/script&gt;</code></p>
 
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/promise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/01/promise/" class="post-title-link" itemprop="url">ES6系列-promise</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// promise</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//传统es5回调方式解决异步</span></span><br><span class="line">    <span class="keyword">let</span> ajax = <span class="function"><span class="keyword">function</span> (<span class="params">callback</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'等待下一步加载。。。'</span>)</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            callback &amp;&amp; callback.call()</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    ajax(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'来了来了'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//执行a-b-c-d-e-f....</span></span><br><span class="line">    <span class="keyword">let</span> ajax = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'等待setTimeOut2加载'</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;  <span class="comment">//执行，中断</span></span><br><span class="line">            setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                resolve()</span><br><span class="line">            &#125;, <span class="number">1000</span>);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    ajax().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'promise'</span>, <span class="string">'setTimeOut2'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> ajax = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'等待第一次加载'</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">            setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                resolve()</span><br><span class="line">            &#125;, <span class="number">1000</span>);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    ajax().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'等待第二次'</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">            setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                resolve()</span><br><span class="line">            &#125;, <span class="number">2000</span>);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">        .then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'我是第三次加载'</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">                setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                    resolve()</span><br><span class="line">                &#125;, <span class="number">3000</span>);</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">        .then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'最后一次加载'</span>)</span><br><span class="line">        &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果中间出现错误，如何捕获</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> ajax = <span class="function"><span class="keyword">function</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'判断num'</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (num &lt; <span class="number">5</span>) &#123;</span><br><span class="line">                resolve()</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'传错了'</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    ajax(<span class="number">6</span>).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'log'</span>, <span class="number">6</span>)</span><br><span class="line">    &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'catch'</span>, err)</span><br><span class="line">    &#125;)</span><br><span class="line">    ajax(<span class="number">2</span>).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'log'</span>, <span class="number">2</span>)</span><br><span class="line">    &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'catch'</span>, err)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用场景promise.all,promise</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 所有图都加载后显示到页面</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">loadImg</span>(<span class="params">src</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> img = <span class="built_in">document</span>.createElement(<span class="string">'img'</span>)</span><br><span class="line">            img.src = src</span><br><span class="line">            img.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                resolve(img)</span><br><span class="line">            &#125;</span><br><span class="line">            img.onerror = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                reject(err)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//图片加载完成onload</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//添加到页面</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">showImg</span>(<span class="params">imgs</span>) </span>&#123;</span><br><span class="line">        imgs.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">document</span>.body.appendChild(item)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// promise.all把多个promise实例当成一个promise实例</span></span><br><span class="line">    <span class="built_in">Promise</span>.all([</span><br><span class="line">        loadImg(<span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1545736426664&amp;di=219db669df4a813bcca53e582da7582e&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201706%2F12%2F20170612130531_wXcaQ.thumb.700_0.jpeg'</span>),</span><br><span class="line">        loadImg(<span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1545736426664&amp;di=2c20d892a361fa4313ae380600c434b8&amp;imgtype=0&amp;src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2Fw440h329%2F20171229%2Fbe5c-fypyuve2937030.jpg'</span>),</span><br><span class="line">        loadImg(<span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1545736426663&amp;di=1ce727cefe866cd3baa0bcdc64dd8cb7&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201706%2F12%2F20170612130914_CrVz5.jpeg'</span>)</span><br><span class="line">    ]).then(showImg)</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//先到先得,有一本图片加载完就加载到页面</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">loadImg</span>(<span class="params">src</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> img = <span class="built_in">document</span>.createElement(<span class="string">'img'</span>)</span><br><span class="line">            img.src = src</span><br><span class="line">            img.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                resolve(img)</span><br><span class="line">            &#125;</span><br><span class="line">            img.onerror = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                reject(err)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">showImg</span>(<span class="params">imgs</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">document</span>.body.appendChild(imgs)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">Promise</span>.race([</span><br><span class="line">        loadImg(<span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1545736426664&amp;di=219db669df4a813bcca53e582da7582e&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201706%2F12%2F20170612130531_wXcaQ.thumb.700_0.jpeg'</span>),</span><br><span class="line">        loadImg(<span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1545736426664&amp;di=2c20d892a361fa4313ae380600c434b8&amp;imgtype=0&amp;src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2Fw440h329%2F20171229%2Fbe5c-fypyuve2937030.jpg'</span>),</span><br><span class="line">        loadImg(<span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1545736426663&amp;di=1ce727cefe866cd3baa0bcdc64dd8cb7&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201706%2F12%2F20170612130914_CrVz5.jpeg'</span>)</span><br><span class="line">    ]).then(showImg)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/rgb转为16进制/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/01/rgb转为16进制/" class="post-title-link" itemprop="url">rgb转化为16进制</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>项目中有个需求是写一个颜色选择器，默认有16个色块可以点击，用户也可以自己输入6位16进制字符，然后动态的给显示用户所输入的颜色。<br>我采用的是vue的<code>:class</code>和<code>:style</code>去完成这个需求。<br>做完之后，发现一个很尴尬的问题，如果我在输入框输入过值，那么他一定会覆盖clss的样式，也就是说，即使我点击色块，颜色也不会出现，于是想到一个解决办法，就是当我点击色块的时候，将色块的颜色值显示到输入框中。<br>那么。如何获取到class中的css样式呢？？<br>我采用了jquery的方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var color = $(`.$&#123;item.color&#125;`).css(<span class="string">'backgroundColor'</span>) <span class="comment">//获取到颜色值</span></span><br></pre></td></tr></table></figure></p>
+<p>额。。。获取到的竟然是个rgb()…….转换起来<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var rgb = a.split(<span class="string">','</span>);  <span class="comment">//将三个数值获取出</span></span><br><span class="line">var r = parseInt(rgb[<span class="number">0</span>].split(<span class="string">'('</span>)[<span class="number">1</span>]);<span class="comment">//第一个值</span></span><br><span class="line">var g = parseInt(rgb[<span class="number">1</span>]);<span class="comment">//第二个值</span></span><br><span class="line">var b = parseInt(rgb[<span class="number">2</span>].split(<span class="string">')'</span>)[<span class="number">0</span>]);<span class="comment">//第三个值</span></span><br><span class="line">var hex = <span class="string">"#"</span> + ((<span class="number">1</span> &lt;&lt; <span class="number">24</span>) + (r &lt;&lt; <span class="number">16</span>) + (g &lt;&lt; <span class="number">8</span>) + b).toString(<span class="number">16</span>).slice(<span class="number">1</span>);</span><br></pre></td></tr></table></figure></p>
+<p>原谅我没有把他封装起来。。。。。<br>最后的<code>hex</code>就是rgb转换后的结果，也就是一个十六进制的色值。<br>呼呼~~一定有比这个更简单的方法吧，思考中。。。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/07/01/rgb转为16进制/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1147,7 +1171,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共27.3k字</span>
+  <span class="post-count">博客全站共27.8k字</span>
 </div>
 -->
 
@@ -1167,6 +1191,8 @@
   
   <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
 <script src="/js/utils.js"></script>
 <script src="/js/schemes/pisces.js"></script>
 <script src="/js/next-boot.js"></script>
@@ -1228,5 +1254,12 @@
   
 
   
+
+  <!--崩溃欺骗-->
+  <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/snow.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
 </html>

@@ -313,8 +313,9 @@ td {
 }
 .btn {
   background: var(--btn-default-bg);
-  border: 2px solid var(--btn-default-border-color);
-  border-radius: 2px;
+  /*border: 2px solid var(--btn-default-border-color);*/
+  border: 1px solid #999;
+  border-radius: 12px;
   color: var(--btn-default-color);
   display: inline-block;
   font-size: 0.875em;
@@ -586,11 +587,12 @@ pre .javascript .function {
   color: #b294bb;
 }
 .blockquote-center {
-  border-left: none;
+  position: relative;
   margin: 40px 0;
   padding: 0;
-  position: relative;
+  border-left: none;
   text-align: center;
+  background-color: #fff;
 }
 .blockquote-center .fa {
   display: block;
@@ -611,6 +613,21 @@ pre .javascript .function {
 .blockquote-center p,
 .blockquote-center div {
   text-align: center;
+}
+.blockquote-center::before,
+.page-home .post-type-quote blockquote::before,
+.page-post-detail .post-type-quote blockquote::before {
+  top: -20px;
+  background-image: url("//51world.win/images/quote-l.svg");
+  border-top: 1px solid #ccc;
+}
+.blockquote-center::after,
+.page-home .post-type-quote blockquote::after,
+.page-post-detail .post-type-quote blockquote::after {
+  bottom: -20px;
+  background-image: url("//51world.win/images/quote-r.svg");
+  border-bottom: 1px solid #ccc;
+  background-position: 100% 8px;
 }
 .post-body .group-picture img {
   margin: 0 auto;
@@ -1291,7 +1308,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5881ff;
+  background: #6087cd;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1490,25 +1507,7 @@ pre .javascript .function {
   color: #999;
   font-size: 0.8125em;
 }
-.site-author-image {
-  display: block;
-  margin: 0 auto;
-  padding: $site-author-image-padding;
-  max-width: 120px;
-  height: $site-author-image-height;
-  border: 1px solid #eee;
-/* 头像圆形 */
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  box-shadow: inset 0 -1px 0 #333 sf;
-/* 设置循环动画 [animation: (play)动画名称 (2s)动画播放时长单位秒或微秒 (ase-out)动画播放的速度曲线为以低速结束
-    (1s)等待1秒然后开始动画 (1)动画播放次数(infinite为循环播放) ]*/
-/* 鼠标经过头像旋转360度 */
-  -webkit-transition: -webkit-transform 1s ease-out;
-  -moz-transition: -moz-transform 1s ease-out;
-  transition: transform 1s ease-out;
-}
+
 img:hover {
 /* 鼠标经过停止头像旋转
   -webkit-animation-play-state:paused;
@@ -1728,7 +1727,7 @@ img:hover {
 }
 @media (min-width: 1200px) {
   .post-body {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 }
 .post-body .exturl .fa {
@@ -1940,7 +1939,7 @@ img:hover {
 .post-body iframe,
 .post-body img,
 .post-body video {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .post-body .video-container {
   height: 0;
@@ -2022,7 +2021,7 @@ img:hover {
   color: #999;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
-  margin: 3px 0 60px 0;
+  /*margin: 3px 0 60px 0;*/
   text-align: center;
 }
 .posts-expand .post-meta .post-description {
@@ -2981,4 +2980,22 @@ ul.breadcrumb li + li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: url("/images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+code {
+  color: #ff7600;
+  background: #fbf7f8;
+  margin: 2px;
 }

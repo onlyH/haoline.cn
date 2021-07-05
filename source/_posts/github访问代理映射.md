@@ -1,12 +1,14 @@
 ---
 title: github访问代理映射 
-date: 2021-07-01 10:39:40 
+date: 2021-07-02 10:39:40 
 tags: [编程,技巧]
 keywords: github访问 
 copyright: true
 ---
-
-### 为本地 hosts 文件添加 Github 相关映射
+<blockquote class="blockquote-center">
+为本地 hosts 文件添加 Github 相关映射
+</blockquote>
+<!-- more -->
 
 1. 打开本地 hosts 文件 win + r => `C:\WINDOWS\system32\drivers\etc`进入
 2. 获取 Github 相关网站的 IP
