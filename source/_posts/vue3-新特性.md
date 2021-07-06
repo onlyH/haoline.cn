@@ -63,21 +63,41 @@ vue3都做了什么呢？
 #### 免费api： https://dog.ceo/dog-api/
 
 #### teleport 瞬间移动
+
 - 将子节点渲染到存在于父组件以外的 DOM 节点
 
 #### definedComponent
+
 - 为ts而定义，保存输入输出整个对象，组件的定义与导出都是 object，更好的提示
 
 #### Suspense
+
 - 异步请求的困境
 - suspense 是 vue3 推出的一个内置的特殊组件
 - 使用 suspense，要返回一个 promise
 
+```vue
+<!--如果放两个组件不显示，那么加一个div即可-->
+<Suspense>
+<template #default>
+  <div>
+    <asyncShow></asyncShow>
+    <dogShow></dogShow>
+  </div>
+</template>
+<template #fallback>
+  <h1>loading ------ </h1>
+</template>
+</Suspense>
+```
+
 #### vue2 全局 API 遇到的问题
+
 - 在单元测试中，全局配置非常容易污染全局环境
 - 在不同的 apps 中，共享一份有不同配置的 vue 对象，也变得非常困难
 
 ##### 全局配置：Vue.config -> app.config
+
 - config.productionTip 被删除
 - config.ignoredElements 改名为 config.isCustomElement
 - config,keyCodes 被删除
@@ -90,5 +110,15 @@ vue3都做了什么呢？
 #### 行为扩展类
 - Vue，minxin -> app.minxin
 - Vue.use -> app.use
+
+
+#### 完美的 vue 实践项目是怎样的？
+- 数据的展示 - 最好是有多级复杂数据的展示
+- 数据的创建 - 可以发散出多个功能
+- 组件的抽象 - 循序渐进的组件开发
+
+- 整体状态数据结构的设计和实现
+- 权限管理和控制
+- 真是的后端 API
 
 
