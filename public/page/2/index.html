@@ -177,7 +177,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">60</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">62</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -232,232 +232,6 @@
 
           <div class="content index posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/js条件语句/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/01/js条件语句/" class="post-title-link" itemprop="url">js条件语句</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="使用Array-includes来处理多重条件"><a href="#使用Array-includes来处理多重条件" class="headerlink" title="使用Array.includes来处理多重条件"></a>使用Array.includes来处理多重条件</h4><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" target="_blank" rel="noopener">Array.includes</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//bad</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(fn === <span class="string">'apply'</span> || fn == <span class="string">'pear'</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'yes'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果筛选条件多</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">param</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> fruits = [<span class="string">'apply'</span>,<span class="string">'pear'</span>,<span class="string">'banana'</span>] <span class="comment">//条件提取到数组</span></span><br><span class="line">    <span class="keyword">if</span>(fruits.includes(param)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'yes'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/07/01/js条件语句/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/module/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/01/module/" class="post-title-link" itemprop="url">ES6系列-模块化</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> A = <span class="number">123</span>; <span class="comment">//导出一个变量</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'test'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">    test() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'class'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123;A,test,Hello&#125; <span class="keyword">from</span> <span class="string">'./index'</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> lesson <span class="keyword">from</span> <span class="string">'./index'</span></span><br><span class="line"><span class="built_in">console</span>.log(lesson.A)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> A = <span class="number">123</span>;</span><br><span class="line">    <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'test'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">        test() &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'hello'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">        A,</span><br><span class="line">        test,</span><br><span class="line">        Hello</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">import</span> 任意变量名 <span class="keyword">from</span> <span class="string">'./index'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/js日常/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/01/js日常/" class="post-title-link" itemprop="url">js日常使用</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> text = <span class="string">'purple haze'</span></span><br><span class="line">text[<span class="string">'length'</span>]</span><br><span class="line">text.length</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//对象所扮演的主要角色实际上是一个属性的集合</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cat = &#123;</span><br><span class="line">    color:<span class="string">'gray'</span>,</span><br><span class="line">    name:<span class="string">'spot'</span>,</span><br><span class="line">    size:<span class="number">46</span></span><br><span class="line">&#125;</span><br><span class="line">cat.size; <span class="comment">//46</span></span><br><span class="line"><span class="keyword">delete</span> cat.size;</span><br><span class="line">cat.size;<span class="comment">//undefind</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> empty = &#123;&#125;</span><br><span class="line">empty.notReally = <span class="number">1000</span></span><br><span class="line">empty;<span class="comment">//&#123;notReally: 1000&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> thing = &#123;</span><br><span class="line">    <span class="string">'gabba'</span>:<span class="string">'hey'</span>,</span><br><span class="line">    <span class="number">5</span>:<span class="number">10</span></span><br><span class="line">&#125;</span><br><span class="line">thing[<span class="string">'5'</span>] <span class="comment">//10</span></span><br><span class="line">thing[<span class="number">2</span>+<span class="number">3</span>] <span class="comment">//10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//中括号会将表达式转化为字符串来判断是否有该属性的名称。</span></span><br><span class="line"><span class="comment">//也可以把变量当成属性名称</span></span><br><span class="line"><span class="keyword">var</span> propertyName = <span class="string">'length'</span></span><br><span class="line"><span class="keyword">var</span> text = <span class="string">'coco'</span></span><br><span class="line">text[propertyName] <span class="comment">//4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//操作符in可以用来判断一个对象是否有某个属性，产生的是布尔值</span></span><br><span class="line"><span class="keyword">var</span> chineseBox = &#123;&#125;</span><br><span class="line">chineseBox.content = chineseBox;</span><br><span class="line"><span class="string">'content'</span> <span class="keyword">in</span> chineseBox <span class="comment">//true</span></span><br><span class="line"><span class="keyword">debugger</span></span><br><span class="line"><span class="string">'content'</span> <span class="keyword">in</span> chineseBox.content<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//对象即集合</span></span><br><span class="line"><span class="keyword">var</span> set = &#123;<span class="string">'spot'</span>:<span class="literal">true</span>&#125;</span><br><span class="line">set[<span class="string">'white'</span>] =<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> set[<span class="string">'spot'</span>]</span><br><span class="line"><span class="string">'aa'</span> <span class="keyword">in</span> set;<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//相同对象的两个引用和包含相同属性的两个不同对象是有区别的。</span></span><br><span class="line"><span class="keyword">var</span> object1 = &#123;<span class="attr">value</span>:<span class="number">10</span>&#125;</span><br><span class="line"><span class="keyword">var</span> object2 = object1</span><br><span class="line"><span class="keyword">var</span> object3 = &#123;<span class="attr">value</span>:<span class="number">10</span>&#125;</span><br><span class="line"><span class="keyword">debugger</span>;</span><br><span class="line">object1 == object2 <span class="comment">//true</span></span><br><span class="line">object1 == object3 <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">object1和object2是两个变量，抓取的是相同的值，这里只有一个实际对象，</span></span><br><span class="line"><span class="comment">因此修改了object1的值，同时也改变了object2的值，</span></span><br><span class="line"><span class="comment">object3指向的是另外一个对象，默认和object1有相同的属性，但各自单独运行</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">比较对象时，js中的==操作符只有在赋予的两个值都完全相同时才能返回true，</span></span><br><span class="line"><span class="comment">比较两个内容相同的不同对象将返回false</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//对象即集合</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">'lele'</span>,<span class="string">'tom'</span>,<span class="string">'jack'</span>,<span class="string">'shuan'</span>]</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">of</span> arr) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`name:<span class="subst">$&#123;i&#125;</span>`</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">range</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> arr = []</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;=item; i++) &#123;</span><br><span class="line">        arr.push(i)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line">range(<span class="number">4</span>) <span class="comment">//01234</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// split()将一个字符串分解成一个数组</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> words = <span class="string">'this is word'</span></span><br><span class="line">words.split(<span class="string">' '</span>) <span class="comment">//空格！！！</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//  如何测试一个段落是否以某个特定单词开头</span></span><br><span class="line"><span class="comment">// charAt()---&gt;用于从某个字符串中获取指定的字符</span></span><br><span class="line"><span class="keyword">var</span> cat = <span class="string">'born 15-11-2003'</span></span><br><span class="line">cat.charAt(<span class="number">0</span>) ==<span class="string">'b'</span> &amp;&amp; cat.charAt(<span class="number">1</span>) == <span class="string">'o'</span> &amp;&amp; cat.charAt(<span class="number">2</span>) ==<span class="string">'r'</span> &amp;&amp; cat.charAt(<span class="number">3</span>) == <span class="string">'n'</span><span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cat.slice(<span class="number">0</span>,<span class="number">4</span>) ==<span class="string">'born'</span><span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">startsWidth</span>(<span class="params">str,comp</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> str.slice(<span class="number">0</span>,comp.length) == comp</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果指定的位置没有字符，charAt将返回空字符，而slice则只是将不存在的内容忽略掉。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//indexOf可以找出字符串第一次出现的位置或者截取字符串中的子串</span></span><br><span class="line"><span class="comment">//如果slice只是一个参数，他将返回从指定位置一直到字符串结束位置之间的字符串</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">catName</span>(<span class="params">paragraph</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> colon = paragraph.indexOf(<span class="string">":"</span>);</span><br><span class="line">    <span class="keyword">return</span> paragraph.slice(colon+<span class="number">2</span>).split(<span class="string">", "</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
       
   
   
@@ -518,82 +292,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/generator/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/01/generator/" class="post-title-link" itemprop="url">ES6系列-generator</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li>generator基本定义,返回的结果类似于Iterator，其实就是返回的Iterator接口，当函数运行的时候，调用一次next(),会执行一个yield.一个遍历器生成函数，赋值给Symbol.iterator，从而使这个接口Iterator</li>
-<li>任何一个iterator接口都会指向Symbol.iterator属性上<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 异步编程的解决方案</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> fn = <span class="function"><span class="keyword">function</span>* (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">yield</span> <span class="string">'a'</span></span><br><span class="line">        <span class="keyword">yield</span> <span class="string">'b'</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'c'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> test = fn()</span><br><span class="line">    <span class="built_in">console</span>.log(test.next())</span><br><span class="line">    <span class="built_in">console</span>.log(test.next())</span><br><span class="line">    <span class="built_in">console</span>.log(test.next())</span><br><span class="line">    <span class="built_in">console</span>.log(test.next())</span><br><span class="line"></span><br><span class="line">    <span class="comment">// &#123;value: "a", done: false&#125;</span></span><br><span class="line">    <span class="comment">//&#123;value: "b", done: false&#125;</span></span><br><span class="line">    <span class="comment">//&#123;value: "c", done: true&#125;</span></span><br><span class="line">    <span class="comment">//&#123;value: undefined, done: true&#125;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//  改写Iterator，使用for..of循环对象</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;&#125;</span><br><span class="line">    obj[<span class="built_in">Symbol</span>.iterator] = <span class="function"><span class="keyword">function</span>* (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">yield</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">yield</span> <span class="number">2</span></span><br><span class="line">        <span class="keyword">yield</span> <span class="number">3</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> value <span class="keyword">of</span> obj) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(value)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">        1</span></span><br><span class="line"><span class="comment">        2</span></span><br><span class="line"><span class="comment">        3</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 什么时候优势最大 -- 状态机  a-b-c-a...</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> state = <span class="function"><span class="keyword">function</span>* (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">yield</span> <span class="string">'a'</span></span><br><span class="line">            <span class="keyword">yield</span> <span class="string">'b'</span></span><br><span class="line">            <span class="keyword">yield</span> <span class="string">'c'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> status = state()</span><br><span class="line">    <span class="built_in">console</span>.log(status.next())</span><br><span class="line">    <span class="built_in">console</span>.log(status.next())</span><br><span class="line">    <span class="built_in">console</span>.log(status.next())</span><br><span class="line">    <span class="built_in">console</span>.log(status.next())</span><br><span class="line">    <span class="built_in">console</span>.log(status.next())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// &#123;value: "a", done: false&#125;</span></span><br><span class="line">    <span class="comment">// &#123;value: "b", done: false&#125;</span></span><br><span class="line">    <span class="comment">// &#123;value: "c", done: false&#125;</span></span><br><span class="line">    <span class="comment">// &#123;value: "a", done: false&#125;</span></span><br><span class="line">    <span class="comment">// &#123;value: "b", done: false&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 语法糖 async</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> state = <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">await</span> <span class="string">'a'</span>;</span><br><span class="line">            <span class="keyword">await</span> <span class="string">'b'</span>;</span><br><span class="line">            <span class="keyword">await</span> <span class="string">'c'</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> status = state()</span><br><span class="line">    <span class="built_in">console</span>.log(status.next())</span><br><span class="line">    <span class="built_in">console</span>.log(status.next())</span><br><span class="line">    <span class="built_in">console</span>.log(status.next())</span><br><span class="line">    <span class="built_in">console</span>.log(status.next())</span><br><span class="line">    <span class="built_in">console</span>.log(status.next())</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 抽奖逻辑</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> draw = <span class="function"><span class="params">count</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//具体逻辑。。</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`还剩下<span class="subst">$&#123;count&#125;</span>次`</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> residus = <span class="function"><span class="keyword">function</span>* (<span class="params">count</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            count--;</span><br><span class="line">            <span class="keyword">yield</span> draw(count)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> start = residus(<span class="number">5</span>) <span class="comment">//5为从后台取得值</span></span><br><span class="line">    <span class="keyword">let</span> btn = <span class="built_in">document</span>.createElement(<span class="string">'button'</span>)</span><br><span class="line">    btn.innerHTML = <span class="string">'按钮'</span></span><br><span class="line">    btn.id = <span class="string">'startBtn'</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(btn)</span><br><span class="line">    btn.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        start.next()</span><br><span class="line">    &#125;, <span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//长轮询</span></span><br><span class="line">    <span class="keyword">let</span> ajax = <span class="function"><span class="keyword">function</span>* (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">yield</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">            setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                reslove(&#123; <span class="attr">code</span>: <span class="number">1</span> &#125;)</span><br><span class="line">            &#125;, <span class="number">200</span>);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> pull = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> generator = ajax()</span><br><span class="line">        <span class="keyword">let</span> step = generator.next()</span><br><span class="line">        step.value.then(<span class="function"><span class="params">d</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (d.value != <span class="number">0</span>) &#123;</span><br><span class="line">                setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">'wait'</span>)</span><br><span class="line">                &#125;, <span class="number">1000</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(d)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-
       
     </div>
 
@@ -772,6 +470,81 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/decorator/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/01/decorator/" class="post-title-link" itemprop="url">ES6系列-decorator</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-01 15:30:54" itemprop="dateCreated datePublished" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>decorator：修饰器是一个函数，修改行为，修改类的行为。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> readonly = <span class="function">(<span class="params">target, name, descriptor</span>) =&gt;</span> &#123;</span><br><span class="line">        descriptor.writable = <span class="literal">false</span></span><br><span class="line">        <span class="keyword">return</span> descriptor</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">        @readonly</span><br><span class="line">        time() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">'2012-12-12'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> test = <span class="keyword">new</span> Test()</span><br><span class="line">    test.time = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'reset time'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(test.time())</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> typename = <span class="function">(<span class="params">target, name, descriptor</span>) =&gt;</span> &#123;</span><br><span class="line">        target.myname = <span class="string">'hello'</span></span><br><span class="line">    &#125;</span><br><span class="line">    @typename</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'类的修饰'</span>, Test.myname)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> log = <span class="function">(<span class="params">type</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">target, name, descriptor</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">let</span> src_method = descriptor.value;</span><br><span class="line">            descriptor.value = <span class="function">(<span class="params">...arg</span>)=&gt;</span>&#123;</span><br><span class="line">                src_method.apply(target.arg);</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">`log <span class="subst">$&#123;type&#125;</span>`</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">AD</span></span>&#123;</span><br><span class="line">        @log(<span class="string">'show'</span>)</span><br><span class="line">        show() &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'ad is show'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        @log(<span class="string">'click'</span>)</span><br><span class="line">        click() &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'ad is click'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> ad = <span class="keyword">new</span> AD()</span><br><span class="line">    ad.show()</span><br><span class="line">    ad.click()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">    ad is show</span></span><br><span class="line"><span class="comment">    log show</span></span><br><span class="line"><span class="comment">    ad is click</span></span><br><span class="line"><span class="comment">    log click</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/css奇淫技巧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -853,7 +626,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/decorator/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/babel运行/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -867,7 +640,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/07/01/decorator/" class="post-title-link" itemprop="url">ES6系列-decorator</a>
+            <a href="/2021/07/01/babel运行/" class="post-title-link" itemprop="url">运行babel，webpack，rollop.js用法</a>
         </h2>
 
         <div class="post-meta">
@@ -885,7 +658,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                  <a href="/categories/babel/" itemprop="url" rel="index"><span itemprop="name">babel</span></a>
                 </span>
             </span>
 
@@ -901,9 +674,31 @@
 
       
           <ul>
-<li>decorator：修饰器是一个函数，修改行为，修改类的行为。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> readonly = <span class="function">(<span class="params">target, name, descriptor</span>) =&gt;</span> &#123;</span><br><span class="line">        descriptor.writable = <span class="literal">false</span></span><br><span class="line">        <span class="keyword">return</span> descriptor</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">        @readonly</span><br><span class="line">        time() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">'2012-12-12'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> test = <span class="keyword">new</span> Test()</span><br><span class="line">    test.time = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'reset time'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(test.time())</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> typename = <span class="function">(<span class="params">target, name, descriptor</span>) =&gt;</span> &#123;</span><br><span class="line">        target.myname = <span class="string">'hello'</span></span><br><span class="line">    &#125;</span><br><span class="line">    @typename</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'类的修饰'</span>, Test.myname)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> log = <span class="function">(<span class="params">type</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">target, name, descriptor</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">let</span> src_method = descriptor.value;</span><br><span class="line">            descriptor.value = <span class="function">(<span class="params">...arg</span>)=&gt;</span>&#123;</span><br><span class="line">                src_method.apply(target.arg);</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">`log <span class="subst">$&#123;type&#125;</span>`</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">AD</span></span>&#123;</span><br><span class="line">        @log(<span class="string">'show'</span>)</span><br><span class="line">        show() &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'ad is show'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        @log(<span class="string">'click'</span>)</span><br><span class="line">        click() &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'ad is click'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> ad = <span class="keyword">new</span> AD()</span><br><span class="line">    ad.show()</span><br><span class="line">    ad.click()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">    ad is show</span></span><br><span class="line"><span class="comment">    log show</span></span><br><span class="line"><span class="comment">    ad is click</span></span><br><span class="line"><span class="comment">    log click</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>运行 <code>npm init -y</code></li>
+<li><code>npm i --save-dev babel-core babel-preset-es2015 babel-preset-latest</code></li>
+<li>创建.babelrc</li>
+<li><p><code>npm install --save-dev babel-cli</code><br>本地就不能用 babel 命令了，在 package.json 文件中添加：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"script"</span>: &#123;</span><br><span class="line">        <span class="attr">"build"</span>: <span class="string">"babel src -d lib"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建 <code>./src/index.js</code></p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">把<span class="keyword">babel-preset-es2015换成babel-preset-env</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">babel-preset-env包括了之前的：</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">babel-preset-es2015, </span><span class="keyword">babel-preset-es2016, </span><span class="keyword">babel-preset-es2017</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">babel-preset-latest</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">其他社区的es20xx</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">babel-preset-node5, </span><span class="keyword">babel-preset-es2015-node, </span>等等</span><br><span class="line"></span><br><span class="line">// <span class="string">"build"</span>: <span class="string">"babel src -d lib"</span>,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开发环境 webpack<br><code>npm i webpack babel-loader --save-dev</code></p>
+</li>
+<li>配置webpack.config.js</li>
+<li>配置package.json中的script</li>
+<li>运行 npm start</li>
 </ul>
-
+<p>运行项目需要安装webpack-dev-server，webpack4x后要区分development和production<br>不支持loader-core@8，需要卸载<br><code>npm un loader-core</code><br>安装<br><code>npm i --save-dev babel-loader@7</code></p>
+<h4 id="rollup-js-lt-—-react-vue都是这样打包的"><a href="#rollup-js-lt-—-react-vue都是这样打包的" class="headerlink" title="rollup.js   &lt;—-react,vue都是这样打包的"></a>rollup.js   &lt;—-react,vue都是这样打包的</h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/07/01/babel运行/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -996,10 +791,252 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/在项目中使用二次元（live2d）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/01/在项目中使用二次元（live2d）/" class="post-title-link" itemprop="url">在项目中使用二次元（live2d）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-07-01 15:02:41 / 修改时间：18:22:00" itemprop="dateCreated datePublished" datetime="2021-07-01T15:02:41+08:00">2021-07-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote class="blockquote-center"><br><image src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzk4YjQzNTJhZ3kxZzI5NGVocG96aWoyMDVhMDVuZ2xrLmpwZw?x-oss-process=image/format,png"></image><br>了解live2d使用原理<br></blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/07/01/在项目中使用二次元（live2d）/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/01/vue3-新特性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/01/vue3-新特性/" class="post-title-link" itemprop="url">vue3-新特性</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-01 14:27:55" itemprop="dateCreated datePublished" datetime="2021-07-01T14:27:55+08:00">2021-07-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-06 14:27:39" itemprop="dateModified" datetime="2021-07-06T14:27:39+08:00">2021-07-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><blockquote class="blockquote-center"><br><img src="https://www.runoob.com/wp-content/uploads/2017/01/vue.png"><br>vue3都做了什么呢？<br></blockquote><br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/07/01/vue3-新特性/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/06/17/vue3-ts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/17/vue3-ts/" class="post-title-link" itemprop="url">vue3-ts</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-17 16:24:18" itemprop="dateCreated datePublished" datetime="2021-06-17T16:24:18+08:00">2021-06-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-01 15:30:54" itemprop="dateModified" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="程序-更容易理解"><a href="#程序-更容易理解" class="headerlink" title="程序 更容易理解"></a>程序 更容易理解</h4><ul>
+<li>函数或者方法输入输出的参数类型，外部条件等</li>
+<li>动态语言的约束：需要手动调整等过程</li>
+<li>有了ts，diamante本身就可以回答上述问题</li>
+</ul>
+<h4 id="效率更高"><a href="#效率更高" class="headerlink" title="效率更高"></a>效率更高</h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/17/vue3-ts/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1067,7 +1104,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-count">62</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1148,7 +1185,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共27.8k字</span>
+  <span class="post-count">博客全站共28.9k字</span>
 </div>
 -->
 
