@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45266f24-b1be-445d-867b-19d3594d1478" name="Default Changelist" comment="feat：修改配置文件">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/表单验证.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/表单验证.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/github访问代理映射.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/github访问代理映射.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

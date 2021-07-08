@@ -1,5 +1,5 @@
 ---
-title: github访问代理映射 
+title: github访问代理映射 与 配置文件查找
 date: 2021-07-02 10:39:40 
 tags: [编程,技巧]
 keywords: github访问 
@@ -24,4 +24,10 @@ copyright: true
 ```
 
 4. 使用`ping github.com`查询是否配置成功
+
+### 配置文件查找
+
+- 在"Git Bash"命令行工具中输入“cd && ls -a”
+- 再通过“view .gitconfig”命令打开.gitconfig文件
+- 强制保存:wq!
     
