@@ -380,80 +380,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/09/webpack端口/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/09/webpack端口/" class="post-title-link" itemprop="url">webpack端口号</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-09 11:04:02" itemprop="dateCreated datePublished" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今日，修改webpack端口号，遇到了问题<br>本来是在webpack.config.js文件夹里添加了devServer属性<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">   <span class="attribute">devServer</span>: &#123;</span><br><span class="line">        <span class="attribute">port</span>: <span class="number">2333</span>,</span><br><span class="line">        <span class="attribute">host</span>: <span class="string">'0.0.0.0'</span>,</span><br><span class="line">        <span class="attribute">overlay</span>: &#123;</span><br><span class="line">            <span class="attribute">errors</span>: true</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attribute">hot</span>: true</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">     <span class="attribute">plugins</span>: [</span><br><span class="line">        new webpack.HotModuleReplacementPlugin(),]</span><br><span class="line"><span class="built_in">``</span>`   </span><br><span class="line"><span class="built_in">`webpack-dev-server`</span> 带 <span class="built_in">`hot`</span> 参数的时候，要去掉config里面的 HotModuleReplacementPlugin</span><br><span class="line">不然会内存溢出。</span><br><span class="line">解决办法：删除</span><br></pre></td></tr></table></figure></p>
-<p>plugins: [<br>        new webpack.HotModuleReplacementPlugin()<br>]<br><code>`</code><br>将<br><code>&quot;dev&quot;: &quot;webpack-dev-server --mode development&quot;,</code><br>改为<br><code>&quot;dev&quot;: &quot;webpack-dev-server --hot --inline&quot;,</code><br>启动服务并不能自动刷新，要自动刷新需要用到webpack-dev-server –hot –inline<br>当使用webpack-dev-server –hot –inline命令时，<br>在每次修改文件，是将文件打包<br>　　保存在内存中并没有写在磁盘里(默认是根据webpack.config.js打包文件，通过–config xxxx.js修改)，这种打包得到的文件<br>　　和项目根目录中的index.html位于同一级（你看不到，因为<br>　　它在内存中并没有在磁盘里）。使用webpack命令将打包后的文件保存在磁盘中<br>　　例如在index.html文件中引入通过webpack-dev-server –hot –inline打包的build.js<br><code>&lt;script src=&quot;build.js&quot;&gt;&lt;/script&gt;</code><br>　　在index.html文件中引入通过webpack命令打包的build.js<br><code>&lt;script src=&quot;./build/build.js&quot;&gt;&lt;/script&gt;</code></p>
-
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/09/webpack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -511,6 +437,80 @@
             </div>
           <!--/noindex-->
         
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2021/07/09/webpack端口/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/09/webpack端口/" class="post-title-link" itemprop="url">webpack端口号</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-09 11:04:02" itemprop="dateCreated datePublished" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今日，修改webpack端口号，遇到了问题<br>本来是在webpack.config.js文件夹里添加了devServer属性<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">   <span class="attribute">devServer</span>: &#123;</span><br><span class="line">        <span class="attribute">port</span>: <span class="number">2333</span>,</span><br><span class="line">        <span class="attribute">host</span>: <span class="string">'0.0.0.0'</span>,</span><br><span class="line">        <span class="attribute">overlay</span>: &#123;</span><br><span class="line">            <span class="attribute">errors</span>: true</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attribute">hot</span>: true</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">     <span class="attribute">plugins</span>: [</span><br><span class="line">        new webpack.HotModuleReplacementPlugin(),]</span><br><span class="line"><span class="built_in">``</span>`   </span><br><span class="line"><span class="built_in">`webpack-dev-server`</span> 带 <span class="built_in">`hot`</span> 参数的时候，要去掉config里面的 HotModuleReplacementPlugin</span><br><span class="line">不然会内存溢出。</span><br><span class="line">解决办法：删除</span><br></pre></td></tr></table></figure></p>
+<p>plugins: [<br>        new webpack.HotModuleReplacementPlugin()<br>]<br><code>`</code><br>将<br><code>&quot;dev&quot;: &quot;webpack-dev-server --mode development&quot;,</code><br>改为<br><code>&quot;dev&quot;: &quot;webpack-dev-server --hot --inline&quot;,</code><br>启动服务并不能自动刷新，要自动刷新需要用到webpack-dev-server –hot –inline<br>当使用webpack-dev-server –hot –inline命令时，<br>在每次修改文件，是将文件打包<br>　　保存在内存中并没有写在磁盘里(默认是根据webpack.config.js打包文件，通过–config xxxx.js修改)，这种打包得到的文件<br>　　和项目根目录中的index.html位于同一级（你看不到，因为<br>　　它在内存中并没有在磁盘里）。使用webpack命令将打包后的文件保存在磁盘中<br>　　例如在index.html文件中引入通过webpack-dev-server –hot –inline打包的build.js<br><code>&lt;script src=&quot;build.js&quot;&gt;&lt;/script&gt;</code><br>　　在index.html文件中引入通过webpack命令打包的build.js<br><code>&lt;script src=&quot;./build/build.js&quot;&gt;&lt;/script&gt;</code></p>
+
       
     </div>
 
