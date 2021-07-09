@@ -61,6 +61,7 @@ vue3都做了什么呢？
 ![生命周期](vue3-新特性/生命周期.png)
 
 #### 免费api： https://dog.ceo/dog-api/
+git push origin HEAD:<name-of-remote-branch>
 
 #### teleport 瞬间移动
 

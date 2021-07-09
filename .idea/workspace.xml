@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45266f24-b1be-445d-867b-19d3594d1478" name="Default Changelist" comment="feat：修改配置文件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/vue3-新特性.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/vue3-新特性.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="21-06-17" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -30,12 +36,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/themes/next-reloaded/source/css/_variables/base.styl" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/themes/next-reloaded/source/css/_custom/custom.styl" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/themes/next/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/themes/next-reloaded/layout/_partials/footer.swig" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/themes/next-reloaded/layout/_layout.swig" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/themes/next-reloaded/layout/_macro/post.swig" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/themes/next-reloaded/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/themes/next-reloaded/layout/_macro/post.swig" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/themes/next-reloaded/source/css/_custom/custom.styl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/themes/next-reloaded/layout/_partials/footer.swig" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1u3kpbDeAVcTy0ZIfA1RylaXlQd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -57,7 +63,7 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="npm.g">
+  <component name="RunManager" selected="npm.s">
     <configuration name="c" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -102,8 +108,9 @@
       <list>
         <item itemvalue="npm.s" />
         <item itemvalue="npm.g" />
-        <item itemvalue="npm.c" />
         <item itemvalue="npm.d" />
+        <item itemvalue="npm.c" />
+        <item itemvalue="npm.s" />
       </list>
     </recent_temporary>
   </component>
