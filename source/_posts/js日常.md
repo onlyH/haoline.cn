@@ -57,4 +57,30 @@ function list(head) {
 一种<em style="color: #0d95e8">无序且唯一</em>的数据结构
 
 ES6 中有集合，名为 Set
+
+集合的常用操作：去重，判断某元素是否在集合中，求交集
+```javascript
+var a = [1,1,2,2,2]
+var d = [...new Set(a)]
+var e =  Array.from(new Set(a))
+```
+ 判断元素是否在集合中
+```javascript
+const set = new Set(arr)
+const has = set.has(1)
+```
+
+求交集
+```javascript
+const set2 = new Set([2,3])
+const set3 = new Set([...set].filter(item=>set2.has(item)))
+```
+
+</details>
+
+#### 字典是什么
+<details>
+<summary>展开查看</summary>
+与集合类似，字典也是一种存储唯一值的数据结构，但它是以<em style="color: #0d95e8">键值对</em>的形式来存储
+
 </details>
