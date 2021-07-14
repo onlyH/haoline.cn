@@ -177,7 +177,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">63</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">65</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -236,6 +236,195 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/03/01/vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/01/vue/" class="post-title-link" itemprop="url">vue日常学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-03-01 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-01T00:00:00+08:00">2018-03-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>路由操作的基本步骤</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入对象</span></span><br><span class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> ’vue-router‘</span><br><span class="line"><span class="comment">//安装插件</span></span><br><span class="line">Vue.use(VueRouter); <span class="comment">//挂载属性的行为</span></span><br><span class="line"><span class="comment">//创建理由对象</span></span><br><span class="line"><span class="keyword">let</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">    routers:[&#123;</span><br><span class="line">        name:<span class="string">'xxx'</span>,<span class="attr">path</span>:<span class="string">'/xxx'</span>,组件</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//将路由对象放入到options中的 new Vue()</span></span><br><span class="line"><span class="keyword">new</span> vue(&#123;</span><br><span class="line">    router</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置</p>
+</li>
+</ul>
+<ul>
+<li>1: &lt;router-link :to={name:’xxx’}&gt;</li>
+<li>2: 配置路由规则<code>{name:&#39;xxx&#39;,path:&#39;xxx&#39;,组件名}</code></li>
+<li>3: 作了什么<pre><code>+ 在created事件函数中，获取路由参数
++ 发起请求，把数据挂在上去
+</code></pre></li>
+</ul>
+<ul>
+<li>参数<ul>
+<li>查询字符串(#/beijing?id=1&amp;age=2)</li>
+</ul>
+</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/03/01/vue/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/03/01/回调函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/01/回调函数/" class="post-title-link" itemprop="url">回调函数</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-03-01 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-01T00:00:00+08:00">2018-03-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>js代码是顺序执行的，如果需要等到一个操作结束之后再进行下一个操作，这个时候需要用到回调函数</li>
+<li>函数也是一种数据结构，可以像变量一样使用</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/02/28/axios1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -267,7 +456,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-01 15:30:54" itemprop="dateModified" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -347,7 +536,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-01 15:30:54" itemprop="dateModified" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -427,7 +616,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-01 15:30:54" itemprop="dateModified" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -520,7 +709,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-01 15:30:54" itemprop="dateModified" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -616,7 +805,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-01 15:30:54" itemprop="dateModified" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -708,7 +897,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-02 19:29:29" itemprop="dateModified" datetime="2021-07-02T19:29:29+08:00">2021-07-02</time>
+                <time title="修改时间：2021-07-09 10:51:03" itemprop="dateModified" datetime="2021-07-09T10:51:03+08:00">2021-07-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -798,7 +987,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-01 15:30:54" itemprop="dateModified" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -877,7 +1066,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-01 15:30:54" itemprop="dateModified" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -902,190 +1091,6 @@
       
           <p>今日工作需求，写了一个既可以上传输入又可以下拉列表的输入框<br>总结下这个功能的实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"> &lt;input type=<span class="string">"text"</span></span><br><span class="line">                 id=<span class="string">"selectId"</span></span><br><span class="line">                 placeholder=<span class="string">"Select Teacher"</span></span><br><span class="line">                 v-model=<span class="string">"teaName"</span></span><br><span class="line">                 value=<span class="string">""</span></span><br><span class="line">                 @click=<span class="string">"selectTeacher"</span></span><br><span class="line">                 <span class="class"><span class="keyword">class</span></span>=<span class="string">"form-control pr"</span>&gt;</span><br><span class="line">                 &lt;img src=<span class="string">"/static/image/course-back.png"</span></span><br><span class="line">                 <span class="class"><span class="keyword">class</span></span>=<span class="string">"course-select-img"</span> </span><br><span class="line">                 :<span class="class"><span class="keyword">class</span></span>=<span class="string">"&#123;'course-select-img-transform':teaSelect&#125;"</span>&gt;</span><br><span class="line"> &lt;--下拉列表--&gt;</span><br><span class="line">          &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"course-select "</span> </span><br><span class="line">               v-show=<span class="string">"teaSelect"</span>&gt;</span><br><span class="line">          &lt;ul&gt;</span><br><span class="line">          &lt;li v-<span class="keyword">for</span>=<span class="string">"(item,index) in filtedTeacher"</span></span><br><span class="line">              @click=<span class="string">"selectOption(item)"</span>&gt;&#123;&#123;item.name&#125;&#125;&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">          &lt;/u</span>l&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/省略列表显示部分，着重记录下输入匹配的方法</span></span><br><span class="line"><span class="regexp">data() &#123;</span></span><br><span class="line"><span class="regexp">    return&#123;</span></span><br><span class="line"><span class="regexp">        teachers:[] /</span><span class="regexp">/接收后台传来的对象</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">computed:&#123;</span></span><br><span class="line"><span class="regexp">    let filtedTeacher = [];</span></span><br><span class="line"><span class="regexp">    let inputName = this.teaName</span></span><br><span class="line"><span class="regexp">    if(!inputName || !inputName.length) &#123;</span></span><br><span class="line"><span class="regexp">        return this.teachers /</span><span class="regexp">/把原数组返回</span></span><br><span class="line"><span class="regexp">    &#125;else&#123;</span></span><br><span class="line"><span class="regexp">        for(var teacher of this.teachers) &#123;</span></span><br><span class="line"><span class="regexp">            if(teacher.name.indexOf(inputName) !== -1) &#123;</span></span><br><span class="line"><span class="regexp">                filtedTeacher.push(teacher)</span></span><br><span class="line"><span class="regexp">            &#125;</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure></p>
 
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2017/12/02/闭包/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/12/02/闭包/" class="post-title-link" itemprop="url">闭包</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2017-12-02 00:00:00" itemprop="dateCreated datePublished" datetime="2017-12-02T00:00:00+08:00">2017-12-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-01 15:30:54" itemprop="dateModified" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>当函数可以记住并访问所在的词法作用域时，就产生了闭包，即使函数是在当前词法作用域之外执行。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(a)  <span class="comment">//2</span></span><br><span class="line">    &#125;</span><br><span class="line">    bar()</span><br><span class="line">&#125;</span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> bar;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> baz = foo();</span><br><span class="line">baz();<span class="comment">//2  闭包</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//bar()的词法作用域能够与访问foo()的内部作用域，将bar()函数本身当做一个值类型进行传递（将bar所引用的函数对象本身当做返回值）在foo()执行后，其返回值(bar()函数)赋值给变量baz并调用baz()，实际上只是通过不同的标识符引用调用了内部的函数bar(),bar() 显然可以被正常执行。但是在这个例子中，它在自己定义的词法作用域以外的地方 执行。</span></span><br><span class="line"><span class="comment">//在 foo() 执行后，通常会期待 foo() 的整个内部作用域都被销毁，因为我们知道引擎有垃 圾回收器用来释放不再使用的内存空间。由于看上去 foo() 的内容不会再被使用，所以很 自然地会考虑对其进行回收。</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>闭包的“神奇”之处正是可以阻止这件事情的发生。事实上内部作用域依然存在，因此 没有被回收。谁在使用这个内部作用域?原来是 bar() 本身在使用。bar()拥有涵盖 foo() 内部作用域的闭包,使得该作用域能够一直存活，以供 bar() 在之后任何时间进行引用。</p>
-<h6 id="bar-依然持有对该作用域的引用，而这个引用就叫作闭包。"><a href="#bar-依然持有对该作用域的引用，而这个引用就叫作闭包。" class="headerlink" title="bar() 依然持有对该作用域的引用，而这个引用就叫作闭包。"></a>bar() 依然持有对该作用域的引用，而这个引用就叫作闭包。</h6></li>
-<li>这个函数在定义时的词法作用域以外的地方被调用。闭包使得函数可以继续访问定义时的<br>词法作用域。<h6 id="无论使用何种方式对函数类型的值进行传递，当函数在别处被调用时都可以观察到-闭包。"><a href="#无论使用何种方式对函数类型的值进行传递，当函数在别处被调用时都可以观察到-闭包。" class="headerlink" title="无论使用何种方式对函数类型的值进行传递，当函数在别处被调用时都可以观察到 闭包。"></a>无论使用何种方式对函数类型的值进行传递，当函数在别处被调用时都可以观察到 闭包。</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">baz</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(a) <span class="comment">//2</span></span><br><span class="line">    &#125;</span><br><span class="line">    bar(baz)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    fn()</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//把内部函数 baz 传递给 bar，当调用这个内部函数时(现在叫作 fn)，它涵盖的 foo()内部作用域的闭包就可以观察到了，因为它能够访问 a。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fn;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">baz</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">    fn = baz;<span class="comment">//将 baz 分配给全局变量</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    fn() <span class="comment">//这就是闭包!</span></span><br><span class="line">&#125;</span><br><span class="line">foo()</span><br><span class="line">bar() <span class="comment">//2</span></span><br><span class="line"><span class="comment">//无论通过何种手段将内部函数传递到所在的词法作用域以外，它都会持有对原始定义作用 域的引用，无论在何处执行这个函数都会使用闭包。</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="经典"><a href="#经典" class="headerlink" title="经典"></a>经典</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wait</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(message)</span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">&#125; </span><br><span class="line">wait(<span class="string">'hello , closure '</span>)</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2017/12/02/闭包/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-    <div>
-          
-    </div>
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2017/12/01/作用域/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="郝洁">
-      <meta itemprop="description" content="web开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="郝洁的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/12/01/作用域/" class="post-title-link" itemprop="url">作用域</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2017-12-01 00:00:00" itemprop="dateCreated datePublished" datetime="2017-12-01T00:00:00+08:00">2017-12-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-01 15:30:54" itemprop="dateModified" datetime="2021-07-01T15:30:54+08:00">2021-07-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="ReferenceError-同作用域判别失败相关，而-TypeError-则代表作用域判别成功了，但是对结果的操作是非法或不合理的。"><a href="#ReferenceError-同作用域判别失败相关，而-TypeError-则代表作用域判别成功了，但是对结果的操作是非法或不合理的。" class="headerlink" title="ReferenceError 同作用域判别失败相关，而 TypeError 则代表作用域判别成功了，但是对结果的操作是非法或不合理的。"></a>ReferenceError 同作用域判别失败相关，而 TypeError 则代表作用域判别成功了，但是对结果的操作是非法或不合理的。</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//js具有基于函数的作用域，每声明一个函数都会为其自身创造一个气泡，而其他结构都不会创建作用域气泡，但并非完全真确</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="number">2</span>;</span><br><span class="line">    <span class="comment">//..</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">//..</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//..</span></span><br><span class="line">    <span class="keyword">var</span> c = <span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// foo(..)包含了a,b,c,bar，所以无法从foo(..)的外部对他进行访问，这些标识符全都无法从全局作用域中进行访问。</span></span><br><span class="line">bar() <span class="comment">//ReferenceError</span></span><br><span class="line"><span class="built_in">console</span>.log(a,b,c) <span class="comment">//ReferenceError</span></span><br></pre></td></tr></table></figure>
-<h5 id="函数作用域：属于这个函数的全部变量都可以在整个函数的范围内使用及复用（嵌套的作用域中也可以使用）"><a href="#函数作用域：属于这个函数的全部变量都可以在整个函数的范围内使用及复用（嵌套的作用域中也可以使用）" class="headerlink" title="函数作用域：属于这个函数的全部变量都可以在整个函数的范围内使用及复用（嵌套的作用域中也可以使用）"></a>函数作用域：属于这个函数的全部变量都可以在整个函数的范围内使用及复用（嵌套的作用域中也可以使用）</h5>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2017/12/01/作用域/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -1177,7 +1182,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1258,7 +1263,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共29k字</span>
+  <span class="post-count">博客全站共31.8k字</span>
 </div>
 -->
 
