@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+
+
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "2f08acae"
+    });
+  daovoice('update');
+  </script>
+
+
+
+  <meta name="description" content="联系方式个人信息 郝洁/女 本科/黄河科技大学/2018 工作年限：2年 技术博客：haoline.cn Github：http://github.com/onlyH  期望职位：web前端 期望城市：北京  工作经历新加坡艾克伦公司北京代表处 （ 2018年2月 ~ 至今 ）后台管理项目，超级管理后台项目  （2018.03-2018.05）项目描述：该管理平台是针对上课系统进行功能补充的后台管">
+<meta name="keywords" content="前端博客,JavaScript,html5,css3,Jquery,NodeJs,Ubuntu（#博客关键字）">
+<meta property="og:type" content="website">
+<meta property="og:title" content="郝洁的小栈">
+<meta property="og:url" content="https://github.com/onlyH/onlyh.github.io/about/index.html">
+<meta property="og:site_name" content="郝洁的小栈">
+<meta property="og:description" content="联系方式个人信息 郝洁/女 本科/黄河科技大学/2018 工作年限：2年 技术博客：haoline.cn Github：http://github.com/onlyH  期望职位：web前端 期望城市：北京  工作经历新加坡艾克伦公司北京代表处 （ 2018年2月 ~ 至今 ）后台管理项目，超级管理后台项目  （2018.03-2018.05）项目描述：该管理平台是针对上课系统进行功能补充的后台管">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-07-09T03:04:02.572Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="郝洁的小栈">
+<meta name="twitter:description" content="联系方式个人信息 郝洁/女 本科/黄河科技大学/2018 工作年限：2年 技术博客：haoline.cn Github：http://github.com/onlyH  期望职位：web前端 期望城市：北京  工作经历新加坡艾克伦公司北京代表处 （ 2018年2月 ~ 至今 ）后台管理项目，超级管理后台项目  （2018.03-2018.05）项目描述：该管理平台是针对上课系统进行功能补充的后台管">
+
+<link rel="canonical" href="https://github.com/onlyH/onlyh.github.io/about/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | 郝洁的小栈
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">郝洁的小栈</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">shaun web</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">65</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/onlyh" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <h1 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><h1 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h1><ul>
+<li>郝洁/女</li>
+<li>本科/黄河科技大学/2018</li>
+<li>工作年限：2年</li>
+<li>技术博客：haoline.cn</li>
+<li>Github：<a href="http://github.com/onlyH">http://github.com/onlyH</a> </li>
+<li>期望职位：web前端</li>
+<li>期望城市：北京</li>
+</ul>
+<h1 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h1><h2 id="新加坡艾克伦公司北京代表处-（-2018年2月-至今-）"><a href="#新加坡艾克伦公司北京代表处-（-2018年2月-至今-）" class="headerlink" title="新加坡艾克伦公司北京代表处 （ 2018年2月 ~ 至今 ）"></a>新加坡艾克伦公司北京代表处 （ 2018年2月 ~ 至今 ）</h2><h3 id="后台管理项目，超级管理后台项目-（2018-03-2018-05）"><a href="#后台管理项目，超级管理后台项目-（2018-03-2018-05）" class="headerlink" title="后台管理项目，超级管理后台项目  （2018.03-2018.05）"></a>后台管理项目，超级管理后台项目  （2018.03-2018.05）</h3><h5 id="项目描述："><a href="#项目描述：" class="headerlink" title="项目描述："></a>项目描述：</h5><p>该管理平台是针对上课系统进行功能补充的后台管理平台。可进行对教室、教师、学生等信息数据的收集管理。角色分为管理员、教师、助教、学生和巡课。<br>超级管理后台中进行的是对Tuition Cloud管理后台的管理。具有企业管理和订单管理两个功能模块，用于为使用企业注册帐号，添加订单。</p>
+<h5 id="项目职责："><a href="#项目职责：" class="headerlink" title="项目职责："></a>项目职责：</h5><ol>
+<li>独立开发，使用vue，对各个角色分配权限，支持国际化语言切换。</li>
+<li>采用element-ui对页面进行布局，交互。</li>
+<li>采用localstorage存储客户数据，与后台对接接口。</li>
+<li>采用$route.params传递用户标识token。</li>
+<li>采用vuex，EventBus做数据状态管理。</li>
+<li>项目重构，用了 axios 技术方案，自动转换JSON数据，拦截请求和响应转换请求和响应数据，研发成本大大降低。</li>
+</ol>
+<h3 id="学生端，机构端项目（2018-05-2018-10）"><a href="#学生端，机构端项目（2018-05-2018-10）" class="headerlink" title="学生端，机构端项目（2018.05-2018.10）"></a>学生端，机构端项目（2018.05-2018.10）</h3><h5 id="项目描述：-1"><a href="#项目描述：-1" class="headerlink" title="项目描述："></a>项目描述：</h5><p>学生端：包含人信息相关操作，选课，上课，购买课程流程，线上购课流程。<br>机构端：包含教学管理，监课管理，机构管理，交易管理等模块。邮件提醒功能等。</p>
+<h5 id="项目职责：-1"><a href="#项目职责：-1" class="headerlink" title="项目职责："></a>项目职责：</h5><ol>
+<li>采用bootstrap独立开发机构端和学生端的所有页面，部分交互逻辑。</li>
+<li>使用momentjs对时间格式化做统一处理。</li>
+<li>采用i18n对语言做国际化处理。</li>
+<li>使用vue对页面模块拆块，复用组件。</li>
+<li>使用fullCalendar.js管理日程安排、工作计划。</li>
+<li>使用pagination.js实现页面分页功能。</li>
+</ol>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol>
+<li>制定公司前端代码规范，并上传GitHub，并实施执行监督。</li>
+<li>熟练使用Git，每日上传代码到GitHub进行托管。</li>
+<li>每次开发前，参加项目prd评审，提出参考方案。</li>
+<li>评审结束后，参与UI设计探讨方针，探讨UI细节，提出方案。</li>
+</ol>
+<h2 id="项目实践"><a href="#项目实践" class="headerlink" title="项目实践"></a>项目实践</h2><h3 id="Vue—电商平台系统"><a href="#Vue—电商平台系统" class="headerlink" title="Vue—电商平台系统"></a>Vue—电商平台系统</h3><h5 id="开发语言："><a href="#开发语言：" class="headerlink" title="开发语言："></a>开发语言：</h5><p>   html5/css3/es6/vue/vue-resource/vuex/vue-router;</p>
+<h5 id="GitHub："><a href="#GitHub：" class="headerlink" title="GitHub："></a>GitHub：</h5><p>   <a href="https://github.com/onlyH/The-electricity-system-vue-">https://github.com/onlyH/The-electricity-system-vue-</a><br>   vue-resource</p>
+<h5 id="功能实现："><a href="#功能实现：" class="headerlink" title="功能实现："></a>功能实现：</h5><p>   实现Ajax获取信息数据、幻灯片组件、登录、添加路由，select选项组件，可多选项组件，数字组件，总价计算，选择银行，订单列表，vuex状态管理应用。</p>
+<h3 id="Vue—购物项目"><a href="#Vue—购物项目" class="headerlink" title="Vue—购物项目"></a>Vue—购物项目</h3><h5 id="开发语言：-1"><a href="#开发语言：-1" class="headerlink" title="开发语言："></a>开发语言：</h5><p>   html5/css3/javascript/vue/vue-resource;</p>
+<h5 id="GitHub：-1"><a href="#GitHub：-1" class="headerlink" title="GitHub："></a>GitHub：</h5><p>   <a href="https://github.com/onlyH/vue-shopping">https://github.com/onlyH/vue-shopping</a> </p>
+<h5 id="功能实现：-1"><a href="#功能实现：-1" class="headerlink" title="功能实现："></a>功能实现：</h5><p>   通过v-for指令渲染产品数据，使用filter对金额进行格式化，为金额前加上金额货币符号。v-on绑定点击事件实现产品金额的动态计算，v-model实时变化。</p>
+<h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><ul>
+<li><a href="https://github.com/onlyH">onlyH</a></li>
+</ul>
+<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>-<a href="haoline.cn">郝洁的博客</a></p>
+<h1 id="技能清单"><a href="#技能清单" class="headerlink" title="技能清单"></a>技能清单</h1><ul>
+<li>Web开发：javascript/less/jQuery/css3/html5/es6/vue</li>
+<li>前端框架：element-ui/mui/bootstrap/highcharts/movejs/ animate.css</li>
+<li>前端工具：koala/firebug/chrome/webstrom/HBuilder/gulp/webpack/vscode</li>
+<li>版本管理、文档和自动化部署工具：Svn/Git</li>
+</ul>
+<hr>
+<h1 id="在校奖励"><a href="#在校奖励" class="headerlink" title="在校奖励"></a>在校奖励</h1><ul>
+<li>2015年6月  荣获自动化专业三等奖学金</li>
+<li>2017年2月  荣获自动化专业三等奖学金</li>
+<li>2018年6月 荣获自动化专业二等奖学金<h1 id="自我评价"><a href="#自我评价" class="headerlink" title="自我评价"></a>自我评价</h1>对前端有着极大的兴趣和热情，具备自主学习能力，喜欢专研思考问题，做事耐心执着，追求完美。</li>
+</ul>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#联系方式"><span class="nav-number">1.</span> <span class="nav-text">联系方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个人信息"><span class="nav-number">2.</span> <span class="nav-text">个人信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作经历"><span class="nav-number">3.</span> <span class="nav-text">工作经历</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新加坡艾克伦公司北京代表处-（-2018年2月-至今-）"><span class="nav-number">3.1.</span> <span class="nav-text">新加坡艾克伦公司北京代表处 （ 2018年2月 ~ 至今 ）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#后台管理项目，超级管理后台项目-（2018-03-2018-05）"><span class="nav-number">3.1.1.</span> <span class="nav-text">后台管理项目，超级管理后台项目  （2018.03-2018.05）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#项目描述："><span class="nav-number">3.1.1.0.1.</span> <span class="nav-text">项目描述：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#项目职责："><span class="nav-number">3.1.1.0.2.</span> <span class="nav-text">项目职责：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学生端，机构端项目（2018-05-2018-10）"><span class="nav-number">3.1.2.</span> <span class="nav-text">学生端，机构端项目（2018.05-2018.10）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#项目描述：-1"><span class="nav-number">3.1.2.0.1.</span> <span class="nav-text">项目描述：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#项目职责：-1"><span class="nav-number">3.1.2.0.2.</span> <span class="nav-text">项目职责：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">3.1.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目实践"><span class="nav-number">3.2.</span> <span class="nav-text">项目实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue—电商平台系统"><span class="nav-number">3.2.1.</span> <span class="nav-text">Vue—电商平台系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#开发语言："><span class="nav-number">3.2.1.0.1.</span> <span class="nav-text">开发语言：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#GitHub："><span class="nav-number">3.2.1.0.2.</span> <span class="nav-text">GitHub：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#功能实现："><span class="nav-number">3.2.1.0.3.</span> <span class="nav-text">功能实现：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue—购物项目"><span class="nav-number">3.2.2.</span> <span class="nav-text">Vue—购物项目</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#开发语言：-1"><span class="nav-number">3.2.2.0.1.</span> <span class="nav-text">开发语言：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#GitHub：-1"><span class="nav-number">3.2.2.0.2.</span> <span class="nav-text">GitHub：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#功能实现：-1"><span class="nav-number">3.2.2.0.3.</span> <span class="nav-text">功能实现：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub"><span class="nav-number">3.3.</span> <span class="nav-text">GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客"><span class="nav-number">3.4.</span> <span class="nav-text">博客</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技能清单"><span class="nav-number">4.</span> <span class="nav-text">技能清单</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在校奖励"><span class="nav-number">5.</span> <span class="nav-text">在校奖励</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自我评价"><span class="nav-number">6.</span> <span class="nav-text">自我评价</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="郝洁"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">郝洁</p>
+  <div class="site-description" itemprop="description">web开发</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/onlyh" title="GitHub → https://github.com/onlyh"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:pdsjjxiaoh@126.com" title="E-Mail → mailto:pdsjjxiaoh@126.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      推荐阅读
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://https://github.com/onlyh" title="http://https://github.com/onlyh" rel="noopener" target="_blank">Github</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+   <!-- <i class="shaun fa fa-heart"></i> -->
+   <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">by 郝洁的小栈</span>
+</div>
+<!--
+<div class="powered-by">
+<i class="fa fa-user-md"></i>
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共31.8k字</span>
+</div>
+-->
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+  
+     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+     <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+
+  
+
+  <!--崩溃欺骗-->
+  <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/snow.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
+</html>

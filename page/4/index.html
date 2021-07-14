@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+
+
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "2f08acae"
+    });
+  daovoice('update');
+  </script>
+
+
+
+  <meta name="description" content="web开发">
+<meta name="keywords" content="前端博客,JavaScript,html5,css3,Jquery,NodeJs,Ubuntu（#博客关键字）">
+<meta property="og:type" content="website">
+<meta property="og:title" content="郝洁的小栈">
+<meta property="og:url" content="https://github.com/onlyH/onlyh.github.io/page/4/index.html">
+<meta property="og:site_name" content="郝洁的小栈">
+<meta property="og:description" content="web开发">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="郝洁的小栈">
+<meta name="twitter:description" content="web开发">
+
+<link rel="canonical" href="https://github.com/onlyH/onlyh.github.io/page/4/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>郝洁的小栈</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">郝洁的小栈</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">shaun web</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">65</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/onlyh" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/12/14/vue下拉框/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/12/14/vue下拉框/" class="post-title-link" itemprop="url">vue简易下拉框</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-12-14 00:00:00" itemprop="dateCreated datePublished" datetime="2018-12-14T00:00:00+08:00">2018-12-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>使用vue模拟了一个简易的下拉框，主要是根据传入当前索引实现数据切换的。具体实现代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dropdown show"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dropdown-toggle"</span> @<span class="attr">click</span>=<span class="string">"toggleDrop"</span>  <span class="attr">ref</span>=<span class="string">"listParents"</span>&gt;</span></span><br><span class="line">    &#123;&#123;content.languages[nowIndex].name&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"drop"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"dropdown-item"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">v-show</span>=<span class="string">"isDrop"</span> </span></span><br><span class="line"><span class="tag">        <span class="attr">v-for</span>=<span class="string">"(ops,index) in content.languages"</span> </span></span><br><span class="line"><span class="tag">        <span class="attr">:key</span>=<span class="string">"ops.id"</span> </span></span><br><span class="line"><span class="tag">        @<span class="attr">click</span>=<span class="string">"chooseSelection(index)"</span>&gt;</span>&#123;&#123;ops.name&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        isDrop:<span class="literal">false</span>,</span><br><span class="line">        nowIndex:<span class="number">0</span>,</span><br><span class="line">        content&#123;</span><br><span class="line">            languages:&#123;</span><br><span class="line">                [</span><br><span class="line">                    name:<span class="string">'lele'</span>,</span><br><span class="line">                    id:<span class="number">1</span></span><br><span class="line">                ],</span><br><span class="line">                [</span><br><span class="line">                    name:<span class="string">'xiaohong'</span>,</span><br><span class="line">                    id:<span class="number">2</span></span><br><span class="line">                ],</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">methods:&#123;</span><br><span class="line">    toggleDrop() &#123;</span><br><span class="line">        <span class="keyword">this</span>.isDrop = !<span class="keyword">this</span>.isDrop</span><br><span class="line">    &#125;,</span><br><span class="line">    chooseSelection(index) &#123;</span><br><span class="line">        <span class="keyword">this</span>.nowIndex = index;</span><br><span class="line">        <span class="keyword">this</span>.isDrop = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>关于点击空白处隐藏，具体实现的思路是：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/12/14/vue下拉框/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/05/01/jsonParse/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/05/01/jsonParse/" class="post-title-link" itemprop="url">关于JSON报错</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-05-01 00:00:00" itemprop="dateCreated datePublished" datetime="2018-05-01T00:00:00+08:00">2018-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/json/" itemprop="url" rel="index"><span itemprop="name">json</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在项目代码中运用到了JSON.parse()和JSON.stringify()去转换保存对象<br><code>this.editingFile = JSON.stringify(lesson)</code><br><code>this.$set(this.lessons, index, JSON.parse(this.editingFile))</code></p>
+<p>每次新建进入页面的时候，都会报错<br><code>Uncaught SyntaxError: Unexpected token u in JSON at position 0</code></p>
+<p>Debugger后，发现每次新建的时候JSON.parse()里的参数是undefined</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/05/01/jsonParse/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/04/28/上传多个file文件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/28/上传多个file文件/" class="post-title-link" itemprop="url">清空上传内容</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-04-28 00:00:00" itemprop="dateCreated datePublished" datetime="2018-04-28T00:00:00+08:00">2018-04-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>如果要上传同一个文件。例如<br><code>&lt;input @change=&quot;fileChange(lesson, $event.target,index)&quot; type=&quot;file&quot; accept=&quot;.jpg,.png,.JPG,.PNG,.gif,.GIF,.xls,.xlsx,.ppt,.pptx,.doc,.docx,.txt,.pdf,.jpeg,.bmp,.XLS,.XLSX,.PPT,.PPTX,.DOC,.DOCX,.TXT,.PDF,.JPEG,.BMP&quot;&gt;</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">fileChange: <span class="function"><span class="keyword">function</span> (<span class="params">course, input, index</span>) </span>&#123;</span><br><span class="line">       <span class="keyword">let</span> fileObj = input.files[<span class="number">0</span>];</span><br><span class="line">       <span class="keyword">var</span> file = &#123;</span><br><span class="line">         prepare: <span class="literal">false</span>,<span class="comment">//是否可预览</span></span><br><span class="line">         name: fileObj.name,</span><br><span class="line">         size: fileObj.size,</span><br><span class="line">         previewFlag: <span class="literal">false</span>,</span><br><span class="line">         process: <span class="literal">true</span></span><br><span class="line">       &#125;;</span><br><span class="line">       course.files.push(file);</span><br><span class="line">                 input.value = <span class="string">""</span></span><br><span class="line"></span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
+<p>那么在js里只需要一行代码<br><code>input.value = &quot;&quot;</code></p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/04/19/改进-select/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/19/改进-select/" class="post-title-link" itemprop="url">富文本-select改进</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-04-19 15:33:03" itemprop="dateCreated datePublished" datetime="2018-04-19T15:33:03+08:00">2018-04-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 10:51:03" itemprop="dateModified" datetime="2021-07-09T10:51:03+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>之前在项目中，做了一个富文本编辑器，第一次用的是原生js实现，第二次用vue实现功能，在select里面定义可以选择字体的大小，当时采取的是@input去实现，无聊时读了下vue文档，发现其实。。是可以改进的，比如说v-model是一个语法糖，文档是这样说的：</p>
+<ul>
+<li>自定义事件也可以用于创建支持 v-model 的自定义输入组件<br><code>input v-nodel=searchText</code><br>等价于：<figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">input</span> v-bind:value=<span class="string">'searchText'</span> v-<span class="keyword">on</span>:<span class="keyword">input</span>=<span class="string">'$event.target.value'</span>&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>而我当时的实现就有一些复杂<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> &lt;select name=<span class="string">"fontSize"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"fontSize"</span> @change=<span class="string">"showSize($event)"</span>&gt;</span><br><span class="line">    &lt;option :value=<span class="string">"ops.value"</span></span><br><span class="line">            v-<span class="keyword">for</span>=<span class="string">"ops in fontSize"</span></span><br><span class="line">            :selected=<span class="string">"ops.value == 16 ? true: '' "</span>&gt;&#123;&#123;ops.value&#125;&#125;&lt;<span class="regexp">/option&gt;</span></span><br><span class="line"><span class="regexp"> &lt;/</span>select&gt;</span><br><span class="line"></span><br><span class="line">showSize: <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> execFontSize = <span class="function"><span class="keyword">function</span> (<span class="params">size, unit</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> spanString = $(<span class="string">'&lt;span/&gt;'</span>, &#123;</span><br><span class="line">        <span class="string">'text'</span>: <span class="built_in">document</span>.getSelection()</span><br><span class="line">    &#125;).css(</span><br><span class="line">        &#123;<span class="string">'font-size'</span>: size + unit, <span class="string">'color'</span>: <span class="string">`#<span class="subst">$&#123;<span class="keyword">this</span>.designColor&#125;</span>`</span>&#125;).prop(<span class="string">'outerHTML'</span>);</span><br><span class="line">    <span class="built_in">document</span>.execCommand(<span class="string">'insertHTML'</span>, <span class="literal">false</span>, spanString);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">const</span> value = ev.target.value;</span><br><span class="line">    execFontSize(value, <span class="string">'px'</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/04/19/改进-select/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/04/02/tab切换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/02/tab切换/" class="post-title-link" itemprop="url">tab切换</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-04-02 15:33:03" itemprop="dateCreated datePublished" datetime="2018-04-02T15:33:03+08:00">2018-04-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 10:51:03" itemprop="dateModified" datetime="2021-07-09T10:51:03+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>使用javascript和jquery编写tab切换,使用jquery编写列表切换<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// javascript</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">typeof</span> id == <span class="string">'string'</span> ? <span class="built_in">document</span>.getElementById(id) : id</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> titleName = $(<span class="string">'tab-title'</span>).getelementsByTagName(<span class="string">'li'</span>)</span><br><span class="line">    <span class="keyword">var</span> tabContent = $(<span class="string">'tab-content'</span>).getelementsByTagName(<span class="string">'div'</span>)</span><br><span class="line">    <span class="keyword">if</span> (titleName.length != tabContent.length) &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; titleName.length; i++) &#123;</span><br><span class="line">        titleName[i].id = i;</span><br><span class="line">        titleName[i].onmouseover = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; titleName.length; j++) &#123;</span><br><span class="line">                titleName[j].className = <span class="string">''</span></span><br><span class="line">                titleName[j].style.display = <span class="string">'none'</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">this</span>.className = <span class="string">'select'</span></span><br><span class="line">            tabContent[<span class="keyword">this</span>.id].style.display = <span class="string">'block'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//jquery方法添加个定时器</span></span><br><span class="line"><span class="keyword">var</span> timer;</span><br><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">'#tabfirst li'</span>).each(<span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> liNode = $(<span class="keyword">this</span>)</span><br><span class="line">        $(<span class="keyword">this</span>).mouseover(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            timer = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                $(<span class="string">'div.content'</span>).removeClass(<span class="string">'content'</span>)</span><br><span class="line">                $(<span class="string">'#tabfirst li.tabin'</span>).removeClass(<span class="string">'tabin'</span>)</span><br><span class="line">                $(<span class="string">'div'</span>).eq(index).addClass(<span class="string">'content'</span>)</span><br><span class="line">                liNode.addClass(<span class="string">'tabin'</span>)</span><br><span class="line">            &#125;, <span class="number">300</span>);</span><br><span class="line">        &#125;).mouseout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            clearTimeout(timer)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">'.list-1'</span>).bind(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        $(<span class="string">'.list-1'</span>).css(<span class="string">'backgroundPosition'</span>, <span class="string">'0px -26px'</span>)</span><br><span class="line">        $(<span class="string">'.list-2'</span>).css(<span class="string">'backgroundPosition'</span>, <span class="string">'-30px -26px'</span>)</span><br><span class="line">        $(<span class="string">'changeList'</span>).children().removeClass(<span class="string">'list-1-0'</span>).addClass(<span class="string">'list-2-v'</span>)</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">    $(<span class="string">'.list-2'</span>).bind(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        $(<span class="string">'.list-1'</span>).css(<span class="string">'backgroundPosition'</span>, <span class="string">'0px 0px'</span>)</span><br><span class="line">        $(<span class="string">'.list-2'</span>).css(<span class="string">'backgroundPosition'</span>, <span class="string">'-30px 0px'</span>)</span><br><span class="line">        $(<span class="string">'changeList'</span>).children().removeClass(<span class="string">'list-2-v'</span>).addClass(<span class="string">'list-1-0'</span>)</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/04/01/js八道题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/01/js八道题/" class="post-title-link" itemprop="url">js八道题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-04-01 00:00:00" itemprop="dateCreated datePublished" datetime="2018-04-01T00:00:00+08:00">2018-04-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="1，写出判断一个变量变量名为arr是数组的方法。"><a href="#1，写出判断一个变量变量名为arr是数组的方法。" class="headerlink" title="1，写出判断一个变量变量名为arr是数组的方法。"></a>1，写出判断一个变量变量名为arr是数组的方法。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">arr instanceof Array</span><br><span class="line"><span class="keyword">if</span>(typeof arr.isArray == undefined) &#123;</span><br><span class="line">    <span class="built_in">return</span> Array.prototype.toString.call = [<span class="string">'object Array'</span>]</span><br><span class="line">&#125;</span><br><span class="line">//用一些数组方法去检测，比如slice()</span><br></pre></td></tr></table></figure>
+<h5 id="2-一下代码输入的结果是？"><a href="#2-一下代码输入的结果是？" class="headerlink" title="2,一下代码输入的结果是？"></a>2,一下代码输入的结果是？</h5>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/04/01/js八道题/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/04/01/购物车项目/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/01/购物车项目/" class="post-title-link" itemprop="url">购物车项目</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-04-01 00:00:00" itemprop="dateCreated datePublished" datetime="2018-04-01T00:00:00+08:00">2018-04-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="第一部分：购物功能"><a href="#第一部分：购物功能" class="headerlink" title="第一部分：购物功能"></a>第一部分：购物功能</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//接口json数据</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"status"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"result"</span>: &#123;</span><br><span class="line">        <span class="attr">"totalMoney"</span>: <span class="number">88</span>,</span><br><span class="line">        <span class="attr">"list"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"productId"</span>: <span class="string">"12345654321"</span>,</span><br><span class="line">                <span class="attr">"productName"</span>: <span class="string">"music"</span>,</span><br><span class="line">                <span class="attr">"productPrice"</span>: <span class="string">"28"</span>,</span><br><span class="line">                <span class="attr">"productQuentity"</span>: <span class="number">1</span>,</span><br><span class="line">                <span class="attr">"productImage"</span>: <span class="string">"img/goods.png"</span>,</span><br><span class="line">                <span class="attr">"parts"</span>: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="attr">"partId"</span>: <span class="string">"100001"</span>,</span><br><span class="line">                        <span class="attr">"partName"</span>: <span class="string">"see you again"</span></span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"productId"</span>: <span class="string">"12345654322"</span>,</span><br><span class="line">                <span class="attr">"productName"</span>: <span class="string">"food"</span>,</span><br><span class="line">                <span class="attr">"productPrice"</span>: <span class="string">"30"</span>,</span><br><span class="line">                <span class="attr">"productQuentity"</span>: <span class="number">1</span>,</span><br><span class="line">                <span class="attr">"productImage"</span>: <span class="string">"img/food.png"</span>,</span><br><span class="line">                <span class="attr">"parts"</span>: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="attr">"partId"</span>: <span class="string">"100002"</span>,</span><br><span class="line">                        <span class="attr">"partName"</span>: <span class="string">"ice"</span></span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"message"</span>:<span class="string">""</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>连接接口数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mounted:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.cartView();<span class="comment">//实例化创建完以后，默认查询某一个方法</span></span><br><span class="line">&#125;</span><br><span class="line">methods:&#123;</span><br><span class="line">    cartView() &#123;</span><br><span class="line">        <span class="keyword">var</span> that = <span class="keyword">this</span></span><br><span class="line">        axios.get(<span class="string">'/user.json?ID=12345'</span>)</span><br><span class="line">        .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">            that.productList = res.result.list</span><br><span class="line">        &#125;) </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列表数据渲染</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">&lt;!-- 购物车页面 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"(item,index) in productList"</span> <span class="attr">:key</span>=<span class="string">"index"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 选中状态 a --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">:class</span>=<span class="string">"&#123;'check':item.check&#125;"</span> @<span class="attr">click</span>=<span class="string">"selectorPeoduct"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"item.productImage"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- titile --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;item.productName&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 类别 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span> <span class="attr">v-for</span>=<span class="string">"part in item.parts"</span> <span class="attr">v-text</span>=<span class="string">"part.partsName"</span>&gt;</span><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- 价格 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;item.productPrice | formatMoney&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 个数 + - --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> @<span class="attr">click</span>=<span class="string">"changeNum(item,-1)"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--item对象--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">"0"</span> <span class="attr">v-model</span>=<span class="string">"item.productQuentity | money('元')"</span> <span class="attr">disabled</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> @<span class="attr">click</span>=<span class="string">"changeNum(item,1)"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 删除 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"delConfirm(item)"</span>&gt;</span>delete<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 总金额 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;item.productPrice * item.productQuentity&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">:class</span>=<span class="string">"&#123;'ckecked':checkAllFLag&#125;"</span> @<span class="attr">click</span>=<span class="string">"checkAll(true)"</span>&gt;</span>全选<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> @<span class="attr">click</span>=<span class="string">"checkAll(false)"</span>&gt;</span>取消全选<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 删除后的弹框提示 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">"&#123;'show':delFlag&#125;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"delFlag = false"</span>&gt;</span>关闭<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"delProduct()"</span>&gt;</span>确认删除<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 结账 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"index.html"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">data() &#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">        totalMoney:<span class="number">0</span>,<span class="comment">//总金额</span></span><br><span class="line">        productList:[],</span><br><span class="line">        checkAllFLag:<span class="literal">false</span>,</span><br><span class="line">        delFlag:<span class="literal">false</span>, <span class="comment">//遮罩开关</span></span><br><span class="line">        current:<span class="string">''</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Vue.js 允许你自定义过滤器，可被用于一些常见的文本格式化</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//局部</span></span><br><span class="line">filters:&#123;</span><br><span class="line">    formatMoney:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"￥"</span> + value.toFixed(<span class="number">2</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//全局</span></span><br><span class="line">vue.filter(<span class="string">'money'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">value,type</span>)) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"￥"</span> + value.toFixed(<span class="number">2</span>) + type</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>改变商品数量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">changeMoney(product,way) &#123;</span><br><span class="line">      <span class="keyword">if</span>(way &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          product.productQuentity++</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          product.productQuentity--;</span><br><span class="line">          <span class="keyword">if</span>(product.productQuentity&lt; <span class="number">1</span>) &#123;</span><br><span class="line">              product.productQuentity = <span class="number">1</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">this</span>.totalPrice()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果接口返回的数据中，没有判断点中状态的数据，那么就动态添加一个选中状态的判断。(多用于循环)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// :class一定是一个object 或者 数组</span></span><br><span class="line">selectorPeoduct(item) &#123;</span><br><span class="line">    <span class="comment">//判断商品是否选中 ,如果一个对象中的变量不存在，set方法</span></span><br><span class="line">    <span class="comment">//判断item中的checked是否存在</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> item.checked == <span class="string">'undefined'</span>) &#123; <span class="comment">//如果等于就是不存在</span></span><br><span class="line">        <span class="comment">// 如果不存在，全局注册或者局部注册</span></span><br><span class="line">        Vue.set(item,<span class="string">'checked'</span>,<span class="literal">true</span>)</span><br><span class="line">        <span class="keyword">this</span>.$set(item,<span class="string">'checked'</span>,<span class="literal">true</span>)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        item.checked = !item.checked</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.totalPrice()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>全选，取消全选事件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">checkAll(flag) &#123; <span class="comment">//参数用于判断当前状态是全选还是取消全选</span></span><br><span class="line">    <span class="keyword">this</span>.checkAllFlag = flag</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span></span><br><span class="line">        <span class="keyword">this</span>.productList.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//如果第一次直接点击的全选，那么上面的事件就不会触发，checked属性就不存在。那么就要判断是否注册。</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> item.checked == <span class="string">'undefined'</span>) &#123;</span><br><span class="line">            that.$set(item,<span class="string">'checked'</span>,<span class="keyword">this</span>.checkAllFlag)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            item .checked = <span class="keyword">this</span>.checkAllFlag</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">   <span class="keyword">this</span>.totalPrice()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>计算总金额</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">totalPrice() &#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">this</span>.totalMoney = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">this</span>.productList.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(item.checked) &#123;</span><br><span class="line">            that.totalMoney += item.productPrice * item.productQuentity</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除操作（当前选中的是哪个要删除）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">delConfirm(item) &#123;</span><br><span class="line">    <span class="keyword">this</span>.delFlag = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">this</span>.current = item; <span class="comment">//当前对象</span></span><br><span class="line">&#125;,</span><br><span class="line">delProduct() &#123;</span><br><span class="line">    <span class="keyword">var</span> index = <span class="keyword">this</span>.productList.indexOf(<span class="keyword">this</span>.current) <span class="comment">//获取索引</span></span><br><span class="line">    <span class="keyword">this</span>.productList.splice(index,<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">this</span>.delFlag = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/04/01/购物车项目/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/03/28/内置函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/28/内置函数/" class="post-title-link" itemprop="url">js中的内置函数</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-03-28 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-28T00:00:00+08:00">2018-03-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>js中有哪些内置函数？–函数封装类对象</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Object</span><br><span class="line">Array</span><br><span class="line">Boolearn</span><br><span class="line">String</span><br><span class="line">Function</span><br><span class="line">Error</span><br><span class="line">Number</span><br><span class="line">Date</span><br><span class="line">RegExp</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/03/28/逻辑运算符/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/28/逻辑运算符/" class="post-title-link" itemprop="url">逻辑运算符</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-03-28 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-28T00:00:00+08:00">2018-03-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">10</span> &amp;&amp; <span class="number">0</span>) <span class="comment">//0</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">''</span> || <span class="string">'abc'</span>) <span class="comment">//abc</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.abc) <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//判断一个变量会被当做true还是false</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="built_in">console</span>.log(!!a)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = &#123;&#125;</span><br><span class="line"><span class="keyword">if</span>(a.b == <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="comment">//a.b === null ,a.b === undefined</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//参考于bootstrap源码</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/onlyH/onlyh.github.io/2018/03/02/vue-router/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="郝洁">
+      <meta itemprop="description" content="web开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝洁的小栈">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/02/vue-router/" class="post-title-link" itemprop="url">vue日常学习-router</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-03-02 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-02T00:00:00+08:00">2018-03-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-09 11:04:02" itemprop="dateModified" datetime="2021-07-09T11:04:02+08:00">2021-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今日搭建vue 3.0脚手架，写了个小项目，被一个问题卡了半天，就是在app.vue里面的router-view和router-link无法生效，页面不会跳转并且控制台会报错，请教后得知，自己在router.js里配置路由的时候代码写错了<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//错误代码</span></span><br><span class="line">&#123;</span><br><span class="line">      path: <span class="string">'/shopping'</span>,</span><br><span class="line">      name: <span class="string">'shopping'</span>,</span><br><span class="line">      component: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">import</span>(<span class="string">"./components/shopping"</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="comment">//正确的写法 1</span></span><br><span class="line">&#123;</span><br><span class="line">      path: <span class="string">'/shopping'</span>,</span><br><span class="line">      name: <span class="string">'shopping'</span>,</span><br><span class="line">      component: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">"./components/shopping"</span>)</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//正确的写法 2</span></span><br><span class="line">&#123;</span><br><span class="line">      path: <span class="string">'/shopping'</span>,</span><br><span class="line">      name: <span class="string">'shopping'</span>,</span><br><span class="line">      component: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">import</span>(<span class="string">"./components/shopping"</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//import是个异步函数, 单纯的componet方法没有返回值,如果加了&#123;&#125;，需要使用return返回出去</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+          
+    </div>
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="郝洁"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">郝洁</p>
+  <div class="site-description" itemprop="description">web开发</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/onlyh" title="GitHub → https://github.com/onlyh"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:pdsjjxiaoh@126.com" title="E-Mail → mailto:pdsjjxiaoh@126.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      推荐阅读
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://https://github.com/onlyh" title="http://https://github.com/onlyh" rel="noopener" target="_blank">Github</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+   <!-- <i class="shaun fa fa-heart"></i> -->
+   <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">by 郝洁的小栈</span>
+</div>
+<!--
+<div class="powered-by">
+<i class="fa fa-user-md"></i>
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共31.8k字</span>
+</div>
+-->
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+  
+     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+     <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+
+  
+
+  <!--崩溃欺骗-->
+  <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/snow.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
+</html>
