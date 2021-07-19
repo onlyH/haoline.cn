@@ -5,10 +5,8 @@ tags: [编程,技巧]
 keywords: github访问 
 copyright: true
 ---
-<blockquote class="blockquote-center">
-为本地 hosts 文件添加 Github 相关映射
-</blockquote>
-<!-- more -->
+3
+
 
 1. 打开本地 hosts 文件 win + r => `C:\WINDOWS\system32\drivers\etc`进入
 2. 获取 Github 相关网站的 IP
