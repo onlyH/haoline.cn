@@ -1,11 +1,18 @@
 ---
-title: vue开发技巧总结
-date: 2021-07-09 11:34:11
+title: vue开发技巧总结 
+date: 2021-07-09 11:34:11 
 tags:
 ---
+<blockquote class="blockquote-center">
+日常开发总结
+</blockquote>
+
+<!-- more -->
+
 ### vue2
 
 #### props 传值
+
 ```vue
 <!-- 静态的prop -->
 <blog-post title="My journey with Vue"/>

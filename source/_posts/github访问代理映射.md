@@ -5,7 +5,7 @@ tags: [编程,技巧]
 keywords: github访问 
 copyright: true
 ---
-3
+
 
 
 1. 打开本地 hosts 文件 win + r => `C:\WINDOWS\system32\drivers\etc`进入
