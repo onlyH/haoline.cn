@@ -125,8 +125,8 @@ passage_end_tag:
       # scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url
       debug: false # 调试, 是否在控制台输出日志
       model:
-        use: live2d-widget-model-hibiki
-        # use: live2d-widget-model-wanko # npm-module package name
+#        use: live2d-widget-model-hibiki
+#         use: live2d-widget-model-wanko # npm-module package name
         # use: wanko   # 博客根目录/live2d_models/ 下的目录名
         # use: ./wives/wanko # 相对于博客根目录的路径
         # use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
@@ -174,4 +174,71 @@ excerpt:
       quote: 'This is my song quote'
       option:
     timeout: 10000
+    bangumi:
+      enable: true
+      vmid: 358247256
+      title: '生命不息，追番不止。'
+      quote: 'Where there is life, there is life.'
+      show: 1
+      loading: '/img/bangumi-loading.gif'
+
+     # enable: 是否启用
+     # vmid: 哔哩哔哩番剧页面的 vmid(uid), 如何获取？
+     # title: 该页面的标题
+     # quote: 写在页面开头的一段话，支持 html 语法
+     # show:
+      #  初始显示页面：0:
+        #  想看 , 1:
+        #    在看 , 2: 看过，默认为 1
+     # loading: 图片加载完成前的 loading 图片
+
+      aplayer:
+        meting: true
+        asset_inject: false
+categoryBar:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: / # 应用页面
+  layout: # 挂载容器类型
+    type: id
+    name: recent-posts
+    index: 0
+  column: odd # odd：3列 | even：4列
+  row: 1 #显示行数，默认两行，超过行数切换为滚动显示
+  message:
+    - descr:
+      cover: https://inews.gtimg.com/newsapp_bt/0/14441450000/1000
+    - descr:
+      cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F0a8394cb-aa44-4b51-912c-3052ae394e5c%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1680784319&t=adbbb924d61577e1cc81287f1b807c38
+    - descr:
+      cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F0e924032-cdc5-4c05-8736-2cbb1675ce3e%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1680784319&t=2c518f7c961ba2a0e8557403c4e801d8
+    - descr:
+      cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F3039a6fc-307c-4c63-953e-33037e093f7c%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1680784319&t=422e51a9582f24e9582cfc46c24c2bb5
+    - descr:
+      cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F755a7f52-204b-41a0-a849-c9a6fb8f3a6d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1680784319&t=eaa3a8b4492b5e2d0972f5a8fbaf0839
+    - descr:
+      cover: https://inews.gtimg.com/newsapp_bt/0/14441450142/1000
+  custom_css: https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css
+
+  electric_clock:
+    enable: true # 开关
+    priority: 5 #过滤器优先权
+    enable_page: all # 应用页面
+    exclude:
+    # - /posts/
+    # - /about/
+    layout: # 挂载容器类型
+      type: class
+      name: sticky_layout
+      index: 0
+    loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义
+    clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css
+    clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js
+    ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
+    # 和风天气key 默认是 b16a1fa0e63c46a4b8f28abfb06ae3fe
+    qweather_key: # 你的key
+    # 高得地图web服务key 默认为 e2b04289e870b005374ee030148d64fd&s=rsv3
+    gaud_map_key: # 你的key
+    default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
+    rectangle: 112.982279,28.19409 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
 
