@@ -87,8 +87,8 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:onlyh/onlyh.github.io.git
-  branch: 22-11-28
+  repo: https://github.com/onlyH/onlyH.github.io.git
+  branch: master
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
