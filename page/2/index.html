@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><script>((function () {
+  var callbacks = [], timeLimit = 50, open = false;
+  setInterval(loop, 1);
+  return {
+    addListener: function (fn) {
+      callbacks.push(fn);
+    }, cancleListenr: function (fn) {
+      callbacks = callbacks.filter(function (v) {
+        return v !== fn;
+      });
+    }
+  }
+
+  function loop() {
+    var startTime = new Date();
+    debugger;
+    if (new Date() - startTime > timeLimit) {
+      if (!open) {
+        callbacks.forEach(function (fn) {
+          fn.call(null);
+        });
+      }
+      open = true;
+      window.stop();
+      alert('你真坏，请关闭控制台！');
+      document.body.innerHTML = "";
+    } else {
+      open = false;
+    }
+  }
+})()).addListener(function () {
+  window.location.reload();
+});</script><script>function toDevtools() {
+  let num = 0;
+  let devtools = new Date();
+  devtools.toString = function () {
+    num++;
+    if (num > 1) {
+      alert('你真坏，请关闭控制台！')
+      window.location.href = "about:blank"
+      blast();
+    }
+  }
+  console.log('', devtools);
+}
+toDevtools();</script><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>郝洁的小栈 - shaun web</title><meta name="author" content="郝洁"><meta name="copyright" content="郝洁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="web开发">
+<meta property="og:type" content="website">
+<meta property="og:title" content="郝洁的小栈">
+<meta property="og:url" content="http://onlyh.github.io/page/2/index.html">
+<meta property="og:site_name" content="郝洁的小栈">
+<meta property="og:description" content="web开发">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="郝洁">
+<meta property="article:tag" content="前端博客,JavaScript,html5,css3,Jquery,NodeJs,Ubuntu（#博客关键字）">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://onlyh.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '郝洁的小栈',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-03-07 21:09:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><style type="text/css">#toggle-sidebar {bottom: 80px}</style><style type="text/css">#toggle-sidebar {left:100px}</style><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="郝洁的小栈" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="郝洁的小栈"><span class="site-name">郝洁的小栈</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">郝洁的小栈</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/735a00e9.html" title="ES6系列-promise">ES6系列-promise</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-07T09:41:41.176Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/js/">js</a></span></div><div class="content">123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136// promise&#123;    //传统es5回调方式解决异步    let ajax = function (callback) &#123;        console.log(&#x27;等待下一步加载。。。&#x27;)        setTimeout(() =&gt; &#123;            callback &amp;&amp; callback.call() ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/dac90b82.html" title="rgb转化为16进制">rgb转化为16进制</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-07T09:41:41.176Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/js/">js</a></span></div><div class="content">项目中有个需求是写一个颜色选择器，默认有16个色块可以点击，用户也可以自己输入6位16进制字符，然后动态的给显示用户所输入的颜色。我采用的是vue的:class和:style去完成这个需求。做完之后，发现一个很尴尬的问题，如果我在输入框输入过值，那么他一定会覆盖clss的样式，也就是说，即使我点击色块，颜色也不会出现，于是想到一个解决办法，就是当我点击色块的时候，将色块的颜色值显示到输入框中。那么。如何获取到class中的css样式呢？？我采用了jquery的方法
+1var color = $(`.$&#123;item.color&#125;`).css(&#x27;backgroundColor&#x27;) //获取到颜色值
+额。。。获取到的竟然是个rgb()…….转换起来
+12345var rgb = a.split(&#x27;,&#x27;);  //将三个数值获取出var r = parseInt(rgb[0].split(&#x27;(&#x27;)[1]);//第一个值var g = parseInt(rgb[1]);//第二个值var b = parseInt(rg ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/b7acde18.html" title="js日常使用">js日常使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-07T09:41:41.175Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/js/">js</a></span></div><div class="content">123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111var text = &#x27;purple haze&#x27;text[&#x27;length&#x27;]text.length//对象所扮演的主要角色实际上是一个属性的集合var cat = &#123;    color:&#x27;gray&#x27;,    name:&#x27;spot&#x27;,    size:46&#125;cat.size; //46delete cat.size;cat.size;//undefindvar empty = &#123;&#125;empty.notReally = 1000em ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/d6d2b6df.html" title="js条件语句">js条件语句</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-07T09:41:41.175Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/js/">js</a></span></div><div class="content">使用Array.includes来处理多重条件Array.includes
+12345678910111213//badfunction test(fn) &#123;    if(fn === &#x27;apply&#x27; || fn == &#x27;pear&#x27;) &#123;        console.log(&#x27;yes&#x27;)    &#125;&#125;//如果筛选条件多function test(param) &#123;    const fruits = [&#x27;apply&#x27;,&#x27;pear&#x27;,&#x27;banana&#x27;] //条件提取到数组    if(fruits.includes(param)) &#123;        console.log(&#x27;yes&#x27;)    &#125;  &#125;
+
+少写嵌套，尽早返回
+如果没有水果，抛出错误
+如果该水果的数量大于10，将其打印出来123456789101112131415161718192021222324252627 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/17516d98.html" title="gulp了解">gulp了解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-07T09:41:41.173Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/gulp/">gulp</a></span></div><div class="content">
+安装 gulp $ npm install --global gulp
+任务管理文件 gulpfile.js12345678//引入const gulp = require(&#x27;gulp&#x27;)const shelljs = require(&#x27;shelljs&#x27;)//定义任务，默认defaultgulp.task(&#x27;default&#x27;,()=&gt;&#123;   // console.log(&#x27;this is deafult&#x27;)   //执行&#125;)
+运行 $ gulp
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/eb80735.html" title="html组件">html组件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-07T09:41:41.173Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/html/">html</a></span></div><div class="content">今日读了掘金上面的一篇文章，讲的是html组件。四大 Web 组件标准四大 Web 组件标准分别为：HTML Template、Shadow DOM、Custom Elements 和 HTML Imports。实际上其中一个已经被废弃了，所以变成“三大”了。
+HTML Template,简单的讲也就是 HTML5 中的 &lt;template&gt; 标签，正常情况下它无色无味，感知不到它的存在，甚至它下面的 img 都不会被下载，script 都不会被执行。 就如它的名字一样，它只是一个模版，只有到你用到它时，它才会变得有意义。
+Shadow DOM 则是原生组件封装的基本工具，它可以实现组件与组件之间的独立性。Custom Elements 是用来包装原生组件的容器，通过它，你就只需要写一个标签，就能得到一个完整的组件。
+HTML Imports 则是 HTML 中类似于 ES6 Module 的一个东西，你可以直接 import 另一个 html 文件，然后使用其中的 DOM 节点。但是，由于 HTML Imports 和 ES6 Module 实在是太像了，并且除了 Chr ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/6ff55e88.html" title="ES6系列-decorator">ES6系列-decorator</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-07T09:41:41.172Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/js/">js</a></span></div><div class="content">
+decorator：修饰器是一个函数，修改行为，修改类的行为。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263&#123;    let readonly = (target, name, descriptor) =&gt; &#123;        descriptor.writable = false        return descriptor    &#125;    class Test &#123;        @readonly        time() &#123;            return &#x27;2012-12-12&#x27;        &#125;    &#125;    let test = new Test()    test.time = () =&gt; &#123;        console.log(&#x27;reset time& ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/963420eb.html" title="ES6系列-generator">ES6系列-generator</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-07T09:41:41.172Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/js/">js</a></span></div><div class="content">
+generator基本定义,返回的结果类似于Iterator，其实就是返回的Iterator接口，当函数运行的时候，调用一次next(),会执行一个yield.一个遍历器生成函数，赋值给Symbol.iterator，从而使这个接口Iterator
+任何一个iterator接口都会指向Symbol.iterator属性上123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129// 异步编程的解决方案&#123;    let fn = function* () &#123;        y ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/1efdce30.html" title="运行babel，webpack，rollop.js用法">运行babel，webpack，rollop.js用法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-07T09:41:41.171Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/babel/">babel</a></span></div><div class="content">
+运行 npm init -y
+
+npm i --save-dev babel-core babel-preset-es2015 babel-preset-latest
+
+创建.babelrc
+
+npm install --save-dev babel-cli本地就不能用 babel 命令了，在 package.json 文件中添加：
+12345&#123;    &quot;script&quot;: &#123;        &quot;build&quot;: &quot;babel src -d lib&quot;    &#125;&#125;
+创建 ./src/index.js
+12345678910111213把babel-preset-es2015换成babel-preset-envbabel-preset-env包括了之前的：babel-preset-es2015, babel-preset-es2016, babel-preset-es2017babel-preset-latest其他社区的es20xxbabel-preset-node5, babel-prese ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/3f264de3.html" title="css修改select样式">css修改select样式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-07T09:41:41.171Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/css/">css</a></span></div><div class="content">select是有默认样式的，select的一些默认样式我们很难修改，比如图标的替换。参考了一些别人的例子，整理下，如果要切换图片。
+1234&lt;select&gt;       &lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;       &lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;   &lt;/select&gt;
+
+123456789101112 select &#123;  border: none;  /*将默认的select选择框样式清除*/  appearance: none;  -moz-appearance: none;  -webkit-appearance: none;  /*在选择框的最右侧中间显示小箭头图片*/  background: url(&quot;http://ourjs.github.io/static/2015/arrow.png&quot;) no-repeat scroll right center transparent !imp ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">郝洁</div><div class="author-info__description">web开发</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="card-widget card-map"><div class="card-content"><div class="item-headline"><i class="fa fa-globe-asia" aria-hidden="true"></i><span>访客地图</span></div><script id="clstr_globe" type="text/javascript" defer="defer" src="//clustrmaps.com/globe.js?d=Zn7himCFQsT3XUAVcnMHJxZPIXW3ZwmmxWJnorW0x2U"></script></div></div><div class="card-widget card-pixiv"><div class="card-content"><div class="item-headline"><i class="fa fa-image" aria-hidden="true"></i><span>Pixiv日榜Top50</span><iframe src="https://cloud.mokeyjay.com/pixiv" frameborder="0" style="width:99%;height:380px;margin:0;"></iframe></div></div></div><!--if theme.aside.card_map--><!--  !=partial('includes/widget/card_map', {}, {cache: true})if theme.aside.card_pixiv
+    !=partial('includes/widget/card_pixiv', {}, {cache:true})
+--><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/8282d6ae.html" title="ES6系列-类与对象">ES6系列-类与对象</a><time datetime="2023-03-07T09:41:41.211Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/ed250810.html" title="截取字符串最方便的办法">截取字符串最方便的办法</a><time datetime="2023-03-07T09:41:41.210Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/e0f8fd55.html" title="富文本-select改进">富文本-select改进</a><time datetime="2023-03-07T09:41:41.210Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/5df27e92.html" title="封装--逐步运动">封装--逐步运动</a><time datetime="2023-03-07T09:41:41.209Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/bd495c40.html" title="异步回调处理">异步回调处理</a><time datetime="2023-03-07T09:41:41.209Z" title="发表于 2023-03-07 17:41:41">2023-03-07</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/babel/"><span class="card-category-list-name">babel</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/"><span class="card-category-list-name">css</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/gulp/"><span class="card-category-list-name">gulp</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/html/"><span class="card-category-list-name">html</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/js/"><span class="card-category-list-name">js</span><span class="card-category-list-count">32</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/json/"><span class="card-category-list-name">json</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/tools/"><span class="card-category-list-name">tools</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.5em; color: #99a9bf">编程</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 1.42em; color: #99a6b7">学习</a> <a href="/tags/%E8%AF%AD%E8%A8%80/" style="font-size: 1.18em; color: #999ca1">语言</a> <a href="/tags/%E5%8A%9F%E8%83%BD/" style="font-size: 1.26em; color: #999fa8">功能</a> <a href="/tags/%E9%A1%B9%E5%88%86%E6%9E%90%E7%9B%AE/" style="font-size: 1.1em; color: #999">项分析目</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 1.1em; color: #999">技巧</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 1.34em; color: #99a3b0">感悟</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 1.1em; color: #999">项目</a> <a href="/tags/%E5%B0%81%E8%A3%85/" style="font-size: 1.1em; color: #999">封装</a> <a href="/tags/%E7%90%86%E8%A7%A3/" style="font-size: 1.1em; color: #999">理解</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">22</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">六月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/06/"><span class="card-archive-list-date">六月 2019</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/12/"><span class="card-archive-list-date">十二月 2018</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/05/"><span class="card-archive-list-date">五月 2018</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/04/"><span class="card-archive-list-date">四月 2018</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/03/"><span class="card-archive-list-date">三月 2018</span><span class="card-archive-list-count">5</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">59</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-07T13:09:57.047Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023  <i id="heartbeat" class="fa fas fa-heartbeat"></i> 郝洁</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script data-pjax defer src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/chocolate.js"></script><script data-pjax defer src="https://npm.elemecdn.com/tzy-blog/lib/js/theme/cursor.js.js"></script><div class="aplayer no-destroy" data-id="7427714271" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-lrctype="1" data-preload="none" data-autoplay="true" muted></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://inews.gtimg.com/newsapp_bt/0/14441450000/1000);"> <a class="categoryBar-list-link" href="categories/js/">js</a><span class="categoryBar-list-count">32</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F0a8394cb-aa44-4b51-912c-3052ae394e5c%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&amp;refer=http%3A%2F%2Fsafe-img.xhscdn.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1680784319&amp;t=adbbb924d61577e1cc81287f1b807c38);"> <a class="categoryBar-list-link" href="categories/vue/">vue</a><span class="categoryBar-list-count">11</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F0e924032-cdc5-4c05-8736-2cbb1675ce3e%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&amp;refer=http%3A%2F%2Fsafe-img.xhscdn.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1680784319&amp;t=2c518f7c961ba2a0e8557403c4e801d8);"> <a class="categoryBar-list-link" href="categories/html/">html</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F3039a6fc-307c-4c63-953e-33037e093f7c%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&amp;refer=http%3A%2F%2Fsafe-img.xhscdn.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1680784319&amp;t=422e51a9582f24e9582cfc46c24c2bb5);"> <a class="categoryBar-list-link" href="categories/babel/">babel</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F755a7f52-204b-41a0-a849-c9a6fb8f3a6d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&amp;refer=http%3A%2F%2Fsafe-img.xhscdn.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1680784319&amp;t=eaa3a8b4492b5e2d0972f5a8fbaf0839);"> <a class="categoryBar-list-link" href="categories/css/">css</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://inews.gtimg.com/newsapp_bt/0/14441450142/1000);"> <a class="categoryBar-list-link" href="categories/gulp/">gulp</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/hexo/">hexo</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/json/">json</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/tools/">tools</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/技术/">技术</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/webpack/">webpack</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
