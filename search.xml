@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ES6系列-Iterator与for of</title>
+    <url>/post/938ff2f7.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">什么是Iterator接口</span></span><br><span class="line"><span class="comment">Iterator的基本用法</span></span><br><span class="line"><span class="comment">for...of </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="string">&#x27;hello&#x27;</span>, <span class="string">&#x27;world&#x27;</span>]</span><br><span class="line">    <span class="keyword">let</span> map = arr[<span class="title class_">Symbol</span>.<span class="property">iterator</span>]()</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(map.<span class="title function_">next</span>())</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(map.<span class="title function_">next</span>())</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(map.<span class="title function_">next</span>())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// &#123;value: &quot;hello&quot;, done: false&#125;</span></span><br><span class="line"><span class="comment">// &#123;value: &quot;world&quot;, done: false&#125;</span></span><br><span class="line"><span class="comment">// &#123;value: undefined, done: true&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用for..of循环Iterator</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        <span class="attr">start</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">        <span class="attr">end</span>:[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],</span><br><span class="line">        [<span class="title class_">Symbol</span>.<span class="property">iterator</span>]() &#123;</span><br><span class="line">            <span class="keyword">let</span> that = <span class="variable language_">this</span></span><br><span class="line">            <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">            <span class="keyword">let</span> arr = that.<span class="property">start</span>.<span class="title function_">concat</span>(that.<span class="property">end</span>)</span><br><span class="line">            <span class="keyword">let</span> len = arr.<span class="property">length</span></span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                <span class="title function_">next</span>(<span class="params"></span>) &#123;</span><br><span class="line">                 <span class="keyword">if</span>(index &lt;len) &#123;</span><br><span class="line">                     <span class="keyword">return</span> &#123;</span><br><span class="line">                         <span class="attr">value</span>:arr[index++],</span><br><span class="line">                         <span class="attr">done</span>:<span class="literal">false</span></span><br><span class="line">                     &#125;</span><br><span class="line">                 &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                     <span class="keyword">return</span> &#123;</span><br><span class="line">                         <span class="attr">value</span>:arr[index++],</span><br><span class="line">                         <span class="attr">done</span>:<span class="literal">true</span></span><br><span class="line">                     &#125;</span><br><span class="line">                 &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">of</span> obj) &#123;</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(key)</span><br><span class="line">   &#125;</span><br><span class="line">    <span class="comment">// 1</span></span><br><span class="line">    <span class="comment">// 2</span></span><br><span class="line">    <span class="comment">// 3</span></span><br><span class="line">    <span class="comment">// 4</span></span><br><span class="line">    <span class="comment">// 5</span></span><br><span class="line">    <span class="comment">// 6</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> value <span class="keyword">of</span> arr) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(value)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// hello</span></span><br><span class="line">   <span class="comment">// world</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>开发小技巧</title>
     <url>/post/129533de.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="分页删除最后一条返回上一页"><a href="#分页删除最后一条返回上一页" class="headerlink" title="分页删除最后一条返回上一页"></a>分页删除最后一条返回上一页</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> totalPage =<span class="title class_">Math</span>.<span class="title function_">ceil</span>((<span class="variable language_">this</span>.<span class="property">page</span>.<span class="property">total</span> -<span class="number">1</span>)/res.<span class="property">pageSize</span>);</span><br><span class="line"><span class="variable language_">this</span>.<span class="property">page</span>.<span class="property">currentPage</span> = <span class="variable language_">this</span>.<span class="property">page</span>.<span class="property">currentPage</span> &lt;<span class="number">1</span> ?<span class="number">1</span> :<span class="variable language_">this</span>.<span class="property">page</span>.<span class="property">currentPage</span> &gt; totalPage ?totalPage :<span class="variable language_">this</span>.<span class="property">page</span>.<span class="property">currentPage</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -13,15 +25,17 @@
 ]]></content>
   </entry>
   <entry>
-    <title>ES6系列-Iterator与for of</title>
-    <url>/post/938ff2f7.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">什么是Iterator接口</span></span><br><span class="line"><span class="comment">Iterator的基本用法</span></span><br><span class="line"><span class="comment">for...of </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="string">&#x27;hello&#x27;</span>, <span class="string">&#x27;world&#x27;</span>]</span><br><span class="line">    <span class="keyword">let</span> map = arr[<span class="title class_">Symbol</span>.<span class="property">iterator</span>]()</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(map.<span class="title function_">next</span>())</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(map.<span class="title function_">next</span>())</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(map.<span class="title function_">next</span>())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// &#123;value: &quot;hello&quot;, done: false&#125;</span></span><br><span class="line"><span class="comment">// &#123;value: &quot;world&quot;, done: false&#125;</span></span><br><span class="line"><span class="comment">// &#123;value: undefined, done: true&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用for..of循环Iterator</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        <span class="attr">start</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">        <span class="attr">end</span>:[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],</span><br><span class="line">        [<span class="title class_">Symbol</span>.<span class="property">iterator</span>]() &#123;</span><br><span class="line">            <span class="keyword">let</span> that = <span class="variable language_">this</span></span><br><span class="line">            <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">            <span class="keyword">let</span> arr = that.<span class="property">start</span>.<span class="title function_">concat</span>(that.<span class="property">end</span>)</span><br><span class="line">            <span class="keyword">let</span> len = arr.<span class="property">length</span></span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                <span class="title function_">next</span>(<span class="params"></span>) &#123;</span><br><span class="line">                 <span class="keyword">if</span>(index &lt;len) &#123;</span><br><span class="line">                     <span class="keyword">return</span> &#123;</span><br><span class="line">                         <span class="attr">value</span>:arr[index++],</span><br><span class="line">                         <span class="attr">done</span>:<span class="literal">false</span></span><br><span class="line">                     &#125;</span><br><span class="line">                 &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                     <span class="keyword">return</span> &#123;</span><br><span class="line">                         <span class="attr">value</span>:arr[index++],</span><br><span class="line">                         <span class="attr">done</span>:<span class="literal">true</span></span><br><span class="line">                     &#125;</span><br><span class="line">                 &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">of</span> obj) &#123;</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(key)</span><br><span class="line">   &#125;</span><br><span class="line">    <span class="comment">// 1</span></span><br><span class="line">    <span class="comment">// 2</span></span><br><span class="line">    <span class="comment">// 3</span></span><br><span class="line">    <span class="comment">// 4</span></span><br><span class="line">    <span class="comment">// 5</span></span><br><span class="line">    <span class="comment">// 6</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> value <span class="keyword">of</span> arr) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(value)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// hello</span></span><br><span class="line">   <span class="comment">// world</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>HTML-autocomplete</title>
+    <url>/post/a085a119.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>项目中，手撸搜索框，从后台拿数据就行展示，选择操作等。<br>偶然发现，搜索后，浏览器会有缓存。就是我的搜索会展示在页面上。<br>于是。。查资料。。关于input的。。有这么一条属性<code>autocomplete = off | no</code></p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">定义和用法</span><br><span class="line">autocomplete 属性规定表单是否应该启用自动完成功能。</span><br><span class="line"></span><br><span class="line">自动完成允许浏览器预测对字段的输入。当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。</span><br><span class="line"></span><br><span class="line">注释：autocomplete 属性适用于 &lt;form&gt;，以及下面的 &lt;<span class="keyword">input</span>&gt; 类型：<span class="type">text</span>, <span class="keyword">search</span>, url, telephone, email, <span class="keyword">password</span>, datepickers, range 以及 color。</span><br><span class="line"></span><br><span class="line">提示：在某些浏览器中，您可能需要手动启用自动完成功能。</span><br></pre></td></tr></table></figure>
+<p>所以，我之所以有搜索记录存在，是因为浏览器会对同一个name标记的输入进行缓存，设置<code>off</code>瞬间解决掉问题。</p>
+]]></content>
       <categories>
-        <category>js</category>
+        <category>html</category>
       </categories>
       <tags>
         <tag>编程</tag>
-        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -38,17 +52,40 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML-autocomplete</title>
-    <url>/post/a085a119.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>项目中，手撸搜索框，从后台拿数据就行展示，选择操作等。<br>偶然发现，搜索后，浏览器会有缓存。就是我的搜索会展示在页面上。<br>于是。。查资料。。关于input的。。有这么一条属性<code>autocomplete = off | no</code></p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">定义和用法</span><br><span class="line">autocomplete 属性规定表单是否应该启用自动完成功能。</span><br><span class="line"></span><br><span class="line">自动完成允许浏览器预测对字段的输入。当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。</span><br><span class="line"></span><br><span class="line">注释：autocomplete 属性适用于 &lt;form&gt;，以及下面的 &lt;<span class="keyword">input</span>&gt; 类型：<span class="type">text</span>, <span class="keyword">search</span>, url, telephone, email, <span class="keyword">password</span>, datepickers, range 以及 color。</span><br><span class="line"></span><br><span class="line">提示：在某些浏览器中，您可能需要手动启用自动完成功能。</span><br></pre></td></tr></table></figure>
-<p>所以，我之所以有搜索记录存在，是因为浏览器会对同一个name标记的输入进行缓存，设置<code>off</code>瞬间解决掉问题。</p>
+    <title>css修改select样式</title>
+    <url>/post/3f264de3.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>select是有默认样式的，select的一些默认样式我们很难修改，比如图标的替换。<br>参考了一些别人的例子，整理下，如果要切换图片。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"> select &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">  <span class="comment">/*将默认的select选择框样式清除*/</span></span><br><span class="line">  appearance: none;</span><br><span class="line">  -moz-appearance: none;</span><br><span class="line">  -webkit-appearance: none;</span><br><span class="line">  <span class="comment">/*在选择框的最右侧中间显示小箭头图片*/</span></span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">&quot;http://ourjs.github.io/static/2015/arrow.png&quot;</span>) no-repeat scroll right center transparent <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/*为下拉小箭头留出一点位置，避免被文字覆盖*/</span></span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">14px</span>;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>html</category>
+        <category>css</category>
       </categories>
       <tags>
         <tag>编程</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css奇技淫巧</title>
+    <url>/post/f62bff42.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在项目中总会遇到许多css问题，因此，总结几个常遇到的问题</p>
+<ul>
+<li>placeholder移动:<code>text-indent:3</code></li>
+<li>去除input框:<code>outline-style:none</code></li>
+<li>background渐变色 :<code> background: linear-gradient(to bottom, #000000 0%,#ffffff 100%);</code></li>
+<li>旋转180度带过渡:<code>-webkit-transform: rotate(180deg);transition: All 0.4s ease-in-out;</code></li>
+<li>关于垂直居中<code>vertical-align</code>可以设置像素值</li>
+<li>在组件化的样式中，在类似于‘曰’这种布局的时候，如何动态的把线加载父元素上？<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span>&#123;</span><br><span class="line">    dispaly:flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>:row;</span><br><span class="line">    <span class="attribute">justify-content</span>:space-around;</span><br><span class="line">    <span class="attribute">box-sizing</span>:border-box;</span><br><span class="line">    &amp;<span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">        <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="attribute">display</span>:block;</span><br><span class="line">        <span class="attribute">width</span>:<span class="number">100%</span>;</span><br><span class="line">        <span class="attribute">height</span>:<span class="number">0</span>;</span><br><span class="line">        <span class="attribute">box-sizing</span>:border-box;</span><br><span class="line">        <span class="attribute">border-bottom</span>:<span class="number">1px</span> solid <span class="number">#ddd</span>;</span><br><span class="line">        <span class="attribute">position</span>:relative;</span><br><span class="line">        <span class="attribute">top</span>:-<span class="number">208px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -93,43 +130,6 @@
 ]]></content>
       <categories>
         <category>babel</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css修改select样式</title>
-    <url>/post/3f264de3.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>select是有默认样式的，select的一些默认样式我们很难修改，比如图标的替换。<br>参考了一些别人的例子，整理下，如果要切换图片。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"> select &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">  <span class="comment">/*将默认的select选择框样式清除*/</span></span><br><span class="line">  appearance: none;</span><br><span class="line">  -moz-appearance: none;</span><br><span class="line">  -webkit-appearance: none;</span><br><span class="line">  <span class="comment">/*在选择框的最右侧中间显示小箭头图片*/</span></span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">&quot;http://ourjs.github.io/static/2015/arrow.png&quot;</span>) no-repeat scroll right center transparent <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/*为下拉小箭头留出一点位置，避免被文字覆盖*/</span></span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">14px</span>;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css奇技淫巧</title>
-    <url>/post/f62bff42.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在项目中总会遇到许多css问题，因此，总结几个常遇到的问题</p>
-<ul>
-<li>placeholder移动:<code>text-indent:3</code></li>
-<li>去除input框:<code>outline-style:none</code></li>
-<li>background渐变色 :<code> background: linear-gradient(to bottom, #000000 0%,#ffffff 100%);</code></li>
-<li>旋转180度带过渡:<code>-webkit-transform: rotate(180deg);transition: All 0.4s ease-in-out;</code></li>
-<li>关于垂直居中<code>vertical-align</code>可以设置像素值</li>
-<li>在组件化的样式中，在类似于‘曰’这种布局的时候，如何动态的把线加载父元素上？<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span>&#123;</span><br><span class="line">    dispaly:flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>:row;</span><br><span class="line">    <span class="attribute">justify-content</span>:space-around;</span><br><span class="line">    <span class="attribute">box-sizing</span>:border-box;</span><br><span class="line">    &amp;<span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">        <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="attribute">display</span>:block;</span><br><span class="line">        <span class="attribute">width</span>:<span class="number">100%</span>;</span><br><span class="line">        <span class="attribute">height</span>:<span class="number">0</span>;</span><br><span class="line">        <span class="attribute">box-sizing</span>:border-box;</span><br><span class="line">        <span class="attribute">border-bottom</span>:<span class="number">1px</span> solid <span class="number">#ddd</span>;</span><br><span class="line">        <span class="attribute">position</span>:relative;</span><br><span class="line">        <span class="attribute">top</span>:-<span class="number">208px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>css</category>
       </categories>
       <tags>
         <tag>编程</tag>
@@ -327,24 +327,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于JSON报错</title>
-    <url>/post/52090ebb.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在项目代码中运用到了JSON.parse()和JSON.stringify()去转换保存对象<br><code>this.editingFile = JSON.stringify(lesson)</code><br><code>this.$set(this.lessons, index, JSON.parse(this.editingFile))</code></p>
-<p>每次新建进入页面的时候，都会报错<br><code>Uncaught SyntaxError: Unexpected token u in JSON at position 0</code></p>
-<p>Debugger后，发现每次新建的时候JSON.parse()里的参数是undefined</p>
-<p>查考得知，当参数为undefined的时候，JSON.parse()会报错的。<br>解决办法是做判断。类似于：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.editingFile != undefined) &#123;</span><br><span class="line">       <span class="keyword">this</span>.$<span class="keyword">set</span>(<span class="keyword">this</span>.lessons, index, JSON.parse(<span class="keyword">this</span>.editingFile))</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
-<p>以上是我的解决办法。</p>
-]]></content>
-      <categories>
-        <category>json</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js五道题</title>
     <url>/post/2907ba7c.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="第一题："><a href="#第一题：" class="headerlink" title="第一题："></a>第一题：</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(!(<span class="string">&quot;a&quot;</span> <span class="keyword">in</span> <span class="variable language_">window</span>)) &#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">alert</span>(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
@@ -438,6 +420,24 @@
 ]]></content>
       <categories>
         <category>js</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于JSON报错</title>
+    <url>/post/52090ebb.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在项目代码中运用到了JSON.parse()和JSON.stringify()去转换保存对象<br><code>this.editingFile = JSON.stringify(lesson)</code><br><code>this.$set(this.lessons, index, JSON.parse(this.editingFile))</code></p>
+<p>每次新建进入页面的时候，都会报错<br><code>Uncaught SyntaxError: Unexpected token u in JSON at position 0</code></p>
+<p>Debugger后，发现每次新建的时候JSON.parse()里的参数是undefined</p>
+<p>查考得知，当参数为undefined的时候，JSON.parse()会报错的。<br>解决办法是做判断。类似于：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.editingFile != undefined) &#123;</span><br><span class="line">       <span class="keyword">this</span>.$<span class="keyword">set</span>(<span class="keyword">this</span>.lessons, index, JSON.parse(<span class="keyword">this</span>.editingFile))</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<p>以上是我的解决办法。</p>
+]]></content>
+      <categories>
+        <category>json</category>
       </categories>
       <tags>
         <tag>编程</tag>
@@ -545,18 +545,6 @@
       </tags>
   </entry>
   <entry>
-    <title>vue-slot</title>
-    <url>/post/5d6f32d5.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//goods.vue</span></span><br><span class="line">&lt;span slot=<span class="string">&quot;A&quot;</span>&gt;啦啦啦&lt;/span&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">&quot;B&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//list.vue</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;A&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;B&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>rgb转化为16进制</title>
     <url>/post/dac90b82.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>项目中有个需求是写一个颜色选择器，默认有16个色块可以点击，用户也可以自己输入6位16进制字符，然后动态的给显示用户所输入的颜色。<br>我采用的是vue的<code>:class</code>和<code>:style</code>去完成这个需求。<br>做完之后，发现一个很尴尬的问题，如果我在输入框输入过值，那么他一定会覆盖clss的样式，也就是说，即使我点击色块，颜色也不会出现，于是想到一个解决办法，就是当我点击色块的时候，将色块的颜色值显示到输入框中。<br>那么。如何获取到class中的css样式呢？？<br>我采用了jquery的方法</p>
@@ -567,6 +555,18 @@
 ]]></content>
       <categories>
         <category>js</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue-slot</title>
+    <url>/post/5d6f32d5.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//goods.vue</span></span><br><span class="line">&lt;span slot=<span class="string">&quot;A&quot;</span>&gt;啦啦啦&lt;/span&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">&quot;B&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//list.vue</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;A&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;B&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>vue</category>
       </categories>
       <tags>
         <tag>编程</tag>
@@ -607,12 +607,6 @@
       </tags>
   </entry>
   <entry>
-    <title>title</title>
-    <url>/post/2b36786b.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>test</p>
-]]></content>
-  </entry>
-  <entry>
     <title>vue日常学习-router</title>
     <url>/post/d2d60a0f.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今日搭建vue 3.0脚手架，写了个小项目，被一个问题卡了半天，就是在app.vue里面的router-view和router-link无法生效，页面不会跳转并且控制台会报错，请教后得知，自己在router.js里配置路由的时候代码写错了</p>
@@ -624,6 +618,12 @@
         <tag>编程</tag>
         <tag>感悟</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>title</title>
+    <url>/post/2b36786b.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>test</p>
+]]></content>
   </entry>
   <entry>
     <title>vue-动态组件</title>
@@ -753,6 +753,22 @@
 ]]></content>
   </entry>
   <entry>
+    <title>vue上传文件</title>
+    <url>/post/15bcfa3f.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>例如点击标签<code>&lt;span @click = &quot;addLesson&quot;&gt;&lt;/span&gt;</code>上传文件</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> @<span class="attr">change</span>=<span class="string">&quot;fileChange(lesson,$event.target)&quot;</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">addLesson</span>:<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">lessons</span>.<span class="title function_">push</span>(&#123;</span><br><span class="line">        <span class="attr">name</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">files</span>:[],</span><br><span class="line">        <span class="attr">editing</span>:<span class="literal">true</span> <span class="comment">//需要隐藏的地方/显示的地方</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="attr">fileChange</span>:<span class="keyword">function</span>(<span class="params">course,input</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> fileObj = input.<span class="property">file</span>[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">let</span> file = &#123;</span><br><span class="line">        <span class="attr">previewFlag</span>:<span class="literal">false</span>, <span class="comment">//是否可预览</span></span><br><span class="line">        <span class="attr">name</span>:fileObj.<span class="property">name</span>,</span><br><span class="line">        <span class="attr">process</span>:<span class="number">0</span>,</span><br><span class="line">        <span class="attr">size</span>:fileObj.<span class="property">size</span></span><br><span class="line">    &#125;;</span><br><span class="line">    course.<span class="property">files</span>.<span class="title function_">push</span>(file)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue3-新特性</title>
     <url>/post/563200aa.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="性能提升"><a href="#性能提升" class="headerlink" title="性能提升"></a>性能提升</h4><ul>
@@ -797,22 +813,6 @@
       <tags>
         <tag>编程</tag>
         <tag>感悟</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vue上传文件</title>
-    <url>/post/15bcfa3f.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>例如点击标签<code>&lt;span @click = &quot;addLesson&quot;&gt;&lt;/span&gt;</code>上传文件</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> @<span class="attr">change</span>=<span class="string">&quot;fileChange(lesson,$event.target)&quot;</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">addLesson</span>:<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">lessons</span>.<span class="title function_">push</span>(&#123;</span><br><span class="line">        <span class="attr">name</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">files</span>:[],</span><br><span class="line">        <span class="attr">editing</span>:<span class="literal">true</span> <span class="comment">//需要隐藏的地方/显示的地方</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="attr">fileChange</span>:<span class="keyword">function</span>(<span class="params">course,input</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> fileObj = input.<span class="property">file</span>[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">let</span> file = &#123;</span><br><span class="line">        <span class="attr">previewFlag</span>:<span class="literal">false</span>, <span class="comment">//是否可预览</span></span><br><span class="line">        <span class="attr">name</span>:fileObj.<span class="property">name</span>,</span><br><span class="line">        <span class="attr">process</span>:<span class="number">0</span>,</span><br><span class="line">        <span class="attr">size</span>:fileObj.<span class="property">size</span></span><br><span class="line">    &#125;;</span><br><span class="line">    course.<span class="property">files</span>.<span class="title function_">push</span>(file)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1001,6 +1001,19 @@
       </tags>
   </entry>
   <entry>
+    <title>js中的内置函数</title>
+    <url>/post/823ecd22.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>js中有哪些内置函数？–函数封装类对象</p>
+<figure class="highlight subunit"><table><tr><td class="code"><pre><span class="line">Object</span><br><span class="line">Array</span><br><span class="line">Boolearn</span><br><span class="line">String</span><br><span class="line">Function</span><br><span class="line"><span class="keyword">Error</span></span><br><span class="line"><span class="keyword"></span>Number</span><br><span class="line">Date</span><br><span class="line">RegExp</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>日常js</title>
     <url>/post/e68219b9.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
@@ -1021,19 +1034,6 @@
       <tags>
         <tag>编程</tag>
         <tag>感悟</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js中的内置函数</title>
-    <url>/post/823ecd22.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>js中有哪些内置函数？–函数封装类对象</p>
-<figure class="highlight subunit"><table><tr><td class="code"><pre><span class="line">Object</span><br><span class="line">Array</span><br><span class="line">Boolearn</span><br><span class="line">String</span><br><span class="line">Function</span><br><span class="line"><span class="keyword">Error</span></span><br><span class="line"><span class="keyword"></span>Number</span><br><span class="line">Date</span><br><span class="line">RegExp</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1082,12 +1082,14 @@
       </tags>
   </entry>
   <entry>
-    <title>回调函数</title>
-    <url>/post/a03e68d3.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
-<li>js代码是顺序执行的，如果需要等到一个操作结束之后再进行下一个操作，这个时候需要用到回调函数</li>
-<li>函数也是一种数据结构，可以像变量一样使用</li>
-</ul>
+    <title>垃圾回收</title>
+    <url>/post/72f47432.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="代码回收规则"><a href="#代码回收规则" class="headerlink" title="代码回收规则"></a>代码回收规则</h4><ol>
+<li>全局变量不会被回收</li>
+<li>局部变量会被回收，函数一旦运行完毕，函数内部的东西会被销毁</li>
+<li>只要被另外一个作用于所引用就不会被回收</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">var</span> add = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        i++;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;();</span><br><span class="line"><span class="title function_">add</span>();</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>js</category>
@@ -1098,14 +1100,12 @@
       </tags>
   </entry>
   <entry>
-    <title>垃圾回收</title>
-    <url>/post/72f47432.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="代码回收规则"><a href="#代码回收规则" class="headerlink" title="代码回收规则"></a>代码回收规则</h4><ol>
-<li>全局变量不会被回收</li>
-<li>局部变量会被回收，函数一旦运行完毕，函数内部的东西会被销毁</li>
-<li>只要被另外一个作用于所引用就不会被回收</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">var</span> add = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        i++;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;();</span><br><span class="line"><span class="title function_">add</span>();</span><br></pre></td></tr></table></figure>
+    <title>回调函数</title>
+    <url>/post/a03e68d3.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
+<li>js代码是顺序执行的，如果需要等到一个操作结束之后再进行下一个操作，这个时候需要用到回调函数</li>
+<li>函数也是一种数据结构，可以像变量一样使用</li>
+</ul>
 ]]></content>
       <categories>
         <category>js</category>
@@ -1200,18 +1200,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ES6系列-类与对象</title>
-    <url>/post/8282d6ae.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 类与对象</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params">name = <span class="string">&#x27;yoyo&#x27;</span></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> v_person = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;v&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(v_person) <span class="comment">//Person &#123;name: &quot;v&quot;&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Child</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Person</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params">name = <span class="string">&#x27;child&#x27;</span></span>) &#123;</span><br><span class="line">            <span class="comment">//  super()会使用父类的所有</span></span><br><span class="line">            <span class="variable language_">super</span>(name)</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">type</span> = <span class="string">&#x27;dog&#x27;</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Child</span>()) <span class="comment">//Child &#123;name: &quot;child&quot;, type: &quot;dog&quot;&#125;</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Child</span>(<span class="string">&#x27;hello&#x27;</span>)) <span class="comment">//Child &#123;name: &quot;hello&quot;, type: &quot;dog&quot;&#125;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// getter,setter</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params">name = <span class="string">&#x27;yoy&#x27;</span></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = name</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">get</span> <span class="title function_">longName</span>() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">name</span> + <span class="string">&#x27;读取属性&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">set</span> <span class="title function_">longName</span>(<span class="params">value</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = value</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> v = <span class="keyword">new</span> <span class="title class_">Person</span>()</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(v.<span class="property">longName</span>, <span class="string">&#x27;getter&#x27;</span>)<span class="comment">//yoy读取属性 getter</span></span><br><span class="line">    v.<span class="property">longName</span> = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(v.<span class="property">longName</span>) <span class="comment">//hello读取属性</span></span><br><span class="line">    <span class="keyword">let</span> vs = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;lele&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(vs.<span class="property">longName</span>, <span class="string">&#x27;setter&#x27;</span>) <span class="comment">//lele读取属性 setter</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 静态方法，不是使用类的实例去调用</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params">name = <span class="string">&#x27;yoyo&#x27;</span></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = name</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">static</span> <span class="title function_">tail</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;this is tail&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title class_">Person</span>.<span class="title function_">tail</span>()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 静态属性 ===&gt; 直接在类上定义</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params">name = <span class="string">&#x27;uouo&#x27;</span></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = name</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">static</span> <span class="title function_">tail</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;this is tail&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title class_">Person</span>.<span class="property">numberId</span> = <span class="number">23333</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Person</span>.<span class="property">numberId</span>) <span class="comment">//2333</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>表单验证，滚动到错误位置</title>
     <url>/post/69d4bd9.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今日有个需求是，表单验证的时候，不弹toast，而是滚动到错误位置，公司代码实现就不写了，记录下自己写的demo。</p>
@@ -1225,9 +1213,9 @@
       </tags>
   </entry>
   <entry>
-    <title>逻辑运算符</title>
-    <url>/post/17278be4.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">10</span> &amp;&amp; <span class="number">0</span>) <span class="comment">//0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;&#x27;</span> || <span class="string">&#x27;abc&#x27;</span>) <span class="comment">//abc</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="property">abc</span>) <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//判断一个变量会被当做true还是false</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(!!a)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = &#123;&#125;</span><br><span class="line"><span class="keyword">if</span>(a.<span class="property">b</span> == <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="comment">//a.b === null ,a.b === undefined</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//参考于bootstrap源码</span></span><br></pre></td></tr></table></figure>]]></content>
+    <title>ES6系列-类与对象</title>
+    <url>/post/8282d6ae.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 类与对象</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params">name = <span class="string">&#x27;yoyo&#x27;</span></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> v_person = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;v&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(v_person) <span class="comment">//Person &#123;name: &quot;v&quot;&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Child</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Person</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params">name = <span class="string">&#x27;child&#x27;</span></span>) &#123;</span><br><span class="line">            <span class="comment">//  super()会使用父类的所有</span></span><br><span class="line">            <span class="variable language_">super</span>(name)</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">type</span> = <span class="string">&#x27;dog&#x27;</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Child</span>()) <span class="comment">//Child &#123;name: &quot;child&quot;, type: &quot;dog&quot;&#125;</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Child</span>(<span class="string">&#x27;hello&#x27;</span>)) <span class="comment">//Child &#123;name: &quot;hello&quot;, type: &quot;dog&quot;&#125;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// getter,setter</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params">name = <span class="string">&#x27;yoy&#x27;</span></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = name</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">get</span> <span class="title function_">longName</span>() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">name</span> + <span class="string">&#x27;读取属性&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">set</span> <span class="title function_">longName</span>(<span class="params">value</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = value</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> v = <span class="keyword">new</span> <span class="title class_">Person</span>()</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(v.<span class="property">longName</span>, <span class="string">&#x27;getter&#x27;</span>)<span class="comment">//yoy读取属性 getter</span></span><br><span class="line">    v.<span class="property">longName</span> = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(v.<span class="property">longName</span>) <span class="comment">//hello读取属性</span></span><br><span class="line">    <span class="keyword">let</span> vs = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;lele&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(vs.<span class="property">longName</span>, <span class="string">&#x27;setter&#x27;</span>) <span class="comment">//lele读取属性 setter</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 静态方法，不是使用类的实例去调用</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params">name = <span class="string">&#x27;yoyo&#x27;</span></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = name</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">static</span> <span class="title function_">tail</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;this is tail&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title class_">Person</span>.<span class="title function_">tail</span>()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 静态属性 ===&gt; 直接在类上定义</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">        <span class="title function_">constructor</span>(<span class="params">name = <span class="string">&#x27;uouo&#x27;</span></span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">name</span> = name</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">static</span> <span class="title function_">tail</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;this is tail&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title class_">Person</span>.<span class="property">numberId</span> = <span class="number">23333</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Person</span>.<span class="property">numberId</span>) <span class="comment">//2333</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -1267,6 +1255,38 @@
       <tags>
         <tag>项目</tag>
         <tag>项分析目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>逻辑运算符</title>
+    <url>/post/17278be4.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">10</span> &amp;&amp; <span class="number">0</span>) <span class="comment">//0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;&#x27;</span> || <span class="string">&#x27;abc&#x27;</span>) <span class="comment">//abc</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="property">abc</span>) <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//判断一个变量会被当做true还是false</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(!!a)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = &#123;&#125;</span><br><span class="line"><span class="keyword">if</span>(a.<span class="property">b</span> == <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="comment">//a.b === null ,a.b === undefined</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//参考于bootstrap源码</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于遍历一组对象</title>
+    <url>/post/f29733c6.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今日，要去遍历一组后台传来的数据，类似于</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attr">courses</span>: [</span><br><span class="line"><span class="number">0</span>: &#123;</span><br><span class="line">    <span class="attr">classId</span>: <span class="string">&quot;5b9b5a10a5084200d4905f98&quot;</span>, </span><br><span class="line">    <span class="attr">lessonId</span>: <span class="string">&quot;5b9b5840a5084200d4905f8e&quot;</span>, </span><br><span class="line">    <span class="attr">courseName</span>: <span class="string">&quot;sadfsafsadf&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>: &#123;</span><br><span class="line">    <span class="attr">classId</span>: <span class="string">&quot;5b9b5a10a5084200d4905f98&quot;</span>, </span><br><span class="line">    <span class="attr">lessonId</span>: <span class="string">&quot;5b9b584da5084200d4905f93&quot;</span>, </span><br><span class="line">    <span class="attr">courseName</span>: <span class="string">&quot;sadfsafsadf&quot;</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>这样的数据。<br>按照往常在vue里面动态展现数据的想法，我定义了一个空数组<code>courseList = []</code>，然后把后台的数据添加到这个空数组，如果是在vue中，一个 <code>v-for=&quot;item in courseList&quot;</code>就可以把数据展现了，但是我现在不是要在vue中展现，而是要js里面展现。<br>采用定义空数组，然后把后台数据赋值给空数组，再去遍历空数组，获取需要的数据。。。orz，好放繁琐的一个过程。。<br>现在，有一个新的做法，那就是</p>
+<ol>
+<li>不在定义一个空数组，而是定义一个空对象，<code>courseList = &#123;&#125;</code></li>
+<li>出初始化这个对象，并把后台数据循环给这个对象的数组</li>
+<li>接收传来的每一个对象<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//代码如下</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">data</span>.<span class="property">courseList</span> = &#123;&#125;</span><br><span class="line">data.<span class="property">courses</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">course</span> =&gt;</span>&#123; <span class="comment">//data.courses是后台数据</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">data</span>.<span class="property">courseList</span>[course.<span class="property">courseId</span>] = course <span class="comment">//course为每一组对象&#123;&#125;,&#123;&#125;,&#123;&#125;...</span></span><br><span class="line">    <span class="comment">//this.data.courseList将当前对象循环n次</span></span><br><span class="line">    <span class="comment">//[course.courseId]数组，取每次循环中对应的courseId对应的数据</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//这时候的 this.data.courseList[courseId]就等于</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">courseList</span>:<span class="title class_">Object</span></span><br><span class="line">5<span class="attr">b9b5a10a5084200d4905f98</span>:<span class="title class_">Object</span></span><br><span class="line"><span class="attr">classId</span>:<span class="string">&quot;5b9b5a10a5084200d4905f98&quot;</span></span><br><span class="line"><span class="attr">courseName</span>:<span class="string">&quot;sadfsafsadf&quot;</span></span><br><span class="line"><span class="attr">lessonId</span>:<span class="string">&quot;5b9b584da5084200d4905f93&quot;</span></span><br><span class="line">5<span class="attr">b9b5a2fa5084200d4905f9a</span>:<span class="title class_">Object</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1363,26 +1383,6 @@
 ]]></content>
       <categories>
         <category>js</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于遍历一组对象</title>
-    <url>/post/f29733c6.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今日，要去遍历一组后台传来的数据，类似于</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attr">courses</span>: [</span><br><span class="line"><span class="number">0</span>: &#123;</span><br><span class="line">    <span class="attr">classId</span>: <span class="string">&quot;5b9b5a10a5084200d4905f98&quot;</span>, </span><br><span class="line">    <span class="attr">lessonId</span>: <span class="string">&quot;5b9b5840a5084200d4905f8e&quot;</span>, </span><br><span class="line">    <span class="attr">courseName</span>: <span class="string">&quot;sadfsafsadf&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>: &#123;</span><br><span class="line">    <span class="attr">classId</span>: <span class="string">&quot;5b9b5a10a5084200d4905f98&quot;</span>, </span><br><span class="line">    <span class="attr">lessonId</span>: <span class="string">&quot;5b9b584da5084200d4905f93&quot;</span>, </span><br><span class="line">    <span class="attr">courseName</span>: <span class="string">&quot;sadfsafsadf&quot;</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>这样的数据。<br>按照往常在vue里面动态展现数据的想法，我定义了一个空数组<code>courseList = []</code>，然后把后台的数据添加到这个空数组，如果是在vue中，一个 <code>v-for=&quot;item in courseList&quot;</code>就可以把数据展现了，但是我现在不是要在vue中展现，而是要js里面展现。<br>采用定义空数组，然后把后台数据赋值给空数组，再去遍历空数组，获取需要的数据。。。orz，好放繁琐的一个过程。。<br>现在，有一个新的做法，那就是</p>
-<ol>
-<li>不在定义一个空数组，而是定义一个空对象，<code>courseList = &#123;&#125;</code></li>
-<li>出初始化这个对象，并把后台数据循环给这个对象的数组</li>
-<li>接收传来的每一个对象<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//代码如下</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">data</span>.<span class="property">courseList</span> = &#123;&#125;</span><br><span class="line">data.<span class="property">courses</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">course</span> =&gt;</span>&#123; <span class="comment">//data.courses是后台数据</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">data</span>.<span class="property">courseList</span>[course.<span class="property">courseId</span>] = course <span class="comment">//course为每一组对象&#123;&#125;,&#123;&#125;,&#123;&#125;...</span></span><br><span class="line">    <span class="comment">//this.data.courseList将当前对象循环n次</span></span><br><span class="line">    <span class="comment">//[course.courseId]数组，取每次循环中对应的courseId对应的数据</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//这时候的 this.data.courseList[courseId]就等于</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">courseList</span>:<span class="title class_">Object</span></span><br><span class="line">5<span class="attr">b9b5a10a5084200d4905f98</span>:<span class="title class_">Object</span></span><br><span class="line"><span class="attr">classId</span>:<span class="string">&quot;5b9b5a10a5084200d4905f98&quot;</span></span><br><span class="line"><span class="attr">courseName</span>:<span class="string">&quot;sadfsafsadf&quot;</span></span><br><span class="line"><span class="attr">lessonId</span>:<span class="string">&quot;5b9b584da5084200d4905f93&quot;</span></span><br><span class="line">5<span class="attr">b9b5a2fa5084200d4905f9a</span>:<span class="title class_">Object</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>vue</category>
       </categories>
       <tags>
         <tag>编程</tag>
